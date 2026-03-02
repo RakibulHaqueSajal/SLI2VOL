@@ -1,0 +1,25 @@
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/c82c8dfb735a461188775b70c46b7c83
+
+[numpy_dic_vols] total=80 train=72 val=8
+[numpy_dic_vols] total=300 train=270 val=30
+[numpy_dic_vols] total=86 train=77 val=9
+[TOTAL] train=419 val=47
+Indexing 0/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0136.npy
+Indexing 50/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0071.npy
+Indexing 100/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0263.npy
+Indexing 150/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0229.npy
+Indexing 200/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-Pancreas/numpy_dic_vols/pancreas_0031.npy
+Indexing 250/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0250.npy
+Indexing 300/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0104.npy
+Indexing 350/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-LN/numpy_dic_vols/lymphnodes_0072.npy
+Indexing 400/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-LN/numpy_dic_vols/lymphnodes_0062.npy
+[Dataset_numpy_3d] Total samples created: 53386
+Indexing 0/47: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-Pancreas/numpy_dic_vols/pancreas_0009.npy
+[Dataset_numpy_3d] Total samples created: 5678
+53386
+creating loaders
+Loaders created. Trying to fetch one batch...
+4
+Got first batch!
+[2026-01-15T23:04:26.392] error: *** JOB 17344 ON spartacus-13 CANCELLED AT 2026-01-15T23:04:26 DUE to SIGNAL Terminated ***

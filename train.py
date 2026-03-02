@@ -1,311 +1,333 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Mar  8 14:32:59 2019
+import os
+import json
+import glob
+import random
+import argparse
+import numpy as np
 
-@author: pemb5552
-"""
 import torch
-from torch.utils import data
-from torch import nn
 import torch.optim as optim
 import torch.nn.functional as F
-import glob
-import os
-import numpy as np
-from random import shuffle
-from tensorboardX import SummaryWriter
-import platform
-import pickle
-import random
-import scipy.io as sio
-import json
+
+from model import Correspondence_Flow_Net
+from model import *  # weight_init etc.
+from dataset import my_collate, edge_profile
+from data_creator.pancreas_dataset import build_multi_source_loaders
 
 try:
-    import matplotlib
-    matplotlib.use("TKAgg")
-except:
-    a=1
+    from comet_ml import Experiment
+except Exception:
+    Experiment = None
 
 
-from model import *
-from dataset import *
- 
-
-def sum_params(model):
-    s = []
-    for p in model.parameters():
-        dims = p.size()
-        n = p.cpu().data.numpy()
-        s.append((dims, np.sum(n)))
-    return s
-
-if __name__ ==  '__main__':
-    torch.manual_seed(10)
-    torch.cuda.manual_seed(10)
-    np.random.seed(10)
-    random.seed(10)
-    
-    '''
-    Parameters
-    '''
-    datatype = 'C4KC_KiTS'
-    interval = 1000000000
-    set_size = 2
-    batch_size = 5
-    in_channels=48
-    R=7
-    params = {'batch_size': int(batch_size),
-              'shuffle': True,
-              'num_workers': 0,
-              'drop_last':False}
-    max_epochs = 4
-    learning_rate = 0.0001
-    cycle = False
-    
-    metrics_name = ['mae', 
-                    # 'ssim',
-                    #'profile',
-#                    'consistency',
-#                    'occ',
-                    'total',]
-    loss_weights = {'mae':1, 
-                    #'profile':1000,
-                    # 'ssim':1,
-#                    'consistency':1,#0.2
-#                    'occ':10,
-                    'total':1
-                    }
-    running_metrics = {}
-    total_metrics = {}
-    loss = {}
-    for mn in metrics_name:
-        running_metrics.update({mn:0.0})
-        total_metrics.update({mn:0.0})
-        loss.update({mn:0})
-        
-    
-    if datatype=='C4KC_KiTS':
-        '''
-        Files-C4KC_KiTS
-        '''
-        from dataset import Dataset_C4KC_KiTS as Dataset
-        
-        headfolder = '/run/media/hugoyeung/Data/CT Dataset/TCGA_C4KC-KiTS/'
-        
-        subfolders = glob.glob(os.path.join(headfolder, '*','*','*'))
-            
-        folders_training = subfolders[0:int(len(subfolders)*0.9)]
-        folders_validation = subfolders[int(len(subfolders)*0.9):len(subfolders)]
-    elif datatype=='allabdomen':
-        from dataset import Dataset_all_abdomen as Dataset
-        folders_training=[]
-        '''
-        Files-C4KC_KiTS
-        '''
-        headfolder = '/run/media/hugoyeung/Data/CT Dataset/TCGA_C4KC-KiTS/'
-        
-        subfolders = glob.glob(os.path.join(headfolder, '*','*','*'))
-        
-        temp=['c4'+i for i in subfolders]
-        
-        folders_training+=temp
-        
-        '''
-        Files-CT_Lymph_Nodes
-        '''
-        headfolder = '/run/media/hugoyeung/Data/CT Dataset/TCGA_CT_Lymph_Nodes/'
-        
-        subfolders = glob.glob(os.path.join(headfolder, '*','*','*'))
-        
-        temp=['ln'+i for i in subfolders]
-        
-        folders_training+=temp
-        
-        '''
-        Files-Pancreas-CT
-        '''
-        headfolder = '/run/media/hugoyeung/Data/CT Dataset/TCGA_Pancreas-CT/'
-        
-        subfolders = glob.glob(os.path.join(headfolder, '*','*','*','*'))
-        
-        temp=['pa'+i for i in subfolders]
-        
-        folders_training+=temp
-        
-        
-        random.shuffle(folders_training)
-        
-    
-    
-    '''
-    Save path
-    '''
-    path_name = 'test'
-    
-    save_path = os.path.join(os.getcwd(), path_name)
-    
-        
-    '''
-    Model
-    '''
-    saved_model = os.path.join(save_path, 'best_model.pth')
-    current_model = os.path.join(save_path, 'current_model.pth')
-   
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
+# ============================================================
+# Reproducibility
+# ============================================================
+def set_seed(seed=10):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
 
 
-    model = Correspondence_Flow_Net(in_channels=in_channels, is_training=True, R=6).cuda()
+# ============================================================
+# Early stopping
+# ============================================================
+class EarlyStopping:
+    """
+    Early stop if validation loss does not improve by min_delta for 'patience' validations.
+    """
+    def __init__(self, patience=10, min_delta=0.0):
+        self.patience = int(patience)
+        self.min_delta = float(min_delta)
+        self.best = None
+        self.bad_count = 0
+
+    def step(self, val_loss: float) -> bool:
+        """
+        Returns True if should stop.
+        """
+        if self.best is None:
+            self.best = val_loss
+            self.bad_count = 0
+            return False
+
+        if val_loss < (self.best - self.min_delta):
+            self.best = val_loss
+            self.bad_count = 0
+            return False
+
+        self.bad_count += 1
+        return self.bad_count >= self.patience
+
+
+# ============================================================
+# Validation loop
+# ============================================================
+@torch.no_grad()
+def run_validation(model, val_loader, device="cuda"):
+    model.eval()
+    total = 0.0
+    n = 0
+
+    for frame1_input, frame2_input, frame1, frame2 in val_loader:
+        frame1_input = frame1_input.float().to(device, non_blocking=True)
+        frame2_input = frame2_input.float().to(device, non_blocking=True)
+        frame1 = frame1.float().to(device, non_blocking=True)
+        frame2 = frame2.float().to(device, non_blocking=True)
+
+        [frame1_input, frame2_input] = edge_profile([frame1_input, frame2_input], False, 3, 1)
+        _, _, h, w = frame1_input.size()
+
+        outputs = model(frame1_input, frame2_input, frame1)
+        outputs = F.interpolate(outputs, (h, w), mode="bilinear", align_corners=False)
+
+        loss = F.smooth_l1_loss(outputs, frame2, reduction="mean")
+        total += float(loss.item())
+        n += 1
+
+    return total / max(1, n)
+
+
+# ============================================================
+# Train loop (one epoch)
+# ============================================================
+def run_train_epoch(model, train_loader, optimizer, device="cuda"):
+    model.train()
+    running = 0.0
+    n = 0
+
+    for frame1_input, frame2_input, frame1, frame2 in train_loader:
+        frame1_input = frame1_input.float().to(device, non_blocking=True)
+        frame2_input = frame2_input.float().to(device, non_blocking=True)
+        frame1 = frame1.float().to(device, non_blocking=True)
+        frame2 = frame2.float().to(device, non_blocking=True)
+
+        [frame1_input, frame2_input] = edge_profile([frame1_input, frame2_input], False, 3, 1)
+        
+    
+        _, _, h, w = frame1_input.size()
+
+        optimizer.zero_grad(set_to_none=True)
+
+        outputs = model(frame1_input, frame2_input, frame1)
+        outputs = F.interpolate(outputs, (h, w), mode="bilinear", align_corners=False)
+
+        loss = F.smooth_l1_loss(outputs, frame2, reduction="mean")
+        loss.backward()
+        optimizer.step()
+
+        running += float(loss.item())
+        n += 1
+
+    return running / max(1, n)
+
+
+# ============================================================
+# CLI
+# ============================================================
+def parse_args():
+    p = argparse.ArgumentParser("Pancreas training (sli2vol)")
+
+    # data
+    p.add_argument("--sourceA_root", type=str, required=True,
+                   help="Root for SourceA (must contain imagesTr/ and optionally labelsTr/)")
+    p.add_argument("--sourceB_root", type=str, required=True,
+                   help="Root for SourceB (must contain imagesTr/ and optionally labelsTr/)")
+    p.add_argument("--sourceC_root", type=str, required=False,
+                   help="Root for SourceC (must contain imagesTr/ and optionally labelsTr/)")
+    p.add_argument("--sourceD_root", type=str, required=False,
+                   help="Root for SourceD (must contain imagesTr/ and optionally labelsTr/)")
+    p.add_argument("--sourceE_root", type=str, required=False,
+                     help="Root for SourceE (must contain imagesTr/ and optionally labelsTr/)")
+    p.add_argument("--sourceF_root", type=str, required=False,
+                        help="Root for SourceF (must contain imagesTr/ and optionally labelsTr/)")
+
+    p.add_argument("--setting", type=str, default="B", choices=["A", "B"],
+                   help="Split setting A or B")
+    p.add_argument("--train_sources", type=str, default="SourceA",
+                   help='Comma-separated train sources for setting B, e.g. "SourceA" or "SourceA,SourceB"')
+    p.add_argument("--test_sources", type=str, default="SourceB",
+                   help='Comma-separated test sources for setting B, e.g. "SourceB"')
+
+    # training hyperparams
+    p.add_argument("--seed", type=int, default=10)
+    p.add_argument("--batch_size", type=int, default=16)
+    p.add_argument("--num_workers", type=int, default=4)
+
+    p.add_argument("--max_epochs", type=int, default=150)
+    p.add_argument("--lr", type=float, default=1e-4)
+    p.add_argument("--step_size", type=int, default=2)
+    p.add_argument("--gamma", type=float, default=0.5)
+
+    p.add_argument("--in_channels", type=int, default=48)
+    p.add_argument("--R", type=int, default=6)
+
+    # validation schedule
+    p.add_argument("--val_every", type=int, default=1)
+
+    # early stopping
+    p.add_argument("--early_stop", action="store_true",
+                   help="Enable early stopping")
+    p.add_argument("--patience", type=int, default=50,
+                   help="Patience for early stopping (in validation checks)")
+    p.add_argument("--min_delta", type=float, default=0.0,
+                   help="Minimum improvement required to reset patience")
+
+    # checkpointing
+    p.add_argument("--save_dir", type=str, required=True,
+                   help="Directory to save checkpoints")
+    p.add_argument("--run_name", type=str, default="Pancreas_Run")
+
+    # comet
+    p.add_argument("--use_comet", type=bool, default=False)
+    p.add_argument("--comet_api_key", type=str, default=None)
+    p.add_argument("--comet_project", type=str, default="sli2vol")
+    p.add_argument("--comet_workspace", type=str, default="rakibulhaq56")
+
+    # device
+    p.add_argument("--device", type=str, default="cuda")
+
+    return p.parse_args()
+
+
+# ============================================================
+# Main
+# ============================================================
+def main():
+    args = parse_args()
+    set_seed(args.seed)
+
+    device = args.device if torch.cuda.is_available() else "cpu"
+    
+    if args.sourceC_root is None:
+        source_roots = [
+            ("SourceA", args.sourceA_root),
+            ("SourceB", args.sourceB_root),
+        ]
+    else:
+        source_roots = [
+            ("SourceA", args.sourceA_root),
+            ("SourceB", args.sourceB_root),
+            ("SourceC", args.sourceC_root),
+            ("SourceD", args.sourceD_root),
+            # ("SourceC", args.sourceC_root),
+            # ("SourceD", args.sourceD_root),
+        ]
+    if args.sourceE_root is not None:
+        source_roots.append( ("SourceE", args.sourceE_root) )
+    if args.sourceF_root is not None:
+        source_roots.append( ("SourceF", args.sourceF_root) )
+
+    setting = args.setting.upper()
+
+    train_sources = [s.strip() for s in args.train_sources.split(",") if s.strip()]
+    test_sources = [s.strip() for s in args.test_sources.split(",") if s.strip()]
+
+    # loaders
+    if setting == "A":
+        train_loader, val_loader, test_loader = build_multi_source_loaders(
+            source_roots=source_roots,
+            setting="A",
+            seed=args.seed,
+            batch_size=args.batch_size,
+            num_workers=args.num_workers,
+            train_cache_rate=0.1,
+            test_cache_rate=0.0
+        )
+    else:
+        train_loader, val_loader, test_loader = build_multi_source_loaders(
+            source_roots=source_roots,
+            setting="B",
+            train_sources=train_sources,
+            test_sources=test_sources,
+            seed=args.seed,
+            batch_size=args.batch_size,
+            num_workers=args.num_workers,
+            train_cache_rate=0.1,
+            test_cache_rate=0.0
+        )
+
+    # checkpoints
+    os.makedirs(args.save_dir, exist_ok=True)
+    best_model_path = os.path.join(args.save_dir, "best_model.pth")
+    current_model_path = os.path.join(args.save_dir, "current_model.pth")
+    meta_path = os.path.join(args.save_dir, "run_config.json")
+
+    with open(meta_path, "w") as f:
+        json.dump(vars(args), f, indent=2)
+
+    # comet
+    
+    if args.use_comet:
+        comet_api_key = "Vr3vky03wyHWTXJTZ6phb4zEF"
+        comet_project = "sli2vol"
+        comet_workspace = "rakibulhaq56"
+        experiment = Experiment(
+            api_key=comet_api_key,
+            project_name=comet_project,
+            workspace=comet_workspace,
+            log_code=True,
+            disabled=False,
+        )
+        experiment.set_name(args.run_name)
+
+    # model
+    model = Correspondence_Flow_Net(in_channels=args.in_channels, is_training=True, R=args.R).to(device)
     model.apply(weight_init)
-        
- 
 
+    optimizer = optim.Adam(model.parameters(), lr=args.lr, betas=(0.9, 0.999))
+    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=args.step_size, gamma=args.gamma)
 
-    # Loss and optimizer
-    patience = 3
-    optimizer = optim.Adam(model.parameters(), lr=learning_rate, betas=(0.9,0.999))
-    scheduler = optim.lr_scheduler.StepLR(optimizer, 2, gamma=0.5)
-    
-    
-    '''
-    Log
-    '''
-    writer = SummaryWriter(os.path.join(save_path, 'log'))
+    early = EarlyStopping(patience=args.patience, min_delta=args.min_delta) if args.early_stop else None
 
-    # Early Stop
-    stop_count = 0
-    
-    def stop_early(best, current, count):
-        stop = False
-        if current<=best:
-            count=0
+    best_val = float("inf")
+
+    for epoch in range(1, args.max_epochs + 1):
+        train_loss = run_train_epoch(model, train_loader, optimizer, device=device)
+        scheduler.step()
+        lr_now = optimizer.param_groups[0]["lr"]
+
+        do_val = (epoch % args.val_every == 0) or (epoch == args.max_epochs)
+
+        if do_val:
+            val_loss = run_validation(model, val_loader, device=device)
+            print(f"Epoch {epoch:03d} | train={train_loss:.6f} | val={val_loss:.6f} | lr={lr_now:.2e}")
+
+            if experiment is not None:
+                experiment.log_metric("train_loss", train_loss, step=epoch)
+                experiment.log_metric("val_loss", val_loss, step=epoch)
+                experiment.log_metric("lr", lr_now, step=epoch)
+
+            # save best
+            if val_loss < best_val:
+                best_val = val_loss
+                torch.save(model.state_dict(), best_model_path)
+
+            # early stopping check
+            if early is not None:
+                should_stop = early.step(val_loss)
+                if should_stop:
+                    print(f"[EARLY STOP] epoch={epoch} best_val={early.best:.6f} patience={args.patience}")
+                    break
+
         else:
-            count+=1
-            if count>=2*patience+1:
-                stop=True
+            print(f"Epoch {epoch:03d} | train={train_loss:.6f} | val=SKIP | lr={lr_now:.2e}")
+            if experiment is not None:
+                experiment.log_metric("train_loss", train_loss, step=epoch)
+                experiment.log_metric("lr", lr_now, step=epoch)
 
-        return stop, count
+        # always save current
+        torch.save(model.state_dict(), current_model_path)
 
-    # Loop over epochs
-    best_loss_on_test = np.Infinity
-    loss_on_test = {}
-    count = 0
-    total_count = 0
-    
-   
-    '''
-    Start training
-    '''
-    for epoch in range(max_epochs):
+    print(f"Done. Best val: {best_val:.6f}")
+    print(f"Saved best:    {best_model_path}")
+    print(f"Saved current: {current_model_path}")
 
-        ''' 
-        Training
-        '''
-
-        for param_group in optimizer.param_groups:
-            current_lr = param_group['lr']
-        
-        model = model.train()
-        for sub in range(0, len(folders_training), interval):
-            sub_list = folders_training[sub:sub+min(interval, len(folders_training))]
-            training_set = Dataset(sub_list, batch_size, set_size)
-            training_set.shuffle_list()
-            training_generator = data.DataLoader(training_set, **params, collate_fn=my_collate)
-            
-            print(path_name)
-            i=0
-            for (frame1_input, frame2_input, frame1, frame2) in training_generator:
-                
-                # Transfer to GPU
-                frame1_input = frame1_input.float().cuda()
-                frame2_input = frame2_input.float().cuda()
-                frame1 = frame1.float().cuda()
-                frame2 = frame2.float().cuda()
-                
-                
-                [frame1_input, frame2_input] = edge_profile([frame1_input, frame2_input], False, 3, 1)
-                
-                
-                
-                b, c, h, w = frame1_input.size()
-        
-                # Model computations
-                # zero the parameter gradients
-                optimizer.zero_grad()
-                
-                # forward + backward + optimize
-                outputs = model(frame1_input, frame2_input, frame1)
-                
-    
-                outputs = F.interpolate(outputs, (h, w), mode='bilinear')
-                
-                loss['mae'] = F.smooth_l1_loss(outputs, frame2, reduction='mean')
-                
-                
-                total = 0.0
-                for key in loss:
-                    if key!='total':
-                        total+=loss[key]*loss_weights[key]
-                loss.update({'total':total})
-                
-
-                i+=1
-                if epoch==0 and sub==0 and i<100:
-                    for key in loss:
-                        print (key, ':', ' ', '%.3f'%(loss[key].item()*loss_weights[key]), end='    ')
-                    print('learning rate: %.4e' % current_lr)
-                loss['total'].backward()
-                optimizer.step()
-                
-                
-
-                
-                for key in loss:
-                    running_metrics[key] += loss[key].item()*loss_weights[key]
-                    total_metrics[key] += loss[key].item()*loss_weights[key]
-                total_count += 1
-                
-                
-                # print statistics
-                save_freq=100
-                if i % save_freq == 99:    # print every 100 mini-batches
-                    print('[%d, %2d, %5d]' %
-                          (epoch + 1, sub, i + 1), end=' ')
-                    for key in metrics_name:
-                        print (key, ': ', '%.3f'%(running_metrics[key]/i), end='    ')
-                    print('learning rate: %.4e' % current_lr)
-
-                    # write to log
-                    writer.add_scalars('training', running_metrics, count)
-                    writer.add_scalar('training/lr', current_lr, count)
-                    torch.save(model.state_dict(), saved_model)
+    if experiment is not None:
+        experiment.end()
 
 
-            if i==0:
-                continue
-                    
-            for key in running_metrics:
-                running_metrics[key]/=i
-            print('[%d, %2d, %5d]' %
-                  (epoch + 1, sub, i + 1), end=' ')
-            for key in metrics_name:
-                print (key, ': ', '%.3f'%(running_metrics[key]), end='    ')
-            print('learning rate: %.4e' % current_lr)
-            
-
-                    
-            for key in running_metrics:
-                running_metrics[key] = 0.0
-        
-        # write to log
-        for key in total_metrics:
-            total_metrics[key] /= total_count
-
-        
-        for key in total_metrics:
-            total_metrics[key] = 0.0
-        total_count = 0
-        torch.save(model.state_dict(), current_model)
-        
-        
-        
+if __name__ == "__main__":
+    main()

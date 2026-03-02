@@ -1,0 +1,44 @@
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[Setting B] train_sources=['SourceA', 'SourceD'] train_pool=110
+[Setting B] test_sources=['SourceB', 'SourceC'] test_pool=151
+[train/val] train=99 val=11
+Loading dataset:   0%|          | 0/9 [00:00<?, ?it/s]Loading dataset:  11%|█         | 1/9 [00:01<00:11,  1.49s/it]Loading dataset:  22%|██▏       | 2/9 [00:09<00:38,  5.47s/it]Loading dataset:  78%|███████▊  | 7/9 [00:12<00:02,  1.45s/it]Loading dataset: 100%|██████████| 9/9 [00:12<00:00,  1.36s/it]
+Loading dataset:   0%|          | 0/1 [00:00<?, ?it/s]Loading dataset: 100%|██████████| 1/1 [00:02<00:00,  2.09s/it]Loading dataset: 100%|██████████| 1/1 [00:02<00:00,  2.09s/it]
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch, sklearn.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/130199c95d0a443bb514bc05264c63e1
+
+torch.Size([16, 48, 256, 256])
+torch.Size([16, 48, 256, 256])
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : Liver_Only_B_Run_Final
+COMET INFO:     url                   : https://www.comet.com/rakibulhaq56/sli2vol/130199c95d0a443bb514bc05264c63e1
+COMET INFO:   Metrics:
+COMET INFO:     lr         : 0.0001
+COMET INFO:     train_loss : 0.0
+COMET INFO:     val_loss   : 0.004475508816540241
+COMET INFO:   Others:
+COMET INFO:     Name : Liver_Only_B_Run_Final
+COMET INFO:   Uploads:
+COMET INFO:     conda-environment-definition : 1
+COMET INFO:     conda-info                   : 1
+COMET INFO:     conda-specification          : 1
+COMET INFO:     environment details          : 1
+COMET INFO:     filename                     : 1
+COMET INFO:     git metadata                 : 1
+COMET INFO:     git-patch (uncompressed)     : 1 (35.42 KB)
+COMET INFO:     installed packages           : 1
+COMET INFO:     os packages                  : 1
+COMET INFO:     source_code                  : 1 (11.19 KB)
+COMET INFO: 
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch, sklearn.
+Epoch 001 | train=0.000000 | val=0.004476 | lr=1.00e-04
+Done. Best val: 0.004476
+Saved best:    /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/Liver/Liver_B_Run_Final/best_model.pth
+Saved current: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/Liver/Liver_B_Run_Final/current_model.pth

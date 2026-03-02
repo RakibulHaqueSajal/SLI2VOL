@@ -1,0 +1,914 @@
+[collect|SourceA] total=80 labeled=80 unlabeled=0
+[collect|SourceB] total=281 labeled=281 unlabeled=0
+[split|SourceA] total=80 train=72 test=8
+[split|SourceB] total=281 train=253 test=28
+[Setting A] train_pool=325 (labeled_train=325 + unlabeled=0)
+[Setting A] test_pool=36 (labeled_test only)
+[train/val] train=292 val=33
+Loading dataset:   0%|          | 0/29 [00:00<?, ?it/s]Loading dataset:   3%|▎         | 1/29 [00:00<00:27,  1.03it/s]Loading dataset:  17%|█▋        | 5/29 [00:01<00:05,  4.54it/s]Loading dataset:  24%|██▍       | 7/29 [00:01<00:03,  5.92it/s]Loading dataset:  28%|██▊       | 8/29 [00:02<00:06,  3.11it/s]Loading dataset:  34%|███▍      | 10/29 [00:02<00:05,  3.64it/s]Loading dataset:  48%|████▊     | 14/29 [00:03<00:02,  5.43it/s]Loading dataset:  62%|██████▏   | 18/29 [00:03<00:01,  7.50it/s]Loading dataset:  66%|██████▌   | 19/29 [00:03<00:01,  6.73it/s]Loading dataset:  69%|██████▉   | 20/29 [00:04<00:01,  5.43it/s]Loading dataset:  83%|████████▎ | 24/29 [00:04<00:00,  9.11it/s]Loading dataset:  90%|████████▉ | 26/29 [00:05<00:00,  5.15it/s]Loading dataset: 100%|██████████| 29/29 [00:05<00:00,  5.71it/s]
+Loading dataset:   0%|          | 0/3 [00:00<?, ?it/s]Loading dataset:  33%|███▎      | 1/3 [00:01<00:02,  1.16s/it]Loading dataset: 100%|██████████| 3/3 [00:01<00:00,  2.26it/s]Loading dataset: 100%|██████████| 3/3 [00:01<00:00,  1.94it/s]
+[test_loader][0] SourceB_pancreas_358 | mean_dice=0.6296 | mean_sd(px)=8.8077 | mean_hd(px)=47.4366
+[test_loader][1] SourceB_pancreas_046 | mean_dice=0.4689 | mean_sd(px)=5.0341 | mean_hd(px)=16.6974
+[test_loader][2] SourceA_pancreas_0029 | mean_dice=0.0395 | mean_sd(px)=37.8062 | mean_hd(px)=84.8760
+[test_loader][3] SourceB_pancreas_285 | mean_dice=0.5419 | mean_sd(px)=4.2752 | mean_hd(px)=18.5283
+[test_loader][4] SourceA_pancreas_0016 | mean_dice=0.1252 | mean_sd(px)=30.5407 | mean_hd(px)=75.7861
+[test_loader][5] SourceB_pancreas_127 | mean_dice=0.6605 | mean_sd(px)=5.9271 | mean_hd(px)=26.4557
+[test_loader][6] SourceB_pancreas_410 | mean_dice=0.6055 | mean_sd(px)=11.9725 | mean_hd(px)=69.4999
+[test_loader][7] SourceB_pancreas_091 | mean_dice=0.3495 | mean_sd(px)=18.6902 | mean_hd(px)=36.6216
+[test_loader][8] SourceB_pancreas_149 | mean_dice=0.2448 | mean_sd(px)=8.8977 | mean_hd(px)=33.1763
+[test_loader][9] SourceB_pancreas_213 | mean_dice=0.2107 | mean_sd(px)=12.2619 | mean_hd(px)=30.7576
+[test_loader][10] SourceB_pancreas_235 | mean_dice=0.5000 | mean_sd(px)=7.4101 | mean_hd(px)=24.3710
+[test_loader][11] SourceB_pancreas_323 | mean_dice=0.1864 | mean_sd(px)=5.2454 | mean_hd(px)=17.2410
+[test_loader][12] SourceA_pancreas_0030 | mean_dice=0.1605 | mean_sd(px)=22.8594 | mean_hd(px)=74.5801
+[test_loader][13] SourceB_pancreas_093 | mean_dice=0.5448 | mean_sd(px)=6.7741 | mean_hd(px)=27.0143
+[test_loader][14] SourceB_pancreas_172 | mean_dice=0.2464 | mean_sd(px)=16.7370 | mean_hd(px)=46.0889
+[test_loader][15] SourceB_pancreas_311 | mean_dice=0.3582 | mean_sd(px)=6.5098 | mean_hd(px)=22.6170
+[test_loader][16] SourceB_pancreas_077 | mean_dice=0.2367 | mean_sd(px)=13.1613 | mean_hd(px)=35.7662
+[test_loader][17] SourceB_pancreas_083 | mean_dice=0.2202 | mean_sd(px)=5.2548 | mean_hd(px)=19.3222
+[test_loader][18] SourceA_pancreas_0009 | mean_dice=0.0709 | mean_sd(px)=34.7038 | mean_hd(px)=65.0919
+[test_loader][19] SourceB_pancreas_267 | mean_dice=0.2824 | mean_sd(px)=19.1792 | mean_hd(px)=52.4304
+[test_loader][20] SourceA_pancreas_0074 | mean_dice=0.0903 | mean_sd(px)=43.9748 | mean_hd(px)=70.5282
+[test_loader][21] SourceB_pancreas_419 | mean_dice=0.2714 | mean_sd(px)=20.5144 | mean_hd(px)=43.5016
+[test_loader][22] SourceB_pancreas_029 | mean_dice=0.4076 | mean_sd(px)=11.6147 | mean_hd(px)=38.8895
+[test_loader][23] SourceB_pancreas_357 | mean_dice=0.2894 | mean_sd(px)=48.5531 | mean_hd(px)=92.8700
+[test_loader][24] SourceA_pancreas_0001 | mean_dice=0.1370 | mean_sd(px)=10.1490 | mean_hd(px)=41.8980
+[test_loader][25] SourceB_pancreas_356 | mean_dice=0.4661 | mean_sd(px)=13.5035 | mean_hd(px)=53.0383
+[test_loader][26] SourceB_pancreas_191 | mean_dice=0.2499 | mean_sd(px)=14.6542 | mean_hd(px)=38.5669
+[test_loader][27] SourceB_pancreas_360 | mean_dice=0.2283 | mean_sd(px)=8.8679 | mean_hd(px)=30.3968
+[test_loader][28] SourceB_pancreas_362 | mean_dice=0.2515 | mean_sd(px)=12.7613 | mean_hd(px)=43.6323
+[test_loader][29] SourceB_pancreas_259 | mean_dice=0.7285 | mean_sd(px)=4.9010 | mean_hd(px)=30.0613
+[test_loader][30] SourceB_pancreas_293 | mean_dice=0.3172 | mean_sd(px)=7.7633 | mean_hd(px)=27.5707
+[test_loader][31] SourceB_pancreas_370 | mean_dice=0.5881 | mean_sd(px)=16.0491 | mean_hd(px)=50.0712
+[test_loader][32] SourceA_pancreas_0010 | mean_dice=0.1521 | mean_sd(px)=19.1400 | mean_hd(px)=40.7155
+[test_loader][33] SourceB_pancreas_006 | mean_dice=0.3651 | mean_sd(px)=10.0434 | mean_hd(px)=37.3448
+[test_loader][34] SourceB_pancreas_078 | mean_dice=0.2145 | mean_sd(px)=9.5821 | mean_hd(px)=35.4731
+[test_loader][35] SourceA_pancreas_0065 | mean_dice=0.0833 | mean_sd(px)=66.6415 | mean_hd(px)=93.2973
+
+Done. Outputs at: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/Results/Pancreas-A
+
+[collect|SourceA] total=80 labeled=80 unlabeled=0
+[collect|SourceB] total=281 labeled=281 unlabeled=0
+[Setting B] train_sources=['SourceA'] train_pool=80
+[Setting B] test_sources=['SourceB'] test_pool=281
+[train/val] train=72 val=8
+Loading dataset:   0%|          | 0/7 [00:00<?, ?it/s]Loading dataset:  14%|█▍        | 1/7 [00:01<00:08,  1.44s/it]Loading dataset:  71%|███████▏  | 5/7 [00:02<00:00,  2.67it/s]Loading dataset:  86%|████████▌ | 6/7 [00:02<00:00,  3.19it/s]Loading dataset: 100%|██████████| 7/7 [00:02<00:00,  3.03it/s]
+[test_loader][0] SourceB_pancreas_001 | mean_dice=0.2808 | mean_sd(px)=11.9328 | mean_hd(px)=35.9082
+[test_loader][1] SourceB_pancreas_004 | mean_dice=0.5043 | mean_sd(px)=15.8437 | mean_hd(px)=62.5332
+[test_loader][2] SourceB_pancreas_005 | mean_dice=0.5704 | mean_sd(px)=8.0361 | mean_hd(px)=33.2236
+[test_loader][3] SourceB_pancreas_006 | mean_dice=0.4973 | mean_sd(px)=8.1987 | mean_hd(px)=45.0618
+[test_loader][4] SourceB_pancreas_010 | mean_dice=0.6684 | mean_sd(px)=5.3252 | mean_hd(px)=20.4480
+[test_loader][5] SourceB_pancreas_012 | mean_dice=0.5894 | mean_sd(px)=9.6700 | mean_hd(px)=55.3302
+[test_loader][6] SourceB_pancreas_015 | mean_dice=0.5195 | mean_sd(px)=7.6896 | mean_hd(px)=30.8817
+[test_loader][7] SourceB_pancreas_016 | mean_dice=0.6132 | mean_sd(px)=7.6312 | mean_hd(px)=37.9824
+[test_loader][8] SourceB_pancreas_018 | mean_dice=0.3859 | mean_sd(px)=16.4038 | mean_hd(px)=37.7984
+[test_loader][9] SourceB_pancreas_019 | mean_dice=0.7014 | mean_sd(px)=4.8461 | mean_hd(px)=22.8016
+[test_loader][10] SourceB_pancreas_021 | mean_dice=0.3246 | mean_sd(px)=23.9638 | mean_hd(px)=70.3166
+[test_loader][11] SourceB_pancreas_024 | mean_dice=0.6521 | mean_sd(px)=6.4259 | mean_hd(px)=26.9350
+[test_loader][12] SourceB_pancreas_025 | mean_dice=0.5996 | mean_sd(px)=10.5406 | mean_hd(px)=58.9338
+[test_loader][13] SourceB_pancreas_028 | mean_dice=0.4790 | mean_sd(px)=13.3778 | mean_hd(px)=44.1938
+[test_loader][14] SourceB_pancreas_029 | mean_dice=0.6255 | mean_sd(px)=7.9902 | mean_hd(px)=48.9297
+[test_loader][15] SourceB_pancreas_032 | mean_dice=0.6394 | mean_sd(px)=7.8721 | mean_hd(px)=56.6260
+[test_loader][16] SourceB_pancreas_035 | mean_dice=0.5946 | mean_sd(px)=8.3574 | mean_hd(px)=45.3253
+[test_loader][17] SourceB_pancreas_037 | mean_dice=0.4611 | mean_sd(px)=13.2531 | mean_hd(px)=50.6149
+[test_loader][18] SourceB_pancreas_040 | mean_dice=0.5613 | mean_sd(px)=15.0925 | mean_hd(px)=92.0039
+[test_loader][19] SourceB_pancreas_041 | mean_dice=0.2611 | mean_sd(px)=11.8177 | mean_hd(px)=39.8061
+[test_loader][20] SourceB_pancreas_042 | mean_dice=0.3287 | mean_sd(px)=33.0949 | mean_hd(px)=82.1217
+[test_loader][21] SourceB_pancreas_043 | mean_dice=0.3572 | mean_sd(px)=29.9009 | mean_hd(px)=73.1452
+[test_loader][22] SourceB_pancreas_045 | mean_dice=0.4692 | mean_sd(px)=8.7858 | mean_hd(px)=36.6771
+[test_loader][23] SourceB_pancreas_046 | mean_dice=0.5839 | mean_sd(px)=9.3826 | mean_hd(px)=37.7200
+[test_loader][24] SourceB_pancreas_048 | mean_dice=0.6604 | mean_sd(px)=7.9534 | mean_hd(px)=51.8066
+[test_loader][25] SourceB_pancreas_049 | mean_dice=0.2751 | mean_sd(px)=17.9311 | mean_hd(px)=66.2759
+[test_loader][26] SourceB_pancreas_050 | mean_dice=0.3085 | mean_sd(px)=14.2681 | mean_hd(px)=53.6633
+[test_loader][27] SourceB_pancreas_051 | mean_dice=0.3129 | mean_sd(px)=11.9140 | mean_hd(px)=37.2929
+[test_loader][28] SourceB_pancreas_052 | mean_dice=0.5264 | mean_sd(px)=19.2818 | mean_hd(px)=100.8714
+[test_loader][29] SourceB_pancreas_055 | mean_dice=0.2318 | mean_sd(px)=12.8755 | mean_hd(px)=34.1846
+[test_loader][30] SourceB_pancreas_056 | mean_dice=0.2744 | mean_sd(px)=17.8830 | mean_hd(px)=53.3667
+[test_loader][31] SourceB_pancreas_058 | mean_dice=0.4145 | mean_sd(px)=13.1893 | mean_hd(px)=45.7422
+[test_loader][32] SourceB_pancreas_061 | mean_dice=0.6986 | mean_sd(px)=6.8956 | mean_hd(px)=59.1064
+[test_loader][33] SourceB_pancreas_064 | mean_dice=0.5461 | mean_sd(px)=8.0036 | mean_hd(px)=45.5927
+[test_loader][34] SourceB_pancreas_066 | mean_dice=0.2667 | mean_sd(px)=31.8708 | mean_hd(px)=68.2238
+[test_loader][35] SourceB_pancreas_067 | mean_dice=0.6484 | mean_sd(px)=8.2714 | mean_hd(px)=46.0323
+[test_loader][36] SourceB_pancreas_069 | mean_dice=0.4512 | mean_sd(px)=12.0399 | mean_hd(px)=75.1383
+[test_loader][37] SourceB_pancreas_070 | mean_dice=0.2455 | mean_sd(px)=11.8057 | mean_hd(px)=40.0190
+[test_loader][38] SourceB_pancreas_071 | mean_dice=0.6854 | mean_sd(px)=6.6802 | mean_hd(px)=35.8276
+[test_loader][39] SourceB_pancreas_074 | mean_dice=0.2986 | mean_sd(px)=24.5458 | mean_hd(px)=48.3015
+[test_loader][40] SourceB_pancreas_075 | mean_dice=0.5893 | mean_sd(px)=8.2226 | mean_hd(px)=47.6898
+[test_loader][41] SourceB_pancreas_077 | mean_dice=0.4523 | mean_sd(px)=10.2704 | mean_hd(px)=33.2502
+[test_loader][42] SourceB_pancreas_078 | mean_dice=0.3779 | mean_sd(px)=11.9524 | mean_hd(px)=39.5616
+[test_loader][43] SourceB_pancreas_080 | mean_dice=0.4954 | mean_sd(px)=9.3484 | mean_hd(px)=39.1306
+[test_loader][44] SourceB_pancreas_081 | mean_dice=0.2467 | mean_sd(px)=13.4068 | mean_hd(px)=31.1512
+[test_loader][45] SourceB_pancreas_083 | mean_dice=0.2579 | mean_sd(px)=18.1522 | mean_hd(px)=44.3949
+[test_loader][46] SourceB_pancreas_084 | mean_dice=0.3480 | mean_sd(px)=23.4884 | mean_hd(px)=68.4888
+[test_loader][47] SourceB_pancreas_086 | mean_dice=0.6815 | mean_sd(px)=5.8436 | mean_hd(px)=23.2852
+[test_loader][48] SourceB_pancreas_087 | mean_dice=0.2008 | mean_sd(px)=35.1117 | mean_hd(px)=103.5163
+[test_loader][49] SourceB_pancreas_088 | mean_dice=0.5110 | mean_sd(px)=12.6411 | mean_hd(px)=50.7992
+[test_loader][50] SourceB_pancreas_089 | mean_dice=0.3568 | mean_sd(px)=8.0495 | mean_hd(px)=27.7730
+[test_loader][51] SourceB_pancreas_091 | mean_dice=0.4272 | mean_sd(px)=12.1467 | mean_hd(px)=47.8883
+[test_loader][52] SourceB_pancreas_092 | mean_dice=0.6014 | mean_sd(px)=7.2027 | mean_hd(px)=33.1588
+[test_loader][53] SourceB_pancreas_093 | mean_dice=0.5993 | mean_sd(px)=8.6658 | mean_hd(px)=70.6325
+[test_loader][54] SourceB_pancreas_094 | mean_dice=0.3916 | mean_sd(px)=30.0776 | mean_hd(px)=130.7392
+[test_loader][55] SourceB_pancreas_095 | mean_dice=0.6575 | mean_sd(px)=8.7101 | mean_hd(px)=51.0898
+[test_loader][56] SourceB_pancreas_096 | mean_dice=0.5567 | mean_sd(px)=14.1590 | mean_hd(px)=72.3893
+[test_loader][57] SourceB_pancreas_098 | mean_dice=0.2976 | mean_sd(px)=9.2620 | mean_hd(px)=29.3547
+[test_loader][58] SourceB_pancreas_099 | mean_dice=0.6114 | mean_sd(px)=7.7369 | mean_hd(px)=45.7658
+[test_loader][59] SourceB_pancreas_100 | mean_dice=0.3610 | mean_sd(px)=24.3278 | mean_hd(px)=93.8883
+[test_loader][60] SourceB_pancreas_101 | mean_dice=0.2726 | mean_sd(px)=16.0960 | mean_hd(px)=50.2009
+[test_loader][61] SourceB_pancreas_102 | mean_dice=0.5640 | mean_sd(px)=13.2209 | mean_hd(px)=75.6499
+[test_loader][62] SourceB_pancreas_103 | mean_dice=0.2750 | mean_sd(px)=15.9635 | mean_hd(px)=40.0349
+[test_loader][63] SourceB_pancreas_104 | mean_dice=0.3880 | mean_sd(px)=11.2343 | mean_hd(px)=46.0154
+[test_loader][64] SourceB_pancreas_105 | mean_dice=0.4858 | mean_sd(px)=14.2275 | mean_hd(px)=89.4388
+[test_loader][65] SourceB_pancreas_106 | mean_dice=0.6709 | mean_sd(px)=10.1864 | mean_hd(px)=59.1522
+[test_loader][66] SourceB_pancreas_107 | mean_dice=0.6415 | mean_sd(px)=5.4399 | mean_hd(px)=24.7979
+[test_loader][67] SourceB_pancreas_109 | mean_dice=0.6630 | mean_sd(px)=8.4215 | mean_hd(px)=42.3858
+[test_loader][68] SourceB_pancreas_110 | mean_dice=0.5909 | mean_sd(px)=8.9868 | mean_hd(px)=50.2066
+[test_loader][69] SourceB_pancreas_111 | mean_dice=0.3784 | mean_sd(px)=15.1444 | mean_hd(px)=63.9815
+[test_loader][70] SourceB_pancreas_113 | mean_dice=0.6206 | mean_sd(px)=6.6954 | mean_hd(px)=37.5430
+[test_loader][71] SourceB_pancreas_114 | mean_dice=0.1168 | mean_sd(px)=20.6678 | mean_hd(px)=45.4857
+[test_loader][72] SourceB_pancreas_117 | mean_dice=0.4883 | mean_sd(px)=13.7325 | mean_hd(px)=74.5719
+[test_loader][73] SourceB_pancreas_119 | mean_dice=0.6522 | mean_sd(px)=6.6815 | mean_hd(px)=34.5141
+[test_loader][74] SourceB_pancreas_120 | mean_dice=0.4610 | mean_sd(px)=9.0937 | mean_hd(px)=39.9887
+[test_loader][75] SourceB_pancreas_122 | mean_dice=0.2573 | mean_sd(px)=10.4175 | mean_hd(px)=32.8474
+[test_loader][76] SourceB_pancreas_124 | mean_dice=0.5402 | mean_sd(px)=10.6300 | mean_hd(px)=60.7127
+[test_loader][77] SourceB_pancreas_125 | mean_dice=0.6247 | mean_sd(px)=10.1973 | mean_hd(px)=72.1522
+[test_loader][78] SourceB_pancreas_126 | mean_dice=0.4565 | mean_sd(px)=17.4671 | mean_hd(px)=66.4252
+[test_loader][79] SourceB_pancreas_127 | mean_dice=0.7071 | mean_sd(px)=7.4373 | mean_hd(px)=47.2253
+[test_loader][80] SourceB_pancreas_129 | mean_dice=0.5120 | mean_sd(px)=13.5814 | mean_hd(px)=64.7186
+[test_loader][81] SourceB_pancreas_130 | mean_dice=0.3070 | mean_sd(px)=31.7681 | mean_hd(px)=78.0171
+[test_loader][82] SourceB_pancreas_131 | mean_dice=0.6938 | mean_sd(px)=11.1973 | mean_hd(px)=67.9264
+[test_loader][83] SourceB_pancreas_135 | mean_dice=0.2645 | mean_sd(px)=32.3326 | mean_hd(px)=100.0028
+[test_loader][84] SourceB_pancreas_137 | mean_dice=0.3685 | mean_sd(px)=9.5132 | mean_hd(px)=36.1763
+[test_loader][85] SourceB_pancreas_138 | mean_dice=0.2561 | mean_sd(px)=13.6163 | mean_hd(px)=41.9380
+[test_loader][86] SourceB_pancreas_140 | mean_dice=0.3535 | mean_sd(px)=32.0236 | mean_hd(px)=62.1295
+[test_loader][87] SourceB_pancreas_145 | mean_dice=0.5432 | mean_sd(px)=6.3525 | mean_hd(px)=29.7004
+[test_loader][88] SourceB_pancreas_147 | mean_dice=0.6164 | mean_sd(px)=9.1817 | mean_hd(px)=54.8683
+[test_loader][89] SourceB_pancreas_148 | mean_dice=0.4397 | mean_sd(px)=12.9706 | mean_hd(px)=64.0486
+[test_loader][90] SourceB_pancreas_149 | mean_dice=0.2940 | mean_sd(px)=12.5837 | mean_hd(px)=55.8830
+[test_loader][91] SourceB_pancreas_155 | mean_dice=0.6510 | mean_sd(px)=5.9906 | mean_hd(px)=28.6670
+[test_loader][92] SourceB_pancreas_157 | mean_dice=0.5986 | mean_sd(px)=15.5178 | mean_hd(px)=86.4548
+[test_loader][93] SourceB_pancreas_158 | mean_dice=0.3967 | mean_sd(px)=20.0252 | mean_hd(px)=87.3481
+[test_loader][94] SourceB_pancreas_159 | mean_dice=0.4651 | mean_sd(px)=9.9458 | mean_hd(px)=33.8661
+[test_loader][95] SourceB_pancreas_160 | mean_dice=0.2560 | mean_sd(px)=13.6870 | mean_hd(px)=37.6023
+[test_loader][96] SourceB_pancreas_165 | mean_dice=0.3545 | mean_sd(px)=7.6786 | mean_hd(px)=23.7587
+[test_loader][97] SourceB_pancreas_166 | mean_dice=0.7004 | mean_sd(px)=5.5933 | mean_hd(px)=35.7994
+[test_loader][98] SourceB_pancreas_167 | mean_dice=0.2186 | mean_sd(px)=16.1189 | mean_hd(px)=48.6354
+[test_loader][99] SourceB_pancreas_169 | mean_dice=0.3139 | mean_sd(px)=16.2428 | mean_hd(px)=30.3554
+[test_loader][100] SourceB_pancreas_170 | mean_dice=0.6230 | mean_sd(px)=4.8514 | mean_hd(px)=24.1194
+[test_loader][101] SourceB_pancreas_172 | mean_dice=0.4582 | mean_sd(px)=23.1460 | mean_hd(px)=48.2080
+[test_loader][102] SourceB_pancreas_173 | mean_dice=0.2348 | mean_sd(px)=32.2153 | mean_hd(px)=74.8002
+[test_loader][103] SourceB_pancreas_175 | mean_dice=0.2476 | mean_sd(px)=22.3704 | mean_hd(px)=61.4895
+[test_loader][104] SourceB_pancreas_178 | mean_dice=0.6557 | mean_sd(px)=6.5018 | mean_hd(px)=35.6346
+[test_loader][105] SourceB_pancreas_179 | mean_dice=0.7469 | mean_sd(px)=3.8647 | mean_hd(px)=19.3597
+[test_loader][106] SourceB_pancreas_180 | mean_dice=0.3725 | mean_sd(px)=9.9032 | mean_hd(px)=32.9344
+[test_loader][107] SourceB_pancreas_181 | mean_dice=0.5352 | mean_sd(px)=8.9788 | mean_hd(px)=42.2679
+[test_loader][108] SourceB_pancreas_182 | mean_dice=0.3530 | mean_sd(px)=13.4965 | mean_hd(px)=65.0907
+[test_loader][109] SourceB_pancreas_183 | mean_dice=0.3123 | mean_sd(px)=8.2048 | mean_hd(px)=28.0164
+[test_loader][110] SourceB_pancreas_186 | mean_dice=0.2301 | mean_sd(px)=69.4968 | mean_hd(px)=116.4606
+[test_loader][111] SourceB_pancreas_187 | mean_dice=0.3426 | mean_sd(px)=14.3105 | mean_hd(px)=71.5226
+[test_loader][112] SourceB_pancreas_191 | mean_dice=0.2760 | mean_sd(px)=18.1006 | mean_hd(px)=53.4987
+[test_loader][113] SourceB_pancreas_193 | mean_dice=0.6107 | mean_sd(px)=9.7978 | mean_hd(px)=36.2526
+[test_loader][114] SourceB_pancreas_194 | mean_dice=0.2664 | mean_sd(px)=34.3509 | mean_hd(px)=107.2769
+[test_loader][115] SourceB_pancreas_196 | mean_dice=0.6496 | mean_sd(px)=8.3073 | mean_hd(px)=53.5336
+[test_loader][116] SourceB_pancreas_197 | mean_dice=0.4176 | mean_sd(px)=8.2125 | mean_hd(px)=48.1481
+[test_loader][117] SourceB_pancreas_198 | mean_dice=0.6631 | mean_sd(px)=8.2144 | mean_hd(px)=45.6622
+[test_loader][118] SourceB_pancreas_199 | mean_dice=0.7083 | mean_sd(px)=4.4540 | mean_hd(px)=27.1674
+[test_loader][119] SourceB_pancreas_200 | mean_dice=0.3331 | mean_sd(px)=12.3691 | mean_hd(px)=42.5320
+[test_loader][120] SourceB_pancreas_201 | mean_dice=0.1602 | mean_sd(px)=34.4953 | mean_hd(px)=65.8113
+[test_loader][121] SourceB_pancreas_203 | mean_dice=0.5826 | mean_sd(px)=11.0891 | mean_hd(px)=51.3110
+[test_loader][122] SourceB_pancreas_204 | mean_dice=0.2476 | mean_sd(px)=20.6956 | mean_hd(px)=47.8770
+[test_loader][123] SourceB_pancreas_207 | mean_dice=0.3071 | mean_sd(px)=34.8865 | mean_hd(px)=106.2306
+[test_loader][124] SourceB_pancreas_209 | mean_dice=0.3150 | mean_sd(px)=14.6659 | mean_hd(px)=47.6159
+[test_loader][125] SourceB_pancreas_210 | mean_dice=0.6596 | mean_sd(px)=4.5147 | mean_hd(px)=20.6534
+[test_loader][126] SourceB_pancreas_211 | mean_dice=0.5444 | mean_sd(px)=8.1976 | mean_hd(px)=42.2939
+[test_loader][127] SourceB_pancreas_212 | mean_dice=0.5858 | mean_sd(px)=9.2655 | mean_hd(px)=47.6126
+[test_loader][128] SourceB_pancreas_213 | mean_dice=0.2504 | mean_sd(px)=8.5581 | mean_hd(px)=33.9419
+[test_loader][129] SourceB_pancreas_214 | mean_dice=0.6542 | mean_sd(px)=5.5251 | mean_hd(px)=24.7337
+[test_loader][130] SourceB_pancreas_215 | mean_dice=0.6601 | mean_sd(px)=7.3429 | mean_hd(px)=34.0272
+[test_loader][131] SourceB_pancreas_217 | mean_dice=0.5198 | mean_sd(px)=13.1118 | mean_hd(px)=57.3150
+[test_loader][132] SourceB_pancreas_218 | mean_dice=0.2485 | mean_sd(px)=24.2207 | mean_hd(px)=62.1511
+[test_loader][133] SourceB_pancreas_219 | mean_dice=0.7966 | mean_sd(px)=3.7510 | mean_hd(px)=22.7979
+[test_loader][134] SourceB_pancreas_222 | mean_dice=0.2633 | mean_sd(px)=12.4968 | mean_hd(px)=34.8422
+[test_loader][135] SourceB_pancreas_224 | mean_dice=0.3290 | mean_sd(px)=14.7957 | mean_hd(px)=45.5491
+[test_loader][136] SourceB_pancreas_225 | mean_dice=0.6453 | mean_sd(px)=10.1530 | mean_hd(px)=57.3890
+[test_loader][137] SourceB_pancreas_226 | mean_dice=0.1926 | mean_sd(px)=20.4009 | mean_hd(px)=40.4359
+[test_loader][138] SourceB_pancreas_227 | mean_dice=0.4074 | mean_sd(px)=5.3432 | mean_hd(px)=16.8223
+[test_loader][139] SourceB_pancreas_228 | mean_dice=0.3913 | mean_sd(px)=15.4858 | mean_hd(px)=68.0351
+[test_loader][140] SourceB_pancreas_229 | mean_dice=0.3501 | mean_sd(px)=5.3345 | mean_hd(px)=21.3805
+[test_loader][141] SourceB_pancreas_230 | mean_dice=0.1814 | mean_sd(px)=12.0966 | mean_hd(px)=30.5965
+[test_loader][142] SourceB_pancreas_231 | mean_dice=0.5329 | mean_sd(px)=8.2836 | mean_hd(px)=42.8106
+[test_loader][143] SourceB_pancreas_234 | mean_dice=0.5901 | mean_sd(px)=11.4803 | mean_hd(px)=60.3767
+[test_loader][144] SourceB_pancreas_235 | mean_dice=0.6004 | mean_sd(px)=7.8353 | mean_hd(px)=42.5546
+[test_loader][145] SourceB_pancreas_236 | mean_dice=0.4556 | mean_sd(px)=15.8605 | mean_hd(px)=36.8174
+[test_loader][146] SourceB_pancreas_239 | mean_dice=0.6796 | mean_sd(px)=6.3095 | mean_hd(px)=45.7570
+[test_loader][147] SourceB_pancreas_241 | mean_dice=0.3651 | mean_sd(px)=7.1017 | mean_hd(px)=30.6900
+[test_loader][148] SourceB_pancreas_242 | mean_dice=0.6742 | mean_sd(px)=5.3412 | mean_hd(px)=33.0024
+[test_loader][149] SourceB_pancreas_243 | mean_dice=0.2701 | mean_sd(px)=21.9234 | mean_hd(px)=114.9393
+[test_loader][150] SourceB_pancreas_244 | mean_dice=0.3977 | mean_sd(px)=25.0259 | mean_hd(px)=41.3776
+[test_loader][151] SourceB_pancreas_246 | mean_dice=0.5069 | mean_sd(px)=10.1016 | mean_hd(px)=53.2859
+[test_loader][152] SourceB_pancreas_247 | mean_dice=0.3121 | mean_sd(px)=25.9309 | mean_hd(px)=90.1018
+[test_loader][153] SourceB_pancreas_249 | mean_dice=0.4508 | mean_sd(px)=11.1914 | mean_hd(px)=52.9767
+[test_loader][154] SourceB_pancreas_253 | mean_dice=0.2048 | mean_sd(px)=23.6706 | mean_hd(px)=49.4235
+[test_loader][155] SourceB_pancreas_254 | mean_dice=0.6368 | mean_sd(px)=3.7259 | mean_hd(px)=17.3444
+[test_loader][156] SourceB_pancreas_255 | mean_dice=0.4839 | mean_sd(px)=10.3953 | mean_hd(px)=54.8638
+[test_loader][157] SourceB_pancreas_256 | mean_dice=0.2136 | mean_sd(px)=14.2762 | mean_hd(px)=47.7495
+[test_loader][158] SourceB_pancreas_258 | mean_dice=0.6063 | mean_sd(px)=11.8558 | mean_hd(px)=68.7478
+[test_loader][159] SourceB_pancreas_259 | mean_dice=0.7186 | mean_sd(px)=5.8399 | mean_hd(px)=39.6369
+[test_loader][160] SourceB_pancreas_261 | mean_dice=0.6963 | mean_sd(px)=5.8006 | mean_hd(px)=54.2259
+[test_loader][161] SourceB_pancreas_262 | mean_dice=0.3903 | mean_sd(px)=16.5014 | mean_hd(px)=48.0635
+[test_loader][162] SourceB_pancreas_264 | mean_dice=0.5814 | mean_sd(px)=7.2409 | mean_hd(px)=33.5230
+[test_loader][163] SourceB_pancreas_265 | mean_dice=0.4414 | mean_sd(px)=11.7014 | mean_hd(px)=37.1469
+[test_loader][164] SourceB_pancreas_266 | mean_dice=0.3770 | mean_sd(px)=9.4154 | mean_hd(px)=30.7226
+[test_loader][165] SourceB_pancreas_267 | mean_dice=0.5117 | mean_sd(px)=8.1484 | mean_hd(px)=33.5374
+[test_loader][166] SourceB_pancreas_268 | mean_dice=0.2077 | mean_sd(px)=10.7283 | mean_hd(px)=32.9550
+[test_loader][167] SourceB_pancreas_269 | mean_dice=0.7026 | mean_sd(px)=4.7046 | mean_hd(px)=21.8932
+[test_loader][168] SourceB_pancreas_270 | mean_dice=0.4882 | mean_sd(px)=12.8600 | mean_hd(px)=44.2540
+[test_loader][169] SourceB_pancreas_274 | mean_dice=0.2777 | mean_sd(px)=18.6929 | mean_hd(px)=60.3918
+[test_loader][170] SourceB_pancreas_275 | mean_dice=0.3333 | mean_sd(px)=11.3834 | mean_hd(px)=32.1466
+[test_loader][171] SourceB_pancreas_276 | mean_dice=0.3684 | mean_sd(px)=35.9022 | mean_hd(px)=62.9889
+[test_loader][172] SourceB_pancreas_277 | mean_dice=0.6569 | mean_sd(px)=4.5363 | mean_hd(px)=24.4381
+[test_loader][173] SourceB_pancreas_278 | mean_dice=0.5505 | mean_sd(px)=7.0296 | mean_hd(px)=35.1187
+[test_loader][174] SourceB_pancreas_279 | mean_dice=0.4108 | mean_sd(px)=19.1912 | mean_hd(px)=45.9053
+[test_loader][175] SourceB_pancreas_280 | mean_dice=0.4318 | mean_sd(px)=21.3812 | mean_hd(px)=88.2081
+[test_loader][176] SourceB_pancreas_283 | mean_dice=0.3162 | mean_sd(px)=19.6899 | mean_hd(px)=43.7179
+[test_loader][177] SourceB_pancreas_284 | mean_dice=0.6487 | mean_sd(px)=9.0921 | mean_hd(px)=48.5150
+[test_loader][178] SourceB_pancreas_285 | mean_dice=0.6936 | mean_sd(px)=6.0136 | mean_hd(px)=39.7517
+[test_loader][179] SourceB_pancreas_286 | mean_dice=0.6707 | mean_sd(px)=7.7787 | mean_hd(px)=42.3732
+[test_loader][180] SourceB_pancreas_287 | mean_dice=0.3916 | mean_sd(px)=21.3786 | mean_hd(px)=45.8955
+[test_loader][181] SourceB_pancreas_289 | mean_dice=0.3431 | mean_sd(px)=27.2810 | mean_hd(px)=76.9662
+[test_loader][182] SourceB_pancreas_290 | mean_dice=0.1965 | mean_sd(px)=15.8428 | mean_hd(px)=44.1853
+[test_loader][183] SourceB_pancreas_291 | mean_dice=0.2079 | mean_sd(px)=15.6964 | mean_hd(px)=49.8416
+[test_loader][184] SourceB_pancreas_292 | mean_dice=0.6696 | mean_sd(px)=6.4346 | mean_hd(px)=37.5146
+[test_loader][185] SourceB_pancreas_293 | mean_dice=0.4283 | mean_sd(px)=13.2458 | mean_hd(px)=65.2861
+[test_loader][186] SourceB_pancreas_294 | mean_dice=0.6413 | mean_sd(px)=5.0155 | mean_hd(px)=22.3048
+[test_loader][187] SourceB_pancreas_295 | mean_dice=0.3222 | mean_sd(px)=7.5560 | mean_hd(px)=29.3972
+[test_loader][188] SourceB_pancreas_296 | mean_dice=0.6807 | mean_sd(px)=4.7468 | mean_hd(px)=20.4031
+[test_loader][189] SourceB_pancreas_297 | mean_dice=0.2667 | mean_sd(px)=11.3424 | mean_hd(px)=28.3358
+[test_loader][190] SourceB_pancreas_298 | mean_dice=0.5417 | mean_sd(px)=10.2140 | mean_hd(px)=82.2931
+[test_loader][191] SourceB_pancreas_299 | mean_dice=0.4301 | mean_sd(px)=11.9758 | mean_hd(px)=43.2822
+[test_loader][192] SourceB_pancreas_300 | mean_dice=0.3146 | mean_sd(px)=16.8175 | mean_hd(px)=54.9052
+[test_loader][193] SourceB_pancreas_301 | mean_dice=0.5345 | mean_sd(px)=9.9187 | mean_hd(px)=38.5328
+[test_loader][194] SourceB_pancreas_302 | mean_dice=0.2717 | mean_sd(px)=8.3589 | mean_hd(px)=30.7892
+[test_loader][195] SourceB_pancreas_303 | mean_dice=0.3885 | mean_sd(px)=6.0480 | mean_hd(px)=21.2561
+[test_loader][196] SourceB_pancreas_304 | mean_dice=0.3145 | mean_sd(px)=9.8838 | mean_hd(px)=33.6621
+[test_loader][197] SourceB_pancreas_305 | mean_dice=0.4245 | mean_sd(px)=11.4458 | mean_hd(px)=32.6066
+[test_loader][198] SourceB_pancreas_308 | mean_dice=0.4380 | mean_sd(px)=22.0352 | mean_hd(px)=57.3660
+[test_loader][199] SourceB_pancreas_309 | mean_dice=0.5181 | mean_sd(px)=9.8484 | mean_hd(px)=50.8410
+[test_loader][200] SourceB_pancreas_310 | mean_dice=0.5242 | mean_sd(px)=4.4958 | mean_hd(px)=18.1179
+[test_loader][201] SourceB_pancreas_311 | mean_dice=0.5824 | mean_sd(px)=7.9064 | mean_hd(px)=37.7717
+[test_loader][202] SourceB_pancreas_312 | mean_dice=0.3772 | mean_sd(px)=6.0296 | mean_hd(px)=18.3283
+[test_loader][203] SourceB_pancreas_313 | mean_dice=0.5081 | mean_sd(px)=8.0922 | mean_hd(px)=34.3138
+[test_loader][204] SourceB_pancreas_315 | mean_dice=0.2556 | mean_sd(px)=10.6742 | mean_hd(px)=30.8703
+[test_loader][205] SourceB_pancreas_316 | mean_dice=0.7715 | mean_sd(px)=3.0871 | mean_hd(px)=17.3355
+[test_loader][206] SourceB_pancreas_318 | mean_dice=0.3042 | mean_sd(px)=22.6251 | mean_hd(px)=49.5767
+[test_loader][207] SourceB_pancreas_320 | mean_dice=0.6867 | mean_sd(px)=7.2394 | mean_hd(px)=49.6355
+[test_loader][208] SourceB_pancreas_321 | mean_dice=0.6978 | mean_sd(px)=3.5246 | mean_hd(px)=15.3258
+[test_loader][209] SourceB_pancreas_323 | mean_dice=0.5680 | mean_sd(px)=4.5495 | mean_hd(px)=21.3130
+[test_loader][210] SourceB_pancreas_325 | mean_dice=0.3702 | mean_sd(px)=19.5355 | mean_hd(px)=60.9170
+[test_loader][211] SourceB_pancreas_326 | mean_dice=0.3695 | mean_sd(px)=12.2260 | mean_hd(px)=42.6325
+[test_loader][212] SourceB_pancreas_327 | mean_dice=0.2768 | mean_sd(px)=10.4908 | mean_hd(px)=30.8124
+[test_loader][213] SourceB_pancreas_328 | mean_dice=0.3366 | mean_sd(px)=17.6416 | mean_hd(px)=35.2303
+[test_loader][214] SourceB_pancreas_329 | mean_dice=0.7074 | mean_sd(px)=4.5427 | mean_hd(px)=25.4845
+[test_loader][215] SourceB_pancreas_330 | mean_dice=0.2790 | mean_sd(px)=11.9113 | mean_hd(px)=31.4563
+[test_loader][216] SourceB_pancreas_331 | mean_dice=0.4484 | mean_sd(px)=14.8769 | mean_hd(px)=50.4008
+[test_loader][217] SourceB_pancreas_333 | mean_dice=0.6019 | mean_sd(px)=6.8215 | mean_hd(px)=39.0045
+[test_loader][218] SourceB_pancreas_334 | mean_dice=0.2973 | mean_sd(px)=36.0881 | mean_hd(px)=58.3994
+[test_loader][219] SourceB_pancreas_336 | mean_dice=0.5897 | mean_sd(px)=8.3024 | mean_hd(px)=43.9894
+[test_loader][220] SourceB_pancreas_339 | mean_dice=0.6098 | mean_sd(px)=8.1004 | mean_hd(px)=53.4719
+[test_loader][221] SourceB_pancreas_342 | mean_dice=0.5568 | mean_sd(px)=14.2303 | mean_hd(px)=63.2034
+[test_loader][222] SourceB_pancreas_343 | mean_dice=0.3829 | mean_sd(px)=8.1207 | mean_hd(px)=21.1895
+[test_loader][223] SourceB_pancreas_344 | mean_dice=0.4266 | mean_sd(px)=4.2506 | mean_hd(px)=21.9668
+[test_loader][224] SourceB_pancreas_345 | mean_dice=0.4145 | mean_sd(px)=9.5060 | mean_hd(px)=47.7285
+[test_loader][225] SourceB_pancreas_346 | mean_dice=0.2850 | mean_sd(px)=30.9506 | mean_hd(px)=50.2756
+[test_loader][226] SourceB_pancreas_347 | mean_dice=0.1326 | mean_sd(px)=42.0629 | mean_hd(px)=88.0945
+[test_loader][227] SourceB_pancreas_348 | mean_dice=0.2918 | mean_sd(px)=8.2300 | mean_hd(px)=26.7098
+[test_loader][228] SourceB_pancreas_350 | mean_dice=0.3082 | mean_sd(px)=13.1175 | mean_hd(px)=42.7068
+[test_loader][229] SourceB_pancreas_351 | mean_dice=0.2099 | mean_sd(px)=10.6098 | mean_hd(px)=32.7263
+[test_loader][230] SourceB_pancreas_354 | mean_dice=0.5934 | mean_sd(px)=6.0793 | mean_hd(px)=33.4148
+[test_loader][231] SourceB_pancreas_355 | mean_dice=0.5920 | mean_sd(px)=9.7783 | mean_hd(px)=49.2292
+[test_loader][232] SourceB_pancreas_356 | mean_dice=0.4255 | mean_sd(px)=21.6567 | mean_hd(px)=66.9299
+[test_loader][233] SourceB_pancreas_357 | mean_dice=0.2626 | mean_sd(px)=37.3009 | mean_hd(px)=103.2232
+[test_loader][234] SourceB_pancreas_358 | mean_dice=0.6119 | mean_sd(px)=9.7574 | mean_hd(px)=57.2858
+[test_loader][235] SourceB_pancreas_360 | mean_dice=0.2515 | mean_sd(px)=19.9299 | mean_hd(px)=44.9632
+[test_loader][236] SourceB_pancreas_361 | mean_dice=0.2396 | mean_sd(px)=52.0529 | mean_hd(px)=82.2142
+[test_loader][237] SourceB_pancreas_362 | mean_dice=0.2779 | mean_sd(px)=32.5505 | mean_hd(px)=71.6474
+[test_loader][238] SourceB_pancreas_364 | mean_dice=0.4049 | mean_sd(px)=43.5238 | mean_hd(px)=93.7509
+[test_loader][239] SourceB_pancreas_365 | mean_dice=0.3481 | mean_sd(px)=35.9969 | mean_hd(px)=123.4011
+[test_loader][240] SourceB_pancreas_366 | mean_dice=0.2935 | mean_sd(px)=22.5769 | mean_hd(px)=52.4151
+[test_loader][241] SourceB_pancreas_367 | mean_dice=0.6260 | mean_sd(px)=9.6134 | mean_hd(px)=51.6724
+[test_loader][242] SourceB_pancreas_369 | mean_dice=0.4024 | mean_sd(px)=9.3546 | mean_hd(px)=31.8741
+[test_loader][243] SourceB_pancreas_370 | mean_dice=0.5802 | mean_sd(px)=14.0348 | mean_hd(px)=60.8973
+[test_loader][244] SourceB_pancreas_372 | mean_dice=0.3001 | mean_sd(px)=25.9400 | mean_hd(px)=70.2361
+[test_loader][245] SourceB_pancreas_374 | mean_dice=0.3534 | mean_sd(px)=12.8191 | mean_hd(px)=42.2135
+[test_loader][246] SourceB_pancreas_375 | mean_dice=0.7040 | mean_sd(px)=5.2244 | mean_hd(px)=29.6995
+[test_loader][247] SourceB_pancreas_376 | mean_dice=0.3596 | mean_sd(px)=15.4689 | mean_hd(px)=58.6850
+[test_loader][248] SourceB_pancreas_377 | mean_dice=0.2520 | mean_sd(px)=17.7681 | mean_hd(px)=56.9120
+[test_loader][249] SourceB_pancreas_378 | mean_dice=0.4207 | mean_sd(px)=31.4923 | mean_hd(px)=81.4949
+[test_loader][250] SourceB_pancreas_379 | mean_dice=0.5479 | mean_sd(px)=8.8262 | mean_hd(px)=45.2608
+[test_loader][251] SourceB_pancreas_380 | mean_dice=0.4866 | mean_sd(px)=9.4120 | mean_hd(px)=47.7264
+[test_loader][252] SourceB_pancreas_382 | mean_dice=0.4843 | mean_sd(px)=7.3264 | mean_hd(px)=33.6595
+[test_loader][253] SourceB_pancreas_385 | mean_dice=0.4182 | mean_sd(px)=12.8202 | mean_hd(px)=37.5356
+[test_loader][254] SourceB_pancreas_386 | mean_dice=0.4722 | mean_sd(px)=18.8977 | mean_hd(px)=78.1486
+[test_loader][255] SourceB_pancreas_387 | mean_dice=0.6498 | mean_sd(px)=6.2079 | mean_hd(px)=31.6182
+[test_loader][256] SourceB_pancreas_388 | mean_dice=0.6235 | mean_sd(px)=11.9947 | mean_hd(px)=25.4948
+[test_loader][257] SourceB_pancreas_389 | mean_dice=0.5894 | mean_sd(px)=7.0496 | mean_hd(px)=39.8937
+[test_loader][258] SourceB_pancreas_391 | mean_dice=0.5659 | mean_sd(px)=9.0913 | mean_hd(px)=57.0891
+[test_loader][259] SourceB_pancreas_392 | mean_dice=0.2094 | mean_sd(px)=33.8046 | mean_hd(px)=85.1978
+[test_loader][260] SourceB_pancreas_393 | mean_dice=0.1705 | mean_sd(px)=17.1776 | mean_hd(px)=51.9229
+[test_loader][261] SourceB_pancreas_395 | mean_dice=0.4745 | mean_sd(px)=12.2722 | mean_hd(px)=53.4568
+[test_loader][262] SourceB_pancreas_398 | mean_dice=0.7026 | mean_sd(px)=4.2929 | mean_hd(px)=26.2707
+[test_loader][263] SourceB_pancreas_399 | mean_dice=0.4798 | mean_sd(px)=13.5961 | mean_hd(px)=68.2734
+[test_loader][264] SourceB_pancreas_400 | mean_dice=0.2866 | mean_sd(px)=7.6264 | mean_hd(px)=23.4965
+[test_loader][265] SourceB_pancreas_401 | mean_dice=0.4358 | mean_sd(px)=13.4855 | mean_hd(px)=54.1848
+[test_loader][266] SourceB_pancreas_402 | mean_dice=0.3678 | mean_sd(px)=15.1976 | mean_hd(px)=39.9413
+[test_loader][267] SourceB_pancreas_404 | mean_dice=0.2043 | mean_sd(px)=17.9240 | mean_hd(px)=44.7475
+[test_loader][268] SourceB_pancreas_405 | mean_dice=0.2552 | mean_sd(px)=16.1808 | mean_hd(px)=44.2088
+[test_loader][269] SourceB_pancreas_406 | mean_dice=0.5010 | mean_sd(px)=10.2585 | mean_hd(px)=54.9278
+[test_loader][270] SourceB_pancreas_409 | mean_dice=0.5028 | mean_sd(px)=24.9990 | mean_hd(px)=109.4169
+[test_loader][271] SourceB_pancreas_410 | mean_dice=0.5411 | mean_sd(px)=16.9123 | mean_hd(px)=91.5595
+[test_loader][272] SourceB_pancreas_411 | mean_dice=0.3584 | mean_sd(px)=16.0096 | mean_hd(px)=39.3710
+[test_loader][273] SourceB_pancreas_412 | mean_dice=0.3229 | mean_sd(px)=13.0808 | mean_hd(px)=40.9134
+[test_loader][274] SourceB_pancreas_413 | mean_dice=0.2834 | mean_sd(px)=40.6641 | mean_hd(px)=111.9915
+[test_loader][275] SourceB_pancreas_414 | mean_dice=0.2354 | mean_sd(px)=20.5193 | mean_hd(px)=74.3319
+[test_loader][276] SourceB_pancreas_415 | mean_dice=0.4745 | mean_sd(px)=32.6764 | mean_hd(px)=67.6678
+[test_loader][277] SourceB_pancreas_416 | mean_dice=0.3822 | mean_sd(px)=16.0965 | mean_hd(px)=35.5812
+[test_loader][278] SourceB_pancreas_418 | mean_dice=0.2425 | mean_sd(px)=34.6100 | mean_hd(px)=87.1213
+[test_loader][279] SourceB_pancreas_419 | mean_dice=0.2823 | mean_sd(px)=16.1598 | mean_hd(px)=52.3682
+[test_loader][280] SourceB_pancreas_421 | mean_dice=0.6741 | mean_sd(px)=4.2816 | mean_hd(px)=22.4676
+
+Done. Outputs at: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/Results/Pancreas-B
+
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[split|SourceB] total=20 train=18 test=2
+[split|SourceC] total=131 train=118 test=13
+[Setting A] train_pool=246 (labeled_train=136 + unlabeled=110)
+[Setting A] test_pool=15 (labeled_test only)
+[train/val] train=221 val=25
+Loading dataset:   0%|          | 0/22 [00:00<?, ?it/s]Loading dataset:   5%|▍         | 1/22 [00:01<00:40,  1.91s/it]Loading dataset:   9%|▉         | 2/22 [00:05<00:59,  2.98s/it]Loading dataset:  50%|█████     | 11/22 [00:06<00:05,  2.15it/s]Loading dataset:  59%|█████▉    | 13/22 [00:10<00:06,  1.35it/s]Loading dataset: 100%|██████████| 22/22 [00:10<00:00,  2.14it/s]
+Loading dataset:   0%|          | 0/2 [00:00<?, ?it/s]Loading dataset:  50%|█████     | 1/2 [00:04<00:04,  4.06s/it]Loading dataset: 100%|██████████| 2/2 [00:04<00:00,  2.03s/it]
+[test_loader][0] SourceC_liver_3 | mean_dice=0.8780 | mean_sd(px)=15.7522 | mean_hd(px)=102.6376
+[test_loader][1] SourceC_liver_25 | mean_dice=0.6708 | mean_sd(px)=15.5999 | mean_hd(px)=82.0873
+[test_loader][2] SourceC_liver_78 | mean_dice=0.8122 | mean_sd(px)=10.5585 | mean_hd(px)=67.9363
+[test_loader][3] SourceC_liver_51 | mean_dice=0.8107 | mean_sd(px)=12.2827 | mean_hd(px)=86.9512
+[test_loader][4] SourceC_liver_60 | mean_dice=0.8658 | mean_sd(px)=11.1622 | mean_hd(px)=80.5056
+[test_loader][5] SourceB_sliver_0010 | mean_dice=0.5636 | mean_sd(px)=15.3519 | mean_hd(px)=52.3425
+[test_loader][6] SourceC_liver_46 | mean_dice=0.7128 | mean_sd(px)=11.4110 | mean_hd(px)=62.5950
+[test_loader][7] SourceC_liver_99 | mean_dice=0.8234 | mean_sd(px)=16.3942 | mean_hd(px)=84.3244
+[test_loader][8] SourceC_liver_50 | mean_dice=0.7753 | mean_sd(px)=10.4623 | mean_hd(px)=54.5288
+[test_loader][9] SourceC_liver_37 | mean_dice=0.8934 | mean_sd(px)=6.5424 | mean_hd(px)=48.1706
+[test_loader][10] SourceB_sliver_0005 | mean_dice=0.8319 | mean_sd(px)=15.4592 | mean_hd(px)=85.5989
+[test_loader][11] SourceC_liver_128 | mean_dice=0.7446 | mean_sd(px)=21.1870 | mean_hd(px)=105.8852
+[test_loader][12] SourceC_liver_27 | mean_dice=0.7885 | mean_sd(px)=12.6976 | mean_hd(px)=77.6011
+[test_loader][13] SourceC_liver_71 | mean_dice=0.7874 | mean_sd(px)=13.6806 | mean_hd(px)=81.4645
+[test_loader][14] SourceC_liver_91 | mean_dice=0.9012 | mean_sd(px)=7.9894 | mean_hd(px)=66.5859
+
+Done. Outputs at: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/Results/Liver-A
+
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[Setting B] train_sources=['SourceA', 'SourceD'] train_pool=110
+[Setting B] test_sources=['SourceB', 'SourceC'] test_pool=151
+[train/val] train=99 val=11
+Loading dataset:   0%|          | 0/9 [00:00<?, ?it/s]Loading dataset:  11%|█         | 1/9 [00:01<00:08,  1.01s/it]Loading dataset:  22%|██▏       | 2/9 [00:05<00:21,  3.05s/it]Loading dataset:  78%|███████▊  | 7/9 [00:07<00:01,  1.15it/s]Loading dataset: 100%|██████████| 9/9 [00:07<00:00,  1.24it/s]
+Loading dataset:   0%|          | 0/1 [00:00<?, ?it/s]Loading dataset: 100%|██████████| 1/1 [00:01<00:00,  1.47s/it]Loading dataset: 100%|██████████| 1/1 [00:01<00:00,  1.47s/it]
+[test_loader][0] SourceB_sliver_0001 | mean_dice=0.7263 | mean_sd(px)=16.4008 | mean_hd(px)=76.8260
+[test_loader][1] SourceB_sliver_0002 | mean_dice=0.7719 | mean_sd(px)=13.7864 | mean_hd(px)=83.5602
+[test_loader][2] SourceB_sliver_0003 | mean_dice=0.8436 | mean_sd(px)=15.5683 | mean_hd(px)=90.7551
+[test_loader][3] SourceB_sliver_0004 | mean_dice=0.7941 | mean_sd(px)=20.3454 | mean_hd(px)=94.2917
+[test_loader][4] SourceB_sliver_0005 | mean_dice=0.7907 | mean_sd(px)=18.2221 | mean_hd(px)=86.9217
+[test_loader][5] SourceB_sliver_0006 | mean_dice=0.7839 | mean_sd(px)=10.3847 | mean_hd(px)=61.3207
+[test_loader][6] SourceB_sliver_0007 | mean_dice=0.8360 | mean_sd(px)=16.5046 | mean_hd(px)=87.9130
+[test_loader][7] SourceB_sliver_0008 | mean_dice=0.6651 | mean_sd(px)=21.6130 | mean_hd(px)=79.9775
+[test_loader][8] SourceB_sliver_0009 | mean_dice=0.6963 | mean_sd(px)=24.7136 | mean_hd(px)=105.7921
+[test_loader][9] SourceB_sliver_0010 | mean_dice=0.6844 | mean_sd(px)=12.0366 | mean_hd(px)=60.8635
+[test_loader][10] SourceB_sliver_0011 | mean_dice=0.8859 | mean_sd(px)=11.3003 | mean_hd(px)=83.3360
+[test_loader][11] SourceB_sliver_0012 | mean_dice=0.8436 | mean_sd(px)=13.9021 | mean_hd(px)=82.1003
+[test_loader][12] SourceB_sliver_0013 | mean_dice=0.7902 | mean_sd(px)=13.2587 | mean_hd(px)=75.0915
+[test_loader][13] SourceB_sliver_0014 | mean_dice=0.8614 | mean_sd(px)=5.8698 | mean_hd(px)=32.0546
+[test_loader][14] SourceB_sliver_0015 | mean_dice=0.8709 | mean_sd(px)=12.3054 | mean_hd(px)=68.4495
+[test_loader][15] SourceB_sliver_0016 | mean_dice=0.7651 | mean_sd(px)=22.2134 | mean_hd(px)=115.9266
+[test_loader][16] SourceB_sliver_0017 | mean_dice=0.7679 | mean_sd(px)=17.6776 | mean_hd(px)=85.9919
+[test_loader][17] SourceB_sliver_0018 | mean_dice=0.7301 | mean_sd(px)=16.2559 | mean_hd(px)=80.8140
+[test_loader][18] SourceB_sliver_0019 | mean_dice=0.7646 | mean_sd(px)=18.1808 | mean_hd(px)=130.9584
+[test_loader][19] SourceB_sliver_0020 | mean_dice=0.7964 | mean_sd(px)=12.4574 | mean_hd(px)=72.7179
+[test_loader][20] SourceC_liver_0 | mean_dice=0.7747 | mean_sd(px)=11.5325 | mean_hd(px)=71.7136
+[test_loader][21] SourceC_liver_1 | mean_dice=0.7372 | mean_sd(px)=18.2717 | mean_hd(px)=95.7302
+[test_loader][22] SourceC_liver_10 | mean_dice=0.7999 | mean_sd(px)=14.8366 | mean_hd(px)=100.6965
+[test_loader][23] SourceC_liver_100 | mean_dice=0.7812 | mean_sd(px)=17.4432 | mean_hd(px)=100.3688
+[test_loader][24] SourceC_liver_101 | mean_dice=0.7665 | mean_sd(px)=22.8210 | mean_hd(px)=123.7637
+[test_loader][25] SourceC_liver_102 | mean_dice=0.4539 | mean_sd(px)=54.6990 | mean_hd(px)=244.5973
+[test_loader][26] SourceC_liver_103 | mean_dice=0.6675 | mean_sd(px)=20.7487 | mean_hd(px)=108.1894
+[test_loader][27] SourceC_liver_104 | mean_dice=0.6939 | mean_sd(px)=10.5119 | mean_hd(px)=51.1499
+[test_loader][28] SourceC_liver_105 | mean_dice=0.7643 | mean_sd(px)=18.0303 | mean_hd(px)=111.1473
+[test_loader][29] SourceC_liver_106 | mean_dice=0.2873 | mean_sd(px)=95.0766 | mean_hd(px)=161.8918
+[test_loader][30] SourceC_liver_107 | mean_dice=0.7529 | mean_sd(px)=20.1211 | mean_hd(px)=97.6005
+[test_loader][31] SourceC_liver_108 | mean_dice=0.3785 | mean_sd(px)=57.5362 | mean_hd(px)=132.1720
+[test_loader][32] SourceC_liver_109 | mean_dice=0.7538 | mean_sd(px)=15.8267 | mean_hd(px)=84.2230
+[test_loader][33] SourceC_liver_11 | mean_dice=0.7608 | mean_sd(px)=18.3715 | mean_hd(px)=104.4246
+[test_loader][34] SourceC_liver_110 | mean_dice=0.7865 | mean_sd(px)=16.2813 | mean_hd(px)=106.3069
+[test_loader][35] SourceC_liver_111 | mean_dice=0.8148 | mean_sd(px)=16.5920 | mean_hd(px)=119.0684
+[test_loader][36] SourceC_liver_112 | mean_dice=0.7761 | mean_sd(px)=22.6864 | mean_hd(px)=109.4906
+[test_loader][37] SourceC_liver_113 | mean_dice=0.7313 | mean_sd(px)=23.4424 | mean_hd(px)=111.7678
+[test_loader][38] SourceC_liver_114 | mean_dice=0.7077 | mean_sd(px)=21.4325 | mean_hd(px)=110.6117
+[test_loader][39] SourceC_liver_115 | mean_dice=0.7166 | mean_sd(px)=18.7316 | mean_hd(px)=90.1600
+[test_loader][40] SourceC_liver_116 | mean_dice=0.7512 | mean_sd(px)=21.8895 | mean_hd(px)=101.0291
+[test_loader][41] SourceC_liver_117 | mean_dice=0.6285 | mean_sd(px)=15.5795 | mean_hd(px)=76.7444
+[test_loader][42] SourceC_liver_118 | mean_dice=0.7930 | mean_sd(px)=17.2664 | mean_hd(px)=98.3323
+[test_loader][43] SourceC_liver_119 | mean_dice=0.7093 | mean_sd(px)=20.0989 | mean_hd(px)=116.7491
+[test_loader][44] SourceC_liver_12 | mean_dice=0.7395 | mean_sd(px)=24.3004 | mean_hd(px)=137.1462
+[test_loader][45] SourceC_liver_120 | mean_dice=0.7354 | mean_sd(px)=10.8608 | mean_hd(px)=66.0254
+[test_loader][46] SourceC_liver_121 | mean_dice=0.8260 | mean_sd(px)=16.8445 | mean_hd(px)=77.9456
+[test_loader][47] SourceC_liver_122 | mean_dice=0.8197 | mean_sd(px)=12.5176 | mean_hd(px)=75.5785
+[test_loader][48] SourceC_liver_123 | mean_dice=0.7580 | mean_sd(px)=19.4139 | mean_hd(px)=105.6924
+[test_loader][49] SourceC_liver_124 | mean_dice=0.7392 | mean_sd(px)=17.4075 | mean_hd(px)=94.2558
+[test_loader][50] SourceC_liver_125 | mean_dice=0.7661 | mean_sd(px)=17.9015 | mean_hd(px)=91.9140
+[test_loader][51] SourceC_liver_126 | mean_dice=0.8123 | mean_sd(px)=12.3656 | mean_hd(px)=66.4646
+[test_loader][52] SourceC_liver_127 | mean_dice=0.8098 | mean_sd(px)=16.9754 | mean_hd(px)=91.6755
+[test_loader][53] SourceC_liver_128 | mean_dice=0.6410 | mean_sd(px)=30.5679 | mean_hd(px)=118.3349
+[test_loader][54] SourceC_liver_129 | mean_dice=0.7735 | mean_sd(px)=15.5471 | mean_hd(px)=95.8550
+[test_loader][55] SourceC_liver_13 | mean_dice=0.4969 | mean_sd(px)=33.8275 | mean_hd(px)=85.8084
+[test_loader][56] SourceC_liver_130 | mean_dice=0.7933 | mean_sd(px)=11.5586 | mean_hd(px)=82.1327
+[test_loader][57] SourceC_liver_14 | mean_dice=0.6979 | mean_sd(px)=17.0584 | mean_hd(px)=97.1932
+[test_loader][58] SourceC_liver_15 | mean_dice=0.6431 | mean_sd(px)=22.8652 | mean_hd(px)=83.4563
+[test_loader][59] SourceC_liver_16 | mean_dice=0.7767 | mean_sd(px)=12.9438 | mean_hd(px)=77.5009
+[test_loader][60] SourceC_liver_17 | mean_dice=0.8699 | mean_sd(px)=11.7900 | mean_hd(px)=76.9989
+[test_loader][61] SourceC_liver_18 | mean_dice=0.8791 | mean_sd(px)=8.5050 | mean_hd(px)=62.9621
+[test_loader][62] SourceC_liver_19 | mean_dice=0.7046 | mean_sd(px)=29.4651 | mean_hd(px)=119.2450
+[test_loader][63] SourceC_liver_2 | mean_dice=0.7469 | mean_sd(px)=25.2380 | mean_hd(px)=137.5421
+[test_loader][64] SourceC_liver_20 | mean_dice=0.6949 | mean_sd(px)=23.2498 | mean_hd(px)=96.7945
+[test_loader][65] SourceC_liver_21 | mean_dice=0.7866 | mean_sd(px)=12.9031 | mean_hd(px)=100.5420
+[test_loader][66] SourceC_liver_22 | mean_dice=0.7760 | mean_sd(px)=10.0646 | mean_hd(px)=56.3902
+[test_loader][67] SourceC_liver_23 | mean_dice=0.6548 | mean_sd(px)=21.0441 | mean_hd(px)=81.4931
+[test_loader][68] SourceC_liver_24 | mean_dice=0.6771 | mean_sd(px)=13.6825 | mean_hd(px)=66.7129
+[test_loader][69] SourceC_liver_25 | mean_dice=0.6389 | mean_sd(px)=22.4736 | mean_hd(px)=117.9042
+[test_loader][70] SourceC_liver_26 | mean_dice=0.7486 | mean_sd(px)=14.2184 | mean_hd(px)=75.2748
+[test_loader][71] SourceC_liver_27 | mean_dice=0.7494 | mean_sd(px)=15.5706 | mean_hd(px)=86.1697
+[test_loader][72] SourceC_liver_28 | mean_dice=0.7685 | mean_sd(px)=14.1661 | mean_hd(px)=83.4303
+[test_loader][73] SourceC_liver_29 | mean_dice=0.7741 | mean_sd(px)=11.3103 | mean_hd(px)=73.8632
+[test_loader][74] SourceC_liver_3 | mean_dice=0.8114 | mean_sd(px)=20.7164 | mean_hd(px)=107.0343
+[test_loader][75] SourceC_liver_30 | mean_dice=0.8173 | mean_sd(px)=12.6161 | mean_hd(px)=78.1693
+[test_loader][76] SourceC_liver_31 | mean_dice=0.9158 | mean_sd(px)=5.0988 | mean_hd(px)=55.8768
+[test_loader][77] SourceC_liver_32 | mean_dice=0.6912 | mean_sd(px)=20.9004 | mean_hd(px)=111.8699
+[test_loader][78] SourceC_liver_33 | mean_dice=0.8615 | mean_sd(px)=10.1026 | mean_hd(px)=66.1475
+[test_loader][79] SourceC_liver_34 | mean_dice=0.7546 | mean_sd(px)=26.6689 | mean_hd(px)=142.8964
+[test_loader][80] SourceC_liver_35 | mean_dice=0.8173 | mean_sd(px)=7.9595 | mean_hd(px)=56.4470
+[test_loader][81] SourceC_liver_36 | mean_dice=0.7861 | mean_sd(px)=11.6868 | mean_hd(px)=72.2779
+[test_loader][82] SourceC_liver_37 | mean_dice=0.7938 | mean_sd(px)=14.1844 | mean_hd(px)=67.2113
+[test_loader][83] SourceC_liver_38 | mean_dice=0.8229 | mean_sd(px)=16.8542 | mean_hd(px)=75.9475
+[test_loader][84] SourceC_liver_39 | mean_dice=0.8114 | mean_sd(px)=8.3842 | mean_hd(px)=54.5854
+[test_loader][85] SourceC_liver_4 | mean_dice=0.6264 | mean_sd(px)=38.3571 | mean_hd(px)=105.0886
+[test_loader][86] SourceC_liver_40 | mean_dice=0.7312 | mean_sd(px)=19.8698 | mean_hd(px)=92.1400
+[test_loader][87] SourceC_liver_41 | mean_dice=0.7264 | mean_sd(px)=14.9688 | mean_hd(px)=86.5297
+[test_loader][88] SourceC_liver_42 | mean_dice=0.6047 | mean_sd(px)=18.6641 | mean_hd(px)=81.1478
+[test_loader][89] SourceC_liver_43 | mean_dice=0.6824 | mean_sd(px)=22.9752 | mean_hd(px)=113.4395
+[test_loader][90] SourceC_liver_44 | mean_dice=0.7442 | mean_sd(px)=19.5358 | mean_hd(px)=92.9071
+[test_loader][91] SourceC_liver_45 | mean_dice=0.7039 | mean_sd(px)=18.2574 | mean_hd(px)=73.5848
+[test_loader][92] SourceC_liver_46 | mean_dice=0.7099 | mean_sd(px)=12.3935 | mean_hd(px)=69.6020
+[test_loader][93] SourceC_liver_47 | mean_dice=0.8311 | mean_sd(px)=13.0058 | mean_hd(px)=83.1621
+[test_loader][94] SourceC_liver_48 | mean_dice=0.7290 | mean_sd(px)=13.6361 | mean_hd(px)=52.3159
+[test_loader][95] SourceC_liver_49 | mean_dice=0.6522 | mean_sd(px)=18.2610 | mean_hd(px)=90.7467
+[test_loader][96] SourceC_liver_5 | mean_dice=0.7945 | mean_sd(px)=15.1624 | mean_hd(px)=81.4915
+[test_loader][97] SourceC_liver_50 | mean_dice=0.7398 | mean_sd(px)=13.1706 | mean_hd(px)=63.1973
+[test_loader][98] SourceC_liver_51 | mean_dice=0.8193 | mean_sd(px)=13.0670 | mean_hd(px)=90.2414
+[test_loader][99] SourceC_liver_52 | mean_dice=0.6972 | mean_sd(px)=13.5640 | mean_hd(px)=69.7003
+[test_loader][100] SourceC_liver_53 | mean_dice=0.8104 | mean_sd(px)=8.0110 | mean_hd(px)=52.4349
+[test_loader][101] SourceC_liver_54 | mean_dice=0.8637 | mean_sd(px)=9.0978 | mean_hd(px)=60.1631
+[test_loader][102] SourceC_liver_55 | mean_dice=0.7141 | mean_sd(px)=27.7089 | mean_hd(px)=128.7377
+[test_loader][103] SourceC_liver_56 | mean_dice=0.6693 | mean_sd(px)=16.7564 | mean_hd(px)=98.6721
+[test_loader][104] SourceC_liver_57 | mean_dice=0.7322 | mean_sd(px)=21.0339 | mean_hd(px)=118.0875
+[test_loader][105] SourceC_liver_58 | mean_dice=0.7269 | mean_sd(px)=16.8286 | mean_hd(px)=100.9916
+[test_loader][106] SourceC_liver_59 | mean_dice=0.8096 | mean_sd(px)=13.6138 | mean_hd(px)=78.9397
+[test_loader][107] SourceC_liver_6 | mean_dice=0.8153 | mean_sd(px)=12.9370 | mean_hd(px)=85.0449
+[test_loader][108] SourceC_liver_60 | mean_dice=0.8794 | mean_sd(px)=11.3046 | mean_hd(px)=87.2091
+[test_loader][109] SourceC_liver_61 | mean_dice=0.8069 | mean_sd(px)=14.6715 | mean_hd(px)=80.8342
+[test_loader][110] SourceC_liver_62 | mean_dice=0.7974 | mean_sd(px)=14.8858 | mean_hd(px)=75.3750
+[test_loader][111] SourceC_liver_63 | mean_dice=0.8445 | mean_sd(px)=9.1455 | mean_hd(px)=68.9360
+[test_loader][112] SourceC_liver_64 | mean_dice=0.8638 | mean_sd(px)=15.2958 | mean_hd(px)=100.7000
+[test_loader][113] SourceC_liver_65 | mean_dice=0.7353 | mean_sd(px)=21.3362 | mean_hd(px)=78.9178
+[test_loader][114] SourceC_liver_66 | mean_dice=0.7922 | mean_sd(px)=12.8834 | mean_hd(px)=86.2503
+[test_loader][115] SourceC_liver_67 | mean_dice=0.8098 | mean_sd(px)=10.5829 | mean_hd(px)=71.7056
+[test_loader][116] SourceC_liver_68 | mean_dice=0.7826 | mean_sd(px)=9.8064 | mean_hd(px)=57.0857
+[test_loader][117] SourceC_liver_69 | mean_dice=0.8510 | mean_sd(px)=15.0210 | mean_hd(px)=80.3898
+[test_loader][118] SourceC_liver_7 | mean_dice=0.6868 | mean_sd(px)=39.8157 | mean_hd(px)=105.8163
+[test_loader][119] SourceC_liver_70 | mean_dice=0.6815 | mean_sd(px)=27.2186 | mean_hd(px)=156.9024
+[test_loader][120] SourceC_liver_71 | mean_dice=0.7965 | mean_sd(px)=13.8071 | mean_hd(px)=85.6796
+[test_loader][121] SourceC_liver_72 | mean_dice=0.6443 | mean_sd(px)=25.8240 | mean_hd(px)=99.4433
+[test_loader][122] SourceC_liver_73 | mean_dice=0.8377 | mean_sd(px)=12.0819 | mean_hd(px)=63.3586
+[test_loader][123] SourceC_liver_74 | mean_dice=0.8681 | mean_sd(px)=12.7879 | mean_hd(px)=82.4340
+[test_loader][124] SourceC_liver_75 | mean_dice=0.8666 | mean_sd(px)=12.7743 | mean_hd(px)=79.1718
+[test_loader][125] SourceC_liver_76 | mean_dice=0.9151 | mean_sd(px)=3.9659 | mean_hd(px)=25.3113
+[test_loader][126] SourceC_liver_77 | mean_dice=0.7353 | mean_sd(px)=19.2569 | mean_hd(px)=107.7033
+[test_loader][127] SourceC_liver_78 | mean_dice=0.7830 | mean_sd(px)=12.0022 | mean_hd(px)=69.6197
+[test_loader][128] SourceC_liver_79 | mean_dice=0.8692 | mean_sd(px)=15.0945 | mean_hd(px)=116.1612
+[test_loader][129] SourceC_liver_8 | mean_dice=0.7622 | mean_sd(px)=23.1084 | mean_hd(px)=98.1117
+[test_loader][130] SourceC_liver_80 | mean_dice=0.8175 | mean_sd(px)=14.8669 | mean_hd(px)=80.6465
+[test_loader][131] SourceC_liver_81 | mean_dice=0.8090 | mean_sd(px)=12.4042 | mean_hd(px)=73.9549
+[test_loader][132] SourceC_liver_82 | mean_dice=0.7962 | mean_sd(px)=12.8128 | mean_hd(px)=81.7649
+[test_loader][133] SourceC_liver_83 | mean_dice=0.7437 | mean_sd(px)=12.0055 | mean_hd(px)=78.4409
+[test_loader][134] SourceC_liver_84 | mean_dice=0.6786 | mean_sd(px)=24.5065 | mean_hd(px)=118.5511
+[test_loader][135] SourceC_liver_85 | mean_dice=0.7279 | mean_sd(px)=27.8461 | mean_hd(px)=102.3446
+[test_loader][136] SourceC_liver_86 | mean_dice=0.7670 | mean_sd(px)=19.9887 | mean_hd(px)=127.4745
+[test_loader][137] SourceC_liver_87 | mean_dice=0.7835 | mean_sd(px)=19.0205 | mean_hd(px)=102.3059
+[test_loader][138] SourceC_liver_88 | mean_dice=0.7587 | mean_sd(px)=16.9128 | mean_hd(px)=59.6492
+[test_loader][139] SourceC_liver_89 | mean_dice=0.7929 | mean_sd(px)=21.1853 | mean_hd(px)=111.6980
+[test_loader][140] SourceC_liver_9 | mean_dice=0.7497 | mean_sd(px)=17.6204 | mean_hd(px)=83.7344
+[test_loader][141] SourceC_liver_90 | mean_dice=0.8246 | mean_sd(px)=11.5727 | mean_hd(px)=69.0072
+[test_loader][142] SourceC_liver_91 | mean_dice=0.8365 | mean_sd(px)=15.3917 | mean_hd(px)=99.2077
+[test_loader][143] SourceC_liver_92 | mean_dice=0.7437 | mean_sd(px)=17.3847 | mean_hd(px)=93.7557
+[test_loader][144] SourceC_liver_93 | mean_dice=0.2547 | mean_sd(px)=39.0876 | mean_hd(px)=87.2095
+[test_loader][145] SourceC_liver_94 | mean_dice=0.6377 | mean_sd(px)=26.8945 | mean_hd(px)=121.1287
+[test_loader][146] SourceC_liver_95 | mean_dice=0.2908 | mean_sd(px)=32.8629 | mean_hd(px)=80.5809
+[test_loader][147] SourceC_liver_96 | mean_dice=0.7521 | mean_sd(px)=19.8688 | mean_hd(px)=120.7514
+[test_loader][148] SourceC_liver_97 | mean_dice=0.7840 | mean_sd(px)=21.2840 | mean_hd(px)=124.7830
+[test_loader][149] SourceC_liver_98 | mean_dice=0.7051 | mean_sd(px)=18.6379 | mean_hd(px)=104.3061
+[test_loader][150] SourceC_liver_99 | mean_dice=0.7874 | mean_sd(px)=17.3411 | mean_hd(px)=88.5370
+
+Done. Outputs at: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/Results/Liver-B
+
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[collect|SourceE] total=80 labeled=80 unlabeled=0
+[collect|SourceF] total=281 labeled=281 unlabeled=0
+[split|SourceB] total=20 train=18 test=2
+[split|SourceC] total=131 train=118 test=13
+[split|SourceE] total=80 train=72 test=8
+[split|SourceF] total=281 train=253 test=28
+[Setting A] train_pool=571 (labeled_train=461 + unlabeled=110)
+[Setting A] test_pool=51 (labeled_test only)
+[train/val] train=514 val=57
+Loading dataset:   0%|          | 0/51 [00:00<?, ?it/s]Loading dataset:   2%|▏         | 1/51 [00:03<02:55,  3.52s/it]Loading dataset:  10%|▉         | 5/51 [00:05<00:46,  1.01s/it]Loading dataset:  25%|██▌       | 13/51 [00:08<00:18,  2.02it/s]Loading dataset:  47%|████▋     | 24/51 [00:09<00:08,  3.25it/s]Loading dataset:  55%|█████▍    | 28/51 [00:10<00:06,  3.39it/s]Loading dataset:  57%|█████▋    | 29/51 [00:11<00:06,  3.25it/s]Loading dataset:  63%|██████▎   | 32/51 [00:14<00:08,  2.22it/s]Loading dataset:  69%|██████▊   | 35/51 [00:14<00:06,  2.61it/s]Loading dataset:  73%|███████▎  | 37/51 [00:15<00:05,  2.38it/s]Loading dataset:  78%|███████▊  | 40/51 [00:16<00:03,  3.12it/s]Loading dataset:  88%|████████▊ | 45/51 [00:16<00:01,  4.23it/s]Loading dataset:  96%|█████████▌| 49/51 [00:16<00:00,  5.58it/s]Loading dataset:  98%|█████████▊| 50/51 [00:17<00:00,  4.36it/s]Loading dataset: 100%|██████████| 51/51 [00:17<00:00,  2.90it/s]
+Loading dataset:   0%|          | 0/5 [00:00<?, ?it/s]Loading dataset:  20%|██        | 1/5 [00:01<00:04,  1.04s/it]Loading dataset:  40%|████      | 2/5 [00:04<00:07,  2.53s/it]Loading dataset: 100%|██████████| 5/5 [00:04<00:00,  1.08it/s]
+[test_loader][0] SourceE_pancreas_0042 | mean_dice=0.0898 | mean_sd(px)=34.5015 | mean_hd(px)=79.3929
+[test_loader][1] SourceC_liver_25 | mean_dice=0.6888 | mean_sd(px)=12.7971 | mean_hd(px)=75.6772
+[test_loader][2] SourceF_pancreas_236 | mean_dice=0.4679 | mean_sd(px)=21.8673 | mean_hd(px)=41.3807
+[test_loader][3] SourceF_pancreas_218 | mean_dice=0.2451 | mean_sd(px)=18.3607 | mean_hd(px)=55.6518
+[test_loader][4] SourceF_pancreas_191 | mean_dice=0.3055 | mean_sd(px)=34.8594 | mean_hd(px)=79.2131
+[test_loader][5] SourceF_pancreas_138 | mean_dice=0.2762 | mean_sd(px)=14.2641 | mean_hd(px)=44.0379
+[test_loader][6] SourceE_pancreas_0009 | mean_dice=0.0746 | mean_sd(px)=35.9711 | mean_hd(px)=65.9956
+[test_loader][7] SourceE_pancreas_0031 | mean_dice=0.1080 | mean_sd(px)=62.0547 | mean_hd(px)=91.6215
+[test_loader][8] SourceF_pancreas_006 | mean_dice=0.6410 | mean_sd(px)=7.1837 | mean_hd(px)=37.4194
+[test_loader][9] SourceF_pancreas_308 | mean_dice=0.4696 | mean_sd(px)=18.9193 | mean_hd(px)=50.1606
+[test_loader][10] SourceF_pancreas_201 | mean_dice=0.1610 | mean_sd(px)=17.7087 | mean_hd(px)=37.3538
+[test_loader][11] SourceB_sliver_0010 | mean_dice=0.6857 | mean_sd(px)=9.0859 | mean_hd(px)=42.8188
+[test_loader][12] SourceF_pancreas_212 | mean_dice=0.5120 | mean_sd(px)=10.9190 | mean_hd(px)=48.5106
+[test_loader][13] SourceE_pancreas_0063 | mean_dice=0.1164 | mean_sd(px)=39.9539 | mean_hd(px)=72.7686
+[test_loader][14] SourceE_pancreas_0026 | mean_dice=0.0839 | mean_sd(px)=36.3392 | mean_hd(px)=71.0159
+[test_loader][15] SourceC_liver_99 | mean_dice=0.8210 | mean_sd(px)=14.5680 | mean_hd(px)=80.1284
+[test_loader][16] SourceB_sliver_0005 | mean_dice=0.8303 | mean_sd(px)=16.2339 | mean_hd(px)=85.9020
+[test_loader][17] SourceF_pancreas_315 | mean_dice=0.2949 | mean_sd(px)=31.9283 | mean_hd(px)=59.3468
+[test_loader][18] SourceC_liver_71 | mean_dice=0.7889 | mean_sd(px)=13.8022 | mean_hd(px)=82.7909
+[test_loader][19] SourceE_pancreas_0014 | mean_dice=0.1575 | mean_sd(px)=21.9073 | mean_hd(px)=45.1554
+[test_loader][20] SourceF_pancreas_401 | mean_dice=0.5241 | mean_sd(px)=10.9008 | mean_hd(px)=52.1638
+[test_loader][21] SourceF_pancreas_389 | mean_dice=0.3794 | mean_sd(px)=10.8762 | mean_hd(px)=46.5483
+[test_loader][22] SourceF_pancreas_285 | mean_dice=0.4510 | mean_sd(px)=8.1556 | mean_hd(px)=23.6575
+[test_loader][23] SourceF_pancreas_091 | mean_dice=0.5278 | mean_sd(px)=13.2092 | mean_hd(px)=63.1755
+[test_loader][24] SourceF_pancreas_043 | mean_dice=0.3932 | mean_sd(px)=15.1312 | mean_hd(px)=52.1665
+[test_loader][25] SourceF_pancreas_318 | mean_dice=0.3062 | mean_sd(px)=11.1674 | mean_hd(px)=37.6483
+[test_loader][26] SourceC_liver_50 | mean_dice=0.7427 | mean_sd(px)=12.0453 | mean_hd(px)=57.8429
+[test_loader][27] SourceC_liver_37 | mean_dice=0.8888 | mean_sd(px)=6.4664 | mean_hd(px)=44.9373
+[test_loader][28] SourceC_liver_128 | mean_dice=0.7959 | mean_sd(px)=11.6344 | mean_hd(px)=76.8912
+[test_loader][29] SourceF_pancreas_311 | mean_dice=0.3776 | mean_sd(px)=20.6951 | mean_hd(px)=42.0032
+[test_loader][30] SourceF_pancreas_012 | mean_dice=0.6304 | mean_sd(px)=8.3985 | mean_hd(px)=51.0504
+[test_loader][31] SourceF_pancreas_088 | mean_dice=0.2442 | mean_sd(px)=24.8659 | mean_hd(px)=69.1990
+[test_loader][32] SourceC_liver_3 | mean_dice=0.8941 | mean_sd(px)=13.3871 | mean_hd(px)=101.4276
+[test_loader][33] SourceF_pancreas_376 | mean_dice=0.3457 | mean_sd(px)=23.2141 | mean_hd(px)=55.4404
+[test_loader][34] SourceE_pancreas_0029 | mean_dice=0.0386 | mean_sd(px)=43.1093 | mean_hd(px)=85.6909
+[test_loader][35] SourceC_liver_51 | mean_dice=0.8112 | mean_sd(px)=11.5622 | mean_hd(px)=74.9803
+[test_loader][36] SourceF_pancreas_242 | mean_dice=0.3641 | mean_sd(px)=23.0490 | mean_hd(px)=46.5713
+[test_loader][37] SourceF_pancreas_356 | mean_dice=0.4043 | mean_sd(px)=27.7738 | mean_hd(px)=65.3590
+[test_loader][38] SourceC_liver_78 | mean_dice=0.8492 | mean_sd(px)=9.7295 | mean_hd(px)=71.0098
+[test_loader][39] SourceF_pancreas_323 | mean_dice=0.3410 | mean_sd(px)=8.4603 | mean_hd(px)=27.9520
+[test_loader][40] SourceC_liver_60 | mean_dice=0.8840 | mean_sd(px)=11.1762 | mean_hd(px)=85.9420
+[test_loader][41] SourceE_pancreas_0073 | mean_dice=0.2441 | mean_sd(px)=26.7528 | mean_hd(px)=67.2947
+[test_loader][42] SourceF_pancreas_297 | mean_dice=0.2581 | mean_sd(px)=15.1135 | mean_hd(px)=42.1513
+[test_loader][43] SourceC_liver_27 | mean_dice=0.8103 | mean_sd(px)=9.9281 | mean_hd(px)=62.1029
+[test_loader][44] SourceF_pancreas_074 | mean_dice=0.3706 | mean_sd(px)=13.7483 | mean_hd(px)=37.2044
+[test_loader][45] SourceC_liver_91 | mean_dice=0.8757 | mean_sd(px)=10.0745 | mean_hd(px)=74.9136
+[test_loader][46] SourceC_liver_46 | mean_dice=0.7108 | mean_sd(px)=11.5946 | mean_hd(px)=63.8541
+[test_loader][47] SourceF_pancreas_312 | mean_dice=0.5342 | mean_sd(px)=3.9297 | mean_hd(px)=16.1015
+[test_loader][48] SourceF_pancreas_421 | mean_dice=0.3962 | mean_sd(px)=4.3162 | mean_hd(px)=22.4567
+[test_loader][49] SourceF_pancreas_041 | mean_dice=0.2796 | mean_sd(px)=11.7506 | mean_hd(px)=31.9803
+[test_loader][50] SourceF_pancreas_077 | mean_dice=0.3948 | mean_sd(px)=10.7972 | mean_hd(px)=34.2365
+
+Done. Outputs at: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/Results/Liver_Pancreas-A
+
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[collect|SourceE] total=80 labeled=80 unlabeled=0
+[collect|SourceF] total=281 labeled=281 unlabeled=0
+[Setting B] train_sources=['SourceA', 'SourceD', 'SourceE'] train_pool=190
+[Setting B] test_sources=['SourceB', 'SourceD', 'SourceF'] test_pool=301
+[train/val] train=171 val=19
+Loading dataset:   0%|          | 0/17 [00:00<?, ?it/s]Loading dataset:   6%|▌         | 1/17 [00:01<00:31,  1.96s/it]Loading dataset:  12%|█▏        | 2/17 [00:03<00:25,  1.68s/it]Loading dataset:  53%|█████▎    | 9/17 [00:03<00:02,  3.87it/s]Loading dataset:  71%|███████   | 12/17 [00:04<00:01,  3.68it/s]Loading dataset:  82%|████████▏ | 14/17 [00:05<00:00,  3.65it/s]Loading dataset:  94%|█████████▍| 16/17 [00:05<00:00,  3.65it/s]Loading dataset: 100%|██████████| 17/17 [00:05<00:00,  3.06it/s]
+Loading dataset:   0%|          | 0/1 [00:00<?, ?it/s]Loading dataset: 100%|██████████| 1/1 [00:01<00:00,  1.10s/it]Loading dataset: 100%|██████████| 1/1 [00:01<00:00,  1.10s/it]
+[test_loader][0] SourceB_sliver_0001 | mean_dice=0.7214 | mean_sd(px)=16.2036 | mean_hd(px)=74.5204
+[test_loader][1] SourceB_sliver_0002 | mean_dice=0.7718 | mean_sd(px)=15.3015 | mean_hd(px)=95.0041
+[test_loader][2] SourceB_sliver_0003 | mean_dice=0.8407 | mean_sd(px)=16.3615 | mean_hd(px)=93.0854
+[test_loader][3] SourceB_sliver_0004 | mean_dice=0.7969 | mean_sd(px)=20.5933 | mean_hd(px)=95.8603
+[test_loader][4] SourceB_sliver_0005 | mean_dice=0.8130 | mean_sd(px)=17.3934 | mean_hd(px)=91.2196
+[test_loader][5] SourceB_sliver_0006 | mean_dice=0.7946 | mean_sd(px)=10.2219 | mean_hd(px)=62.7607
+[test_loader][6] SourceB_sliver_0007 | mean_dice=0.8187 | mean_sd(px)=16.8631 | mean_hd(px)=86.2070
+[test_loader][7] SourceB_sliver_0008 | mean_dice=0.8097 | mean_sd(px)=13.4499 | mean_hd(px)=85.6246
+[test_loader][8] SourceB_sliver_0009 | mean_dice=0.7041 | mean_sd(px)=23.4979 | mean_hd(px)=120.6501
+[test_loader][9] SourceB_sliver_0010 | mean_dice=0.5702 | mean_sd(px)=14.9976 | mean_hd(px)=55.4030
+[test_loader][10] SourceB_sliver_0011 | mean_dice=0.8839 | mean_sd(px)=10.9225 | mean_hd(px)=77.2448
+[test_loader][11] SourceB_sliver_0012 | mean_dice=0.8263 | mean_sd(px)=15.7482 | mean_hd(px)=88.2547
+[test_loader][12] SourceB_sliver_0013 | mean_dice=0.8061 | mean_sd(px)=12.9887 | mean_hd(px)=74.9237
+[test_loader][13] SourceB_sliver_0014 | mean_dice=0.8560 | mean_sd(px)=6.3156 | mean_hd(px)=31.4422
+[test_loader][14] SourceB_sliver_0015 | mean_dice=0.8792 | mean_sd(px)=12.2655 | mean_hd(px)=70.9601
+[test_loader][15] SourceB_sliver_0016 | mean_dice=0.7637 | mean_sd(px)=22.4482 | mean_hd(px)=117.1885
+[test_loader][16] SourceB_sliver_0017 | mean_dice=0.7549 | mean_sd(px)=16.6121 | mean_hd(px)=83.6893
+[test_loader][17] SourceB_sliver_0018 | mean_dice=0.7300 | mean_sd(px)=16.2174 | mean_hd(px)=86.7327
+[test_loader][18] SourceB_sliver_0019 | mean_dice=0.7345 | mean_sd(px)=19.8232 | mean_hd(px)=125.8440
+[test_loader][19] SourceB_sliver_0020 | mean_dice=0.7905 | mean_sd(px)=13.1328 | mean_hd(px)=74.0946
+[test_loader][20] SourceF_pancreas_001 | mean_dice=0.4601 | mean_sd(px)=7.3924 | mean_hd(px)=22.5246
+[test_loader][21] SourceF_pancreas_004 | mean_dice=0.3995 | mean_sd(px)=18.6773 | mean_hd(px)=61.2481
+[test_loader][22] SourceF_pancreas_005 | mean_dice=0.5888 | mean_sd(px)=7.6240 | mean_hd(px)=31.2629
+[test_loader][23] SourceF_pancreas_006 | mean_dice=0.5883 | mean_sd(px)=7.2152 | mean_hd(px)=39.8478
+[test_loader][24] SourceF_pancreas_010 | mean_dice=0.5952 | mean_sd(px)=6.1755 | mean_hd(px)=20.9470
+[test_loader][25] SourceF_pancreas_012 | mean_dice=0.5924 | mean_sd(px)=8.8576 | mean_hd(px)=51.2171
+[test_loader][26] SourceF_pancreas_015 | mean_dice=0.4576 | mean_sd(px)=8.5599 | mean_hd(px)=37.4769
+[test_loader][27] SourceF_pancreas_016 | mean_dice=0.6056 | mean_sd(px)=7.4518 | mean_hd(px)=37.2650
+[test_loader][28] SourceF_pancreas_018 | mean_dice=0.3931 | mean_sd(px)=28.1704 | mean_hd(px)=51.6754
+[test_loader][29] SourceF_pancreas_019 | mean_dice=0.5502 | mean_sd(px)=6.4533 | mean_hd(px)=16.9467
+[test_loader][30] SourceF_pancreas_021 | mean_dice=0.5114 | mean_sd(px)=9.3669 | mean_hd(px)=43.6812
+[test_loader][31] SourceF_pancreas_024 | mean_dice=0.6729 | mean_sd(px)=6.1502 | mean_hd(px)=28.4649
+[test_loader][32] SourceF_pancreas_025 | mean_dice=0.3841 | mean_sd(px)=16.7626 | mean_hd(px)=63.3048
+[test_loader][33] SourceF_pancreas_028 | mean_dice=0.5031 | mean_sd(px)=11.8102 | mean_hd(px)=40.3038
+[test_loader][34] SourceF_pancreas_029 | mean_dice=0.5263 | mean_sd(px)=8.6605 | mean_hd(px)=37.2065
+[test_loader][35] SourceF_pancreas_032 | mean_dice=0.6749 | mean_sd(px)=7.8858 | mean_hd(px)=57.9058
+[test_loader][36] SourceF_pancreas_035 | mean_dice=0.6091 | mean_sd(px)=13.5238 | mean_hd(px)=81.2873
+[test_loader][37] SourceF_pancreas_037 | mean_dice=0.4864 | mean_sd(px)=11.2369 | mean_hd(px)=57.3646
+[test_loader][38] SourceF_pancreas_040 | mean_dice=0.6176 | mean_sd(px)=9.1053 | mean_hd(px)=59.9548
+[test_loader][39] SourceF_pancreas_041 | mean_dice=0.2544 | mean_sd(px)=9.8461 | mean_hd(px)=37.9868
+[test_loader][40] SourceF_pancreas_042 | mean_dice=0.3768 | mean_sd(px)=19.2216 | mean_hd(px)=65.2160
+[test_loader][41] SourceF_pancreas_043 | mean_dice=0.3744 | mean_sd(px)=28.3979 | mean_hd(px)=67.2301
+[test_loader][42] SourceF_pancreas_045 | mean_dice=0.4438 | mean_sd(px)=8.9028 | mean_hd(px)=36.5264
+[test_loader][43] SourceF_pancreas_046 | mean_dice=0.5419 | mean_sd(px)=11.6422 | mean_hd(px)=38.8517
+[test_loader][44] SourceF_pancreas_048 | mean_dice=0.6706 | mean_sd(px)=7.7671 | mean_hd(px)=54.9104
+[test_loader][45] SourceF_pancreas_049 | mean_dice=0.2830 | mean_sd(px)=14.5483 | mean_hd(px)=64.7399
+[test_loader][46] SourceF_pancreas_050 | mean_dice=0.3256 | mean_sd(px)=11.8457 | mean_hd(px)=56.4153
+[test_loader][47] SourceF_pancreas_051 | mean_dice=0.4187 | mean_sd(px)=9.4569 | mean_hd(px)=35.4709
+[test_loader][48] SourceF_pancreas_052 | mean_dice=0.5167 | mean_sd(px)=21.0065 | mean_hd(px)=110.8795
+[test_loader][49] SourceF_pancreas_055 | mean_dice=0.3329 | mean_sd(px)=7.8156 | mean_hd(px)=26.6404
+[test_loader][50] SourceF_pancreas_056 | mean_dice=0.2772 | mean_sd(px)=33.7525 | mean_hd(px)=77.0826
+[test_loader][51] SourceF_pancreas_058 | mean_dice=0.3931 | mean_sd(px)=13.7763 | mean_hd(px)=45.4336
+[test_loader][52] SourceF_pancreas_061 | mean_dice=0.6217 | mean_sd(px)=5.4757 | mean_hd(px)=21.7480
+[test_loader][53] SourceF_pancreas_064 | mean_dice=0.3746 | mean_sd(px)=9.6010 | mean_hd(px)=45.8293
+[test_loader][54] SourceF_pancreas_066 | mean_dice=0.2749 | mean_sd(px)=31.7826 | mean_hd(px)=72.4600
+[test_loader][55] SourceF_pancreas_067 | mean_dice=0.6556 | mean_sd(px)=9.0912 | mean_hd(px)=55.7989
+[test_loader][56] SourceF_pancreas_069 | mean_dice=0.4905 | mean_sd(px)=9.9969 | mean_hd(px)=54.2972
+[test_loader][57] SourceF_pancreas_070 | mean_dice=0.2226 | mean_sd(px)=15.8734 | mean_hd(px)=44.4315
+[test_loader][58] SourceF_pancreas_071 | mean_dice=0.7335 | mean_sd(px)=6.5855 | mean_hd(px)=36.8807
+[test_loader][59] SourceF_pancreas_074 | mean_dice=0.3192 | mean_sd(px)=19.4087 | mean_hd(px)=43.5530
+[test_loader][60] SourceF_pancreas_075 | mean_dice=0.5547 | mean_sd(px)=9.9709 | mean_hd(px)=47.8523
+[test_loader][61] SourceF_pancreas_077 | mean_dice=0.4751 | mean_sd(px)=11.9979 | mean_hd(px)=34.4716
+[test_loader][62] SourceF_pancreas_078 | mean_dice=0.3447 | mean_sd(px)=12.4543 | mean_hd(px)=43.0051
+[test_loader][63] SourceF_pancreas_080 | mean_dice=0.3580 | mean_sd(px)=19.1694 | mean_hd(px)=54.4022
+[test_loader][64] SourceF_pancreas_081 | mean_dice=0.2605 | mean_sd(px)=13.3296 | mean_hd(px)=31.3516
+[test_loader][65] SourceF_pancreas_083 | mean_dice=0.2565 | mean_sd(px)=17.5493 | mean_hd(px)=53.3283
+[test_loader][66] SourceF_pancreas_084 | mean_dice=0.3544 | mean_sd(px)=16.9071 | mean_hd(px)=53.3623
+[test_loader][67] SourceF_pancreas_086 | mean_dice=0.6449 | mean_sd(px)=6.6545 | mean_hd(px)=32.5851
+[test_loader][68] SourceF_pancreas_087 | mean_dice=0.2204 | mean_sd(px)=30.3679 | mean_hd(px)=103.4819
+[test_loader][69] SourceF_pancreas_088 | mean_dice=0.4055 | mean_sd(px)=15.5124 | mean_hd(px)=53.6467
+[test_loader][70] SourceF_pancreas_089 | mean_dice=0.5569 | mean_sd(px)=6.0385 | mean_hd(px)=28.9731
+[test_loader][71] SourceF_pancreas_091 | mean_dice=0.4577 | mean_sd(px)=12.4608 | mean_hd(px)=60.2331
+[test_loader][72] SourceF_pancreas_092 | mean_dice=0.6578 | mean_sd(px)=6.7847 | mean_hd(px)=32.0343
+[test_loader][73] SourceF_pancreas_093 | mean_dice=0.6514 | mean_sd(px)=6.6428 | mean_hd(px)=43.2165
+[test_loader][74] SourceF_pancreas_094 | mean_dice=0.6070 | mean_sd(px)=13.3182 | mean_hd(px)=88.5411
+[test_loader][75] SourceF_pancreas_095 | mean_dice=0.5669 | mean_sd(px)=11.3065 | mean_hd(px)=68.3965
+[test_loader][76] SourceF_pancreas_096 | mean_dice=0.6317 | mean_sd(px)=11.4492 | mean_hd(px)=57.3893
+[test_loader][77] SourceF_pancreas_098 | mean_dice=0.3110 | mean_sd(px)=9.1656 | mean_hd(px)=30.1497
+[test_loader][78] SourceF_pancreas_099 | mean_dice=0.6074 | mean_sd(px)=7.5365 | mean_hd(px)=46.5686
+[test_loader][79] SourceF_pancreas_100 | mean_dice=0.3386 | mean_sd(px)=26.1248 | mean_hd(px)=92.6666
+[test_loader][80] SourceF_pancreas_101 | mean_dice=0.2941 | mean_sd(px)=18.9020 | mean_hd(px)=54.5497
+[test_loader][81] SourceF_pancreas_102 | mean_dice=0.5397 | mean_sd(px)=13.1905 | mean_hd(px)=78.0955
+[test_loader][82] SourceF_pancreas_103 | mean_dice=0.2717 | mean_sd(px)=15.7544 | mean_hd(px)=40.4477
+[test_loader][83] SourceF_pancreas_104 | mean_dice=0.3328 | mean_sd(px)=14.3716 | mean_hd(px)=49.1042
+[test_loader][84] SourceF_pancreas_105 | mean_dice=0.5156 | mean_sd(px)=12.0563 | mean_hd(px)=56.4743
+[test_loader][85] SourceF_pancreas_106 | mean_dice=0.5526 | mean_sd(px)=21.6552 | mean_hd(px)=108.5922
+[test_loader][86] SourceF_pancreas_107 | mean_dice=0.6758 | mean_sd(px)=5.0197 | mean_hd(px)=24.1186
+[test_loader][87] SourceF_pancreas_109 | mean_dice=0.6583 | mean_sd(px)=9.0275 | mean_hd(px)=45.0179
+[test_loader][88] SourceF_pancreas_110 | mean_dice=0.5844 | mean_sd(px)=8.8407 | mean_hd(px)=50.7365
+[test_loader][89] SourceF_pancreas_111 | mean_dice=0.4591 | mean_sd(px)=13.8332 | mean_hd(px)=65.7020
+[test_loader][90] SourceF_pancreas_113 | mean_dice=0.5949 | mean_sd(px)=8.3816 | mean_hd(px)=47.9223
+[test_loader][91] SourceF_pancreas_114 | mean_dice=0.1271 | mean_sd(px)=23.3984 | mean_hd(px)=51.3310
+[test_loader][92] SourceF_pancreas_117 | mean_dice=0.4299 | mean_sd(px)=14.2912 | mean_hd(px)=78.3919
+[test_loader][93] SourceF_pancreas_119 | mean_dice=0.6244 | mean_sd(px)=6.8018 | mean_hd(px)=37.6255
+[test_loader][94] SourceF_pancreas_120 | mean_dice=0.4782 | mean_sd(px)=8.2759 | mean_hd(px)=46.7312
+[test_loader][95] SourceF_pancreas_122 | mean_dice=0.2621 | mean_sd(px)=10.3003 | mean_hd(px)=34.6383
+[test_loader][96] SourceF_pancreas_124 | mean_dice=0.4522 | mean_sd(px)=11.1171 | mean_hd(px)=70.7771
+[test_loader][97] SourceF_pancreas_125 | mean_dice=0.5734 | mean_sd(px)=9.6645 | mean_hd(px)=78.2791
+[test_loader][98] SourceF_pancreas_126 | mean_dice=0.4668 | mean_sd(px)=17.3425 | mean_hd(px)=69.4828
+[test_loader][99] SourceF_pancreas_127 | mean_dice=0.7020 | mean_sd(px)=7.9006 | mean_hd(px)=48.5006
+[test_loader][100] SourceF_pancreas_129 | mean_dice=0.5207 | mean_sd(px)=14.1703 | mean_hd(px)=62.9882
+[test_loader][101] SourceF_pancreas_130 | mean_dice=0.3255 | mean_sd(px)=16.4153 | mean_hd(px)=57.4410
+[test_loader][102] SourceF_pancreas_131 | mean_dice=0.7035 | mean_sd(px)=7.1971 | mean_hd(px)=41.1764
+[test_loader][103] SourceF_pancreas_135 | mean_dice=0.2324 | mean_sd(px)=28.7039 | mean_hd(px)=72.8442
+[test_loader][104] SourceF_pancreas_137 | mean_dice=0.3656 | mean_sd(px)=10.0047 | mean_hd(px)=40.7919
+[test_loader][105] SourceF_pancreas_138 | mean_dice=0.2768 | mean_sd(px)=15.1702 | mean_hd(px)=49.9461
+[test_loader][106] SourceF_pancreas_140 | mean_dice=0.3924 | mean_sd(px)=28.8640 | mean_hd(px)=62.1082
+[test_loader][107] SourceF_pancreas_145 | mean_dice=0.4937 | mean_sd(px)=6.2081 | mean_hd(px)=25.5712
+[test_loader][108] SourceF_pancreas_147 | mean_dice=0.6131 | mean_sd(px)=7.8032 | mean_hd(px)=32.9839
+[test_loader][109] SourceF_pancreas_148 | mean_dice=0.4055 | mean_sd(px)=15.7878 | mean_hd(px)=78.2045
+[test_loader][110] SourceF_pancreas_149 | mean_dice=0.3723 | mean_sd(px)=13.1546 | mean_hd(px)=56.0089
+[test_loader][111] SourceF_pancreas_155 | mean_dice=0.6381 | mean_sd(px)=6.7674 | mean_hd(px)=42.4918
+[test_loader][112] SourceF_pancreas_157 | mean_dice=0.5940 | mean_sd(px)=12.6176 | mean_hd(px)=65.5406
+[test_loader][113] SourceF_pancreas_158 | mean_dice=0.3700 | mean_sd(px)=21.3394 | mean_hd(px)=84.2152
+[test_loader][114] SourceF_pancreas_159 | mean_dice=0.3879 | mean_sd(px)=11.5883 | mean_hd(px)=35.4267
+[test_loader][115] SourceF_pancreas_160 | mean_dice=0.2358 | mean_sd(px)=13.0853 | mean_hd(px)=33.2570
+[test_loader][116] SourceF_pancreas_165 | mean_dice=0.2885 | mean_sd(px)=8.3724 | mean_hd(px)=25.5218
+[test_loader][117] SourceF_pancreas_166 | mean_dice=0.6750 | mean_sd(px)=8.0508 | mean_hd(px)=50.9790
+[test_loader][118] SourceF_pancreas_167 | mean_dice=0.2301 | mean_sd(px)=21.8236 | mean_hd(px)=47.2446
+[test_loader][119] SourceF_pancreas_169 | mean_dice=0.2915 | mean_sd(px)=15.2928 | mean_hd(px)=29.8439
+[test_loader][120] SourceF_pancreas_170 | mean_dice=0.6256 | mean_sd(px)=5.0748 | mean_hd(px)=23.9987
+[test_loader][121] SourceF_pancreas_172 | mean_dice=0.4762 | mean_sd(px)=22.1972 | mean_hd(px)=55.8354
+[test_loader][122] SourceF_pancreas_173 | mean_dice=0.2413 | mean_sd(px)=46.5360 | mean_hd(px)=91.9777
+[test_loader][123] SourceF_pancreas_175 | mean_dice=0.1899 | mean_sd(px)=37.0039 | mean_hd(px)=73.6074
+[test_loader][124] SourceF_pancreas_178 | mean_dice=0.7352 | mean_sd(px)=6.5436 | mean_hd(px)=42.7221
+[test_loader][125] SourceF_pancreas_179 | mean_dice=0.7015 | mean_sd(px)=4.7778 | mean_hd(px)=27.4938
+[test_loader][126] SourceF_pancreas_180 | mean_dice=0.4988 | mean_sd(px)=8.1464 | mean_hd(px)=39.8391
+[test_loader][127] SourceF_pancreas_181 | mean_dice=0.5779 | mean_sd(px)=8.8991 | mean_hd(px)=42.7375
+[test_loader][128] SourceF_pancreas_182 | mean_dice=0.3620 | mean_sd(px)=13.8242 | mean_hd(px)=65.6493
+[test_loader][129] SourceF_pancreas_183 | mean_dice=0.4380 | mean_sd(px)=8.2416 | mean_hd(px)=35.8709
+[test_loader][130] SourceF_pancreas_186 | mean_dice=0.2292 | mean_sd(px)=72.5125 | mean_hd(px)=122.0276
+[test_loader][131] SourceF_pancreas_187 | mean_dice=0.3471 | mean_sd(px)=8.1012 | mean_hd(px)=22.4957
+[test_loader][132] SourceF_pancreas_191 | mean_dice=0.2923 | mean_sd(px)=30.9109 | mean_hd(px)=90.7874
+[test_loader][133] SourceF_pancreas_193 | mean_dice=0.6057 | mean_sd(px)=9.6445 | mean_hd(px)=36.3751
+[test_loader][134] SourceF_pancreas_194 | mean_dice=0.3121 | mean_sd(px)=55.0414 | mean_hd(px)=113.1416
+[test_loader][135] SourceF_pancreas_196 | mean_dice=0.6710 | mean_sd(px)=6.6505 | mean_hd(px)=52.7211
+[test_loader][136] SourceF_pancreas_197 | mean_dice=0.3652 | mean_sd(px)=8.0720 | mean_hd(px)=38.1171
+[test_loader][137] SourceF_pancreas_198 | mean_dice=0.6951 | mean_sd(px)=8.3900 | mean_hd(px)=45.0034
+[test_loader][138] SourceF_pancreas_199 | mean_dice=0.6980 | mean_sd(px)=6.1957 | mean_hd(px)=40.7399
+[test_loader][139] SourceF_pancreas_200 | mean_dice=0.3763 | mean_sd(px)=10.8900 | mean_hd(px)=37.6955
+[test_loader][140] SourceF_pancreas_201 | mean_dice=0.2170 | mean_sd(px)=26.7278 | mean_hd(px)=60.9674
+[test_loader][141] SourceF_pancreas_203 | mean_dice=0.5841 | mean_sd(px)=12.5640 | mean_hd(px)=52.6521
+[test_loader][142] SourceF_pancreas_204 | mean_dice=0.2517 | mean_sd(px)=20.2259 | mean_hd(px)=47.4493
+[test_loader][143] SourceF_pancreas_207 | mean_dice=0.2944 | mean_sd(px)=40.8707 | mean_hd(px)=105.2608
+[test_loader][144] SourceF_pancreas_209 | mean_dice=0.5218 | mean_sd(px)=12.4805 | mean_hd(px)=57.3086
+[test_loader][145] SourceF_pancreas_210 | mean_dice=0.6132 | mean_sd(px)=7.2292 | mean_hd(px)=40.8140
+[test_loader][146] SourceF_pancreas_211 | mean_dice=0.5323 | mean_sd(px)=7.9398 | mean_hd(px)=40.5033
+[test_loader][147] SourceF_pancreas_212 | mean_dice=0.5610 | mean_sd(px)=10.2798 | mean_hd(px)=53.3609
+[test_loader][148] SourceF_pancreas_213 | mean_dice=0.2355 | mean_sd(px)=16.0023 | mean_hd(px)=38.5528
+[test_loader][149] SourceF_pancreas_214 | mean_dice=0.6455 | mean_sd(px)=6.1141 | mean_hd(px)=25.0118
+[test_loader][150] SourceF_pancreas_215 | mean_dice=0.4648 | mean_sd(px)=8.7458 | mean_hd(px)=38.0902
+[test_loader][151] SourceF_pancreas_217 | mean_dice=0.3825 | mean_sd(px)=29.9859 | mean_hd(px)=107.5295
+[test_loader][152] SourceF_pancreas_218 | mean_dice=0.2446 | mean_sd(px)=27.1624 | mean_hd(px)=62.7558
+[test_loader][153] SourceF_pancreas_219 | mean_dice=0.7574 | mean_sd(px)=5.5434 | mean_hd(px)=34.8388
+[test_loader][154] SourceF_pancreas_222 | mean_dice=0.2994 | mean_sd(px)=12.4249 | mean_hd(px)=35.1180
+[test_loader][155] SourceF_pancreas_224 | mean_dice=0.3401 | mean_sd(px)=19.8667 | mean_hd(px)=49.7324
+[test_loader][156] SourceF_pancreas_225 | mean_dice=0.6978 | mean_sd(px)=8.7146 | mean_hd(px)=55.1394
+[test_loader][157] SourceF_pancreas_226 | mean_dice=0.2143 | mean_sd(px)=16.6895 | mean_hd(px)=38.7606
+[test_loader][158] SourceF_pancreas_227 | mean_dice=0.3438 | mean_sd(px)=6.7713 | mean_hd(px)=19.8867
+[test_loader][159] SourceF_pancreas_228 | mean_dice=0.3353 | mean_sd(px)=16.3125 | mean_hd(px)=64.1470
+[test_loader][160] SourceF_pancreas_229 | mean_dice=0.3829 | mean_sd(px)=6.4279 | mean_hd(px)=22.7739
+[test_loader][161] SourceF_pancreas_230 | mean_dice=0.1872 | mean_sd(px)=14.2931 | mean_hd(px)=38.1040
+[test_loader][162] SourceF_pancreas_231 | mean_dice=0.6052 | mean_sd(px)=8.0812 | mean_hd(px)=42.5584
+[test_loader][163] SourceF_pancreas_234 | mean_dice=0.6026 | mean_sd(px)=7.2209 | mean_hd(px)=42.2479
+[test_loader][164] SourceF_pancreas_235 | mean_dice=0.6072 | mean_sd(px)=6.8561 | mean_hd(px)=38.5149
+[test_loader][165] SourceF_pancreas_236 | mean_dice=0.4715 | mean_sd(px)=19.8861 | mean_hd(px)=42.5729
+[test_loader][166] SourceF_pancreas_239 | mean_dice=0.6689 | mean_sd(px)=7.1118 | mean_hd(px)=50.2503
+[test_loader][167] SourceF_pancreas_241 | mean_dice=0.7537 | mean_sd(px)=4.3741 | mean_hd(px)=25.8760
+[test_loader][168] SourceF_pancreas_242 | mean_dice=0.5757 | mean_sd(px)=7.0148 | mean_hd(px)=36.5231
+[test_loader][169] SourceF_pancreas_243 | mean_dice=0.2757 | mean_sd(px)=12.5918 | mean_hd(px)=39.2554
+[test_loader][170] SourceF_pancreas_244 | mean_dice=0.4173 | mean_sd(px)=25.8612 | mean_hd(px)=43.2501
+[test_loader][171] SourceF_pancreas_246 | mean_dice=0.4215 | mean_sd(px)=12.8903 | mean_hd(px)=62.9783
+[test_loader][172] SourceF_pancreas_247 | mean_dice=0.3601 | mean_sd(px)=16.0642 | mean_hd(px)=57.4505
+[test_loader][173] SourceF_pancreas_249 | mean_dice=0.4869 | mean_sd(px)=9.4384 | mean_hd(px)=50.3472
+[test_loader][174] SourceF_pancreas_253 | mean_dice=0.2208 | mean_sd(px)=17.1486 | mean_hd(px)=48.6224
+[test_loader][175] SourceF_pancreas_254 | mean_dice=0.5247 | mean_sd(px)=3.3549 | mean_hd(px)=12.0896
+[test_loader][176] SourceF_pancreas_255 | mean_dice=0.5876 | mean_sd(px)=9.9954 | mean_hd(px)=54.9580
+[test_loader][177] SourceF_pancreas_256 | mean_dice=0.1906 | mean_sd(px)=16.0643 | mean_hd(px)=49.7101
+[test_loader][178] SourceF_pancreas_258 | mean_dice=0.5201 | mean_sd(px)=14.2420 | mean_hd(px)=67.1000
+[test_loader][179] SourceF_pancreas_259 | mean_dice=0.4858 | mean_sd(px)=12.5367 | mean_hd(px)=53.7194
+[test_loader][180] SourceF_pancreas_261 | mean_dice=0.7000 | mean_sd(px)=4.4696 | mean_hd(px)=32.6429
+[test_loader][181] SourceF_pancreas_262 | mean_dice=0.3810 | mean_sd(px)=37.6535 | mean_hd(px)=71.1200
+[test_loader][182] SourceF_pancreas_264 | mean_dice=0.5804 | mean_sd(px)=6.3855 | mean_hd(px)=31.4843
+[test_loader][183] SourceF_pancreas_265 | mean_dice=0.4505 | mean_sd(px)=11.5416 | mean_hd(px)=34.9885
+[test_loader][184] SourceF_pancreas_266 | mean_dice=0.4550 | mean_sd(px)=8.3294 | mean_hd(px)=35.5389
+[test_loader][185] SourceF_pancreas_267 | mean_dice=0.5443 | mean_sd(px)=7.3722 | mean_hd(px)=36.6523
+[test_loader][186] SourceF_pancreas_268 | mean_dice=0.2242 | mean_sd(px)=12.0817 | mean_hd(px)=37.8895
+[test_loader][187] SourceF_pancreas_269 | mean_dice=0.6733 | mean_sd(px)=5.2057 | mean_hd(px)=20.4450
+[test_loader][188] SourceF_pancreas_270 | mean_dice=0.4781 | mean_sd(px)=11.5812 | mean_hd(px)=43.1521
+[test_loader][189] SourceF_pancreas_274 | mean_dice=0.1940 | mean_sd(px)=18.4547 | mean_hd(px)=62.5680
+[test_loader][190] SourceF_pancreas_275 | mean_dice=0.3241 | mean_sd(px)=11.4378 | mean_hd(px)=32.0607
+[test_loader][191] SourceF_pancreas_276 | mean_dice=0.4564 | mean_sd(px)=17.5824 | mean_hd(px)=63.3401
+[test_loader][192] SourceF_pancreas_277 | mean_dice=0.6361 | mean_sd(px)=4.7905 | mean_hd(px)=25.5954
+[test_loader][193] SourceF_pancreas_278 | mean_dice=0.5437 | mean_sd(px)=7.1600 | mean_hd(px)=35.8013
+[test_loader][194] SourceF_pancreas_279 | mean_dice=0.3602 | mean_sd(px)=20.9314 | mean_hd(px)=61.2033
+[test_loader][195] SourceF_pancreas_280 | mean_dice=0.5174 | mean_sd(px)=10.0438 | mean_hd(px)=42.3204
+[test_loader][196] SourceF_pancreas_283 | mean_dice=0.3785 | mean_sd(px)=19.4068 | mean_hd(px)=44.0356
+[test_loader][197] SourceF_pancreas_284 | mean_dice=0.6721 | mean_sd(px)=8.6706 | mean_hd(px)=53.0672
+[test_loader][198] SourceF_pancreas_285 | mean_dice=0.7201 | mean_sd(px)=4.2307 | mean_hd(px)=23.6809
+[test_loader][199] SourceF_pancreas_286 | mean_dice=0.6115 | mean_sd(px)=9.0072 | mean_hd(px)=45.6708
+[test_loader][200] SourceF_pancreas_287 | mean_dice=0.4390 | mean_sd(px)=21.8147 | mean_hd(px)=47.8524
+[test_loader][201] SourceF_pancreas_289 | mean_dice=0.4517 | mean_sd(px)=26.8321 | mean_hd(px)=78.2033
+[test_loader][202] SourceF_pancreas_290 | mean_dice=0.2773 | mean_sd(px)=10.1655 | mean_hd(px)=30.3475
+[test_loader][203] SourceF_pancreas_291 | mean_dice=0.2769 | mean_sd(px)=12.4407 | mean_hd(px)=34.3874
+[test_loader][204] SourceF_pancreas_292 | mean_dice=0.5963 | mean_sd(px)=6.0366 | mean_hd(px)=32.1977
+[test_loader][205] SourceF_pancreas_293 | mean_dice=0.3640 | mean_sd(px)=15.4010 | mean_hd(px)=66.0212
+[test_loader][206] SourceF_pancreas_294 | mean_dice=0.3452 | mean_sd(px)=8.8443 | mean_hd(px)=29.7425
+[test_loader][207] SourceF_pancreas_295 | mean_dice=0.4827 | mean_sd(px)=7.4532 | mean_hd(px)=26.1149
+[test_loader][208] SourceF_pancreas_296 | mean_dice=0.5950 | mean_sd(px)=5.8997 | mean_hd(px)=26.8536
+[test_loader][209] SourceF_pancreas_297 | mean_dice=0.3009 | mean_sd(px)=11.1124 | mean_hd(px)=29.8360
+[test_loader][210] SourceF_pancreas_298 | mean_dice=0.3110 | mean_sd(px)=14.2697 | mean_hd(px)=81.1657
+[test_loader][211] SourceF_pancreas_299 | mean_dice=0.4496 | mean_sd(px)=12.6875 | mean_hd(px)=41.2597
+[test_loader][212] SourceF_pancreas_300 | mean_dice=0.3315 | mean_sd(px)=8.4667 | mean_hd(px)=33.3237
+[test_loader][213] SourceF_pancreas_301 | mean_dice=0.5376 | mean_sd(px)=8.7983 | mean_hd(px)=36.2712
+[test_loader][214] SourceF_pancreas_302 | mean_dice=0.2985 | mean_sd(px)=8.4510 | mean_hd(px)=27.0788
+[test_loader][215] SourceF_pancreas_303 | mean_dice=0.3702 | mean_sd(px)=7.7664 | mean_hd(px)=20.7491
+[test_loader][216] SourceF_pancreas_304 | mean_dice=0.3506 | mean_sd(px)=9.1252 | mean_hd(px)=33.9437
+[test_loader][217] SourceF_pancreas_305 | mean_dice=0.4479 | mean_sd(px)=17.3500 | mean_hd(px)=33.7579
+[test_loader][218] SourceF_pancreas_308 | mean_dice=0.4964 | mean_sd(px)=16.1329 | mean_hd(px)=57.0518
+[test_loader][219] SourceF_pancreas_309 | mean_dice=0.5735 | mean_sd(px)=9.3289 | mean_hd(px)=69.0695
+[test_loader][220] SourceF_pancreas_310 | mean_dice=0.4083 | mean_sd(px)=5.5321 | mean_hd(px)=20.8207
+[test_loader][221] SourceF_pancreas_311 | mean_dice=0.5389 | mean_sd(px)=7.9912 | mean_hd(px)=39.6445
+[test_loader][222] SourceF_pancreas_312 | mean_dice=0.3554 | mean_sd(px)=6.5513 | mean_hd(px)=20.6018
+[test_loader][223] SourceF_pancreas_313 | mean_dice=0.3285 | mean_sd(px)=12.8647 | mean_hd(px)=35.6744
+[test_loader][224] SourceF_pancreas_315 | mean_dice=0.2672 | mean_sd(px)=11.7498 | mean_hd(px)=34.3231
+[test_loader][225] SourceF_pancreas_316 | mean_dice=0.5732 | mean_sd(px)=4.3309 | mean_hd(px)=14.6802
+[test_loader][226] SourceF_pancreas_318 | mean_dice=0.3106 | mean_sd(px)=23.4750 | mean_hd(px)=51.6762
+[test_loader][227] SourceF_pancreas_320 | mean_dice=0.6724 | mean_sd(px)=7.6336 | mean_hd(px)=56.5156
+[test_loader][228] SourceF_pancreas_321 | mean_dice=0.6573 | mean_sd(px)=5.0585 | mean_hd(px)=25.7707
+[test_loader][229] SourceF_pancreas_323 | mean_dice=0.3527 | mean_sd(px)=7.9225 | mean_hd(px)=31.3489
+[test_loader][230] SourceF_pancreas_325 | mean_dice=0.3767 | mean_sd(px)=15.7854 | mean_hd(px)=51.8543
+[test_loader][231] SourceF_pancreas_326 | mean_dice=0.6854 | mean_sd(px)=5.9692 | mean_hd(px)=42.7370
+[test_loader][232] SourceF_pancreas_327 | mean_dice=0.3013 | mean_sd(px)=9.4847 | mean_hd(px)=28.0696
+[test_loader][233] SourceF_pancreas_328 | mean_dice=0.3405 | mean_sd(px)=21.1295 | mean_hd(px)=36.9816
+[test_loader][234] SourceF_pancreas_329 | mean_dice=0.6997 | mean_sd(px)=6.2423 | mean_hd(px)=32.2623
+[test_loader][235] SourceF_pancreas_330 | mean_dice=0.3983 | mean_sd(px)=12.1055 | mean_hd(px)=41.3611
+[test_loader][236] SourceF_pancreas_331 | mean_dice=0.5002 | mean_sd(px)=13.2233 | mean_hd(px)=54.1086
+[test_loader][237] SourceF_pancreas_333 | mean_dice=0.5949 | mean_sd(px)=9.0040 | mean_hd(px)=52.5372
+[test_loader][238] SourceF_pancreas_334 | mean_dice=0.3151 | mean_sd(px)=26.4572 | mean_hd(px)=72.8320
+[test_loader][239] SourceF_pancreas_336 | mean_dice=0.5979 | mean_sd(px)=8.5658 | mean_hd(px)=44.2329
+[test_loader][240] SourceF_pancreas_339 | mean_dice=0.5666 | mean_sd(px)=9.3560 | mean_hd(px)=50.0292
+[test_loader][241] SourceF_pancreas_342 | mean_dice=0.5275 | mean_sd(px)=15.1101 | mean_hd(px)=64.0629
+[test_loader][242] SourceF_pancreas_343 | mean_dice=0.4613 | mean_sd(px)=12.7528 | mean_hd(px)=32.8392
+[test_loader][243] SourceF_pancreas_344 | mean_dice=0.6378 | mean_sd(px)=4.3923 | mean_hd(px)=21.7570
+[test_loader][244] SourceF_pancreas_345 | mean_dice=0.4344 | mean_sd(px)=10.9924 | mean_hd(px)=54.8164
+[test_loader][245] SourceF_pancreas_346 | mean_dice=0.2615 | mean_sd(px)=32.1117 | mean_hd(px)=51.2669
+[test_loader][246] SourceF_pancreas_347 | mean_dice=0.1329 | mean_sd(px)=36.2668 | mean_hd(px)=89.7828
+[test_loader][247] SourceF_pancreas_348 | mean_dice=0.3304 | mean_sd(px)=7.0072 | mean_hd(px)=25.9261
+[test_loader][248] SourceF_pancreas_350 | mean_dice=0.3957 | mean_sd(px)=12.6002 | mean_hd(px)=59.0241
+[test_loader][249] SourceF_pancreas_351 | mean_dice=0.2175 | mean_sd(px)=11.5695 | mean_hd(px)=42.5293
+[test_loader][250] SourceF_pancreas_354 | mean_dice=0.4932 | mean_sd(px)=12.7624 | mean_hd(px)=63.8262
+[test_loader][251] SourceF_pancreas_355 | mean_dice=0.6257 | mean_sd(px)=8.3174 | mean_hd(px)=49.3397
+[test_loader][252] SourceF_pancreas_356 | mean_dice=0.4276 | mean_sd(px)=20.2687 | mean_hd(px)=63.7016
+[test_loader][253] SourceF_pancreas_357 | mean_dice=0.2996 | mean_sd(px)=22.7611 | mean_hd(px)=86.7078
+[test_loader][254] SourceF_pancreas_358 | mean_dice=0.6017 | mean_sd(px)=10.0516 | mean_hd(px)=57.5157
+[test_loader][255] SourceF_pancreas_360 | mean_dice=0.2695 | mean_sd(px)=21.1775 | mean_hd(px)=65.0524
+[test_loader][256] SourceF_pancreas_361 | mean_dice=0.2378 | mean_sd(px)=51.5639 | mean_hd(px)=82.7778
+[test_loader][257] SourceF_pancreas_362 | mean_dice=0.3028 | mean_sd(px)=26.8698 | mean_hd(px)=64.2662
+[test_loader][258] SourceF_pancreas_364 | mean_dice=0.4286 | mean_sd(px)=52.4284 | mean_hd(px)=96.1019
+[test_loader][259] SourceF_pancreas_365 | mean_dice=0.3678 | mean_sd(px)=38.0482 | mean_hd(px)=124.8375
+[test_loader][260] SourceF_pancreas_366 | mean_dice=0.3177 | mean_sd(px)=16.3019 | mean_hd(px)=62.1068
+[test_loader][261] SourceF_pancreas_367 | mean_dice=0.5699 | mean_sd(px)=10.9461 | mean_hd(px)=51.9383
+[test_loader][262] SourceF_pancreas_369 | mean_dice=0.3179 | mean_sd(px)=13.3892 | mean_hd(px)=42.3516
+[test_loader][263] SourceF_pancreas_370 | mean_dice=0.5883 | mean_sd(px)=13.3327 | mean_hd(px)=56.1435
+[test_loader][264] SourceF_pancreas_372 | mean_dice=0.3094 | mean_sd(px)=20.8917 | mean_hd(px)=72.8974
+[test_loader][265] SourceF_pancreas_374 | mean_dice=0.5345 | mean_sd(px)=7.7854 | mean_hd(px)=32.1865
+[test_loader][266] SourceF_pancreas_375 | mean_dice=0.5723 | mean_sd(px)=9.3165 | mean_hd(px)=41.1449
+[test_loader][267] SourceF_pancreas_376 | mean_dice=0.3599 | mean_sd(px)=12.3042 | mean_hd(px)=47.2335
+[test_loader][268] SourceF_pancreas_377 | mean_dice=0.3270 | mean_sd(px)=15.4415 | mean_hd(px)=55.6247
+[test_loader][269] SourceF_pancreas_378 | mean_dice=0.4215 | mean_sd(px)=16.1511 | mean_hd(px)=86.2266
+[test_loader][270] SourceF_pancreas_379 | mean_dice=0.3606 | mean_sd(px)=15.1380 | mean_hd(px)=52.9698
+[test_loader][271] SourceF_pancreas_380 | mean_dice=0.4860 | mean_sd(px)=9.2981 | mean_hd(px)=49.4307
+[test_loader][272] SourceF_pancreas_382 | mean_dice=0.6020 | mean_sd(px)=7.1517 | mean_hd(px)=36.0103
+[test_loader][273] SourceF_pancreas_385 | mean_dice=0.4631 | mean_sd(px)=13.1388 | mean_hd(px)=40.3698
+[test_loader][274] SourceF_pancreas_386 | mean_dice=0.3577 | mean_sd(px)=29.0371 | mean_hd(px)=89.7050
+[test_loader][275] SourceF_pancreas_387 | mean_dice=0.6601 | mean_sd(px)=6.0568 | mean_hd(px)=28.3975
+[test_loader][276] SourceF_pancreas_388 | mean_dice=0.6157 | mean_sd(px)=12.9837 | mean_hd(px)=29.0689
+[test_loader][277] SourceF_pancreas_389 | mean_dice=0.4964 | mean_sd(px)=8.6917 | mean_hd(px)=47.6949
+[test_loader][278] SourceF_pancreas_391 | mean_dice=0.4804 | mean_sd(px)=10.7107 | mean_hd(px)=54.7349
+[test_loader][279] SourceF_pancreas_392 | mean_dice=0.2030 | mean_sd(px)=34.2809 | mean_hd(px)=89.4219
+[test_loader][280] SourceF_pancreas_393 | mean_dice=0.1853 | mean_sd(px)=22.0948 | mean_hd(px)=78.1797
+[test_loader][281] SourceF_pancreas_395 | mean_dice=0.6016 | mean_sd(px)=10.0786 | mean_hd(px)=59.1047
+[test_loader][282] SourceF_pancreas_398 | mean_dice=0.6399 | mean_sd(px)=5.2822 | mean_hd(px)=26.1542
+[test_loader][283] SourceF_pancreas_399 | mean_dice=0.4944 | mean_sd(px)=14.7847 | mean_hd(px)=74.0179
+[test_loader][284] SourceF_pancreas_400 | mean_dice=0.3564 | mean_sd(px)=8.0948 | mean_hd(px)=24.2169
+[test_loader][285] SourceF_pancreas_401 | mean_dice=0.4632 | mean_sd(px)=14.1608 | mean_hd(px)=54.7221
+[test_loader][286] SourceF_pancreas_402 | mean_dice=0.3055 | mean_sd(px)=26.7909 | mean_hd(px)=56.5323
+[test_loader][287] SourceF_pancreas_404 | mean_dice=0.2578 | mean_sd(px)=16.4659 | mean_hd(px)=49.6780
+[test_loader][288] SourceF_pancreas_405 | mean_dice=0.2772 | mean_sd(px)=7.9809 | mean_hd(px)=37.2306
+[test_loader][289] SourceF_pancreas_406 | mean_dice=0.5053 | mean_sd(px)=17.4669 | mean_hd(px)=66.1751
+[test_loader][290] SourceF_pancreas_409 | mean_dice=0.6364 | mean_sd(px)=13.4191 | mean_hd(px)=77.5220
+[test_loader][291] SourceF_pancreas_410 | mean_dice=0.5311 | mean_sd(px)=16.3275 | mean_hd(px)=87.7801
+[test_loader][292] SourceF_pancreas_411 | mean_dice=0.3647 | mean_sd(px)=26.7784 | mean_hd(px)=50.7872
+[test_loader][293] SourceF_pancreas_412 | mean_dice=0.3437 | mean_sd(px)=13.1419 | mean_hd(px)=48.2037
+[test_loader][294] SourceF_pancreas_413 | mean_dice=0.3312 | mean_sd(px)=25.2151 | mean_hd(px)=107.1745
+[test_loader][295] SourceF_pancreas_414 | mean_dice=0.2057 | mean_sd(px)=23.3560 | mean_hd(px)=78.4312
+[test_loader][296] SourceF_pancreas_415 | mean_dice=0.4944 | mean_sd(px)=32.6718 | mean_hd(px)=66.5957
+[test_loader][297] SourceF_pancreas_416 | mean_dice=0.3871 | mean_sd(px)=19.6421 | mean_hd(px)=36.3228
+[test_loader][298] SourceF_pancreas_418 | mean_dice=0.2486 | mean_sd(px)=27.2043 | mean_hd(px)=82.8839
+[test_loader][299] SourceF_pancreas_419 | mean_dice=0.3088 | mean_sd(px)=14.5302 | mean_hd(px)=51.3014
+[test_loader][300] SourceF_pancreas_421 | mean_dice=0.5814 | mean_sd(px)=5.4130 | mean_hd(px)=25.1603
+
+Done. Outputs at: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/Results/Liver_Pancreas-B
+

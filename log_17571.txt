@@ -1,0 +1,339 @@
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/e448bede1fca4199b1f0cda093ee861b
+
+[collect|SourceA] total=80 labeled=80 unlabeled=0
+[collect|SourceB] total=281 labeled=281 unlabeled=0
+[Setting B] train_sources=['SourceA'] train_pool=80
+[Setting B] test_sources=['SourceB'] test_pool=281
+[train/val] train=72 val=8
+Loading dataset:   0%|          | 0/72 [00:00<?, ?it/s]Loading dataset:   1%|▏         | 1/72 [00:02<02:42,  2.28s/it]Loading dataset:   7%|▋         | 5/72 [00:03<00:45,  1.48it/s]Loading dataset:  11%|█         | 8/72 [00:04<00:25,  2.51it/s]Loading dataset:  12%|█▎        | 9/72 [00:05<00:36,  1.73it/s]Loading dataset:  14%|█▍        | 10/72 [00:05<00:30,  2.01it/s]Loading dataset:  17%|█▋        | 12/72 [00:05<00:20,  3.00it/s]Loading dataset:  18%|█▊        | 13/72 [00:07<00:35,  1.67it/s]Loading dataset:  19%|█▉        | 14/72 [00:07<00:30,  1.92it/s]Loading dataset:  24%|██▎       | 17/72 [00:08<00:24,  2.21it/s]Loading dataset:  25%|██▌       | 18/72 [00:09<00:21,  2.49it/s]Loading dataset:  26%|██▋       | 19/72 [00:09<00:19,  2.77it/s]Loading dataset:  28%|██▊       | 20/72 [00:09<00:18,  2.82it/s]Loading dataset:  29%|██▉       | 21/72 [00:11<00:33,  1.52it/s]Loading dataset:  33%|███▎      | 24/72 [00:11<00:18,  2.60it/s]Loading dataset:  35%|███▍      | 25/72 [00:12<00:27,  1.70it/s]Loading dataset:  38%|███▊      | 27/72 [00:13<00:20,  2.20it/s]Loading dataset:  39%|███▉      | 28/72 [00:15<00:32,  1.36it/s]Loading dataset:  44%|████▍     | 32/72 [00:16<00:20,  1.95it/s]Loading dataset:  46%|████▌     | 33/72 [00:16<00:18,  2.16it/s]Loading dataset:  49%|████▊     | 35/72 [00:17<00:14,  2.61it/s]Loading dataset:  50%|█████     | 36/72 [00:18<00:17,  2.05it/s]Loading dataset:  51%|█████▏    | 37/72 [00:18<00:15,  2.22it/s]Loading dataset:  54%|█████▍    | 39/72 [00:18<00:11,  2.99it/s]Loading dataset:  56%|█████▌    | 40/72 [00:20<00:19,  1.68it/s]Loading dataset:  58%|█████▊    | 42/72 [00:20<00:12,  2.36it/s]Loading dataset:  61%|██████    | 44/72 [00:21<00:11,  2.35it/s]Loading dataset:  62%|██████▎   | 45/72 [00:21<00:11,  2.44it/s]Loading dataset:  64%|██████▍   | 46/72 [00:22<00:10,  2.37it/s]Loading dataset:  67%|██████▋   | 48/72 [00:23<00:10,  2.36it/s]Loading dataset:  68%|██████▊   | 49/72 [00:23<00:09,  2.48it/s]Loading dataset:  69%|██████▉   | 50/72 [00:23<00:07,  2.98it/s]Loading dataset:  71%|███████   | 51/72 [00:23<00:06,  3.14it/s]Loading dataset:  72%|███████▏  | 52/72 [00:24<00:09,  2.21it/s]Loading dataset:  74%|███████▎  | 53/72 [00:24<00:08,  2.37it/s]Loading dataset:  75%|███████▌  | 54/72 [00:25<00:09,  1.88it/s]Loading dataset:  78%|███████▊  | 56/72 [00:26<00:08,  1.93it/s]Loading dataset:  81%|████████  | 58/72 [00:27<00:07,  1.86it/s]Loading dataset:  83%|████████▎ | 60/72 [00:28<00:05,  2.26it/s]Loading dataset:  86%|████████▌ | 62/72 [00:28<00:03,  2.61it/s]Loading dataset:  88%|████████▊ | 63/72 [00:29<00:03,  2.38it/s]Loading dataset:  89%|████████▉ | 64/72 [00:30<00:03,  2.08it/s]Loading dataset:  92%|█████████▏| 66/72 [00:30<00:01,  3.01it/s]Loading dataset:  93%|█████████▎| 67/72 [00:31<00:02,  2.47it/s]Loading dataset:  94%|█████████▍| 68/72 [00:31<00:01,  2.73it/s]Loading dataset:  96%|█████████▌| 69/72 [00:31<00:01,  2.37it/s]Loading dataset:  99%|█████████▊| 71/72 [00:32<00:00,  2.71it/s]Loading dataset: 100%|██████████| 72/72 [00:32<00:00,  2.21it/s]
+Loading dataset:   0%|          | 0/8 [00:00<?, ?it/s]Loading dataset:  12%|█▎        | 1/8 [00:02<00:15,  2.26s/it]Loading dataset:  25%|██▌       | 2/8 [00:02<00:06,  1.07s/it]Loading dataset:  62%|██████▎   | 5/8 [00:03<00:01,  1.92it/s]Loading dataset:  75%|███████▌  | 6/8 [00:03<00:00,  2.18it/s]Loading dataset: 100%|██████████| 8/8 [00:03<00:00,  3.28it/s]Loading dataset: 100%|██████████| 8/8 [00:03<00:00,  2.07it/s]
+Loading dataset:   0%|          | 0/281 [00:00<?, ?it/s]Loading dataset:   0%|          | 1/281 [00:01<07:46,  1.67s/it]Loading dataset:   2%|▏         | 5/281 [00:03<02:47,  1.65it/s]Loading dataset:   3%|▎         | 9/281 [00:03<01:21,  3.32it/s]Loading dataset:   4%|▎         | 10/281 [00:03<01:15,  3.61it/s]Loading dataset:   4%|▍         | 12/281 [00:04<01:32,  2.91it/s]Loading dataset:   5%|▌         | 15/281 [00:04<01:01,  4.29it/s]Loading dataset:   6%|▌         | 16/281 [00:05<01:19,  3.32it/s]Loading dataset:   7%|▋         | 20/281 [00:07<01:34,  2.76it/s]Loading dataset:   9%|▊         | 24/281 [00:07<01:00,  4.26it/s]Loading dataset:   9%|▉         | 25/281 [00:07<00:59,  4.32it/s]Loading dataset:  10%|▉         | 27/281 [00:08<01:06,  3.85it/s]Loading dataset:  10%|▉         | 28/281 [00:08<01:02,  4.06it/s]Loading dataset:  11%|█         | 30/281 [00:08<00:52,  4.82it/s]Loading dataset:  11%|█         | 31/281 [00:09<01:13,  3.41it/s]Loading dataset:  11%|█▏        | 32/281 [00:09<01:08,  3.64it/s]Loading dataset:  12%|█▏        | 33/281 [00:09<01:04,  3.86it/s]Loading dataset:  12%|█▏        | 35/281 [00:10<01:24,  2.92it/s]Loading dataset:  13%|█▎        | 36/281 [00:11<01:17,  3.17it/s]Loading dataset:  14%|█▎        | 38/281 [00:11<00:53,  4.53it/s]Loading dataset:  14%|█▍        | 39/281 [00:11<01:24,  2.87it/s]Loading dataset:  15%|█▍        | 41/281 [00:12<01:11,  3.34it/s]Loading dataset:  15%|█▌        | 43/281 [00:12<00:53,  4.41it/s]Loading dataset:  16%|█▌        | 44/281 [00:13<01:16,  3.10it/s]Loading dataset:  16%|█▋        | 46/281 [00:13<00:54,  4.34it/s]Loading dataset:  17%|█▋        | 47/281 [00:13<00:53,  4.37it/s]Loading dataset:  17%|█▋        | 49/281 [00:14<01:02,  3.72it/s]Loading dataset:  18%|█▊        | 50/281 [00:14<01:09,  3.34it/s]Loading dataset:  19%|█▉        | 53/281 [00:15<01:08,  3.30it/s]Loading dataset:  19%|█▉        | 54/281 [00:15<01:03,  3.58it/s]Loading dataset:  20%|█▉        | 56/281 [00:15<00:45,  4.91it/s]Loading dataset:  20%|██        | 57/281 [00:17<01:25,  2.63it/s]Loading dataset:  21%|██        | 58/281 [00:17<01:34,  2.35it/s]Loading dataset:  22%|██▏       | 61/281 [00:17<00:55,  3.98it/s]Loading dataset:  22%|██▏       | 62/281 [00:18<01:02,  3.52it/s]Loading dataset:  22%|██▏       | 63/281 [00:18<00:54,  3.97it/s]Loading dataset:  23%|██▎       | 64/281 [00:18<01:05,  3.33it/s]Loading dataset:  23%|██▎       | 65/281 [00:19<01:06,  3.23it/s]Loading dataset:  24%|██▍       | 67/281 [00:19<01:00,  3.52it/s]Loading dataset:  24%|██▍       | 68/281 [00:20<01:06,  3.21it/s]Loading dataset:  25%|██▌       | 71/281 [00:21<01:09,  3.01it/s]Loading dataset:  26%|██▌       | 73/281 [00:21<01:06,  3.14it/s]Loading dataset:  27%|██▋       | 75/281 [00:22<01:13,  2.79it/s]Loading dataset:  28%|██▊       | 78/281 [00:23<00:55,  3.65it/s]Loading dataset:  28%|██▊       | 79/281 [00:23<00:50,  4.01it/s]Loading dataset:  28%|██▊       | 80/281 [00:24<01:17,  2.60it/s]Loading dataset:  29%|██▉       | 82/281 [00:24<01:16,  2.61it/s]Loading dataset:  30%|███       | 85/281 [00:25<00:47,  4.14it/s]Loading dataset:  31%|███▏      | 88/281 [00:26<00:54,  3.52it/s]Loading dataset:  33%|███▎      | 92/281 [00:26<00:46,  4.07it/s]Loading dataset:  33%|███▎      | 93/281 [00:27<00:43,  4.31it/s]Loading dataset:  34%|███▍      | 95/281 [00:27<00:36,  5.10it/s]Loading dataset:  34%|███▍      | 96/281 [00:27<00:49,  3.77it/s]Loading dataset:  35%|███▍      | 97/281 [00:28<00:44,  4.10it/s]Loading dataset:  35%|███▍      | 98/281 [00:28<00:42,  4.27it/s]Loading dataset:  35%|███▌      | 99/281 [00:28<00:43,  4.16it/s]Loading dataset:  36%|███▌      | 100/281 [00:29<00:59,  3.02it/s]Loading dataset:  36%|███▌      | 101/281 [00:29<00:55,  3.25it/s]Loading dataset:  37%|███▋      | 103/281 [00:29<00:38,  4.59it/s]Loading dataset:  37%|███▋      | 104/281 [00:30<01:02,  2.83it/s]Loading dataset:  37%|███▋      | 105/281 [00:30<01:06,  2.65it/s]Loading dataset:  38%|███▊      | 108/281 [00:31<00:55,  3.14it/s]Loading dataset:  39%|███▉      | 110/281 [00:31<00:41,  4.12it/s]Loading dataset:  40%|███▉      | 112/281 [00:32<00:53,  3.18it/s]Loading dataset:  41%|████      | 114/281 [00:32<00:40,  4.08it/s]Loading dataset:  41%|████      | 115/281 [00:33<00:38,  4.29it/s]Loading dataset:  41%|████▏     | 116/281 [00:33<00:46,  3.58it/s]Loading dataset:  42%|████▏     | 117/281 [00:33<00:42,  3.87it/s]Loading dataset:  42%|████▏     | 118/281 [00:34<01:00,  2.71it/s]Loading dataset:  43%|████▎     | 120/281 [00:34<00:43,  3.72it/s]Loading dataset:  43%|████▎     | 122/281 [00:35<01:00,  2.64it/s]Loading dataset:  44%|████▍     | 125/281 [00:36<00:38,  4.02it/s]Loading dataset:  45%|████▍     | 126/281 [00:36<00:46,  3.33it/s]Loading dataset:  45%|████▌     | 127/281 [00:37<00:55,  2.77it/s]Loading dataset:  46%|████▌     | 129/281 [00:37<00:39,  3.88it/s]Loading dataset:  46%|████▋     | 130/281 [00:38<00:55,  2.74it/s]Loading dataset:  47%|████▋     | 131/281 [00:38<00:52,  2.87it/s]Loading dataset:  47%|████▋     | 132/281 [00:38<00:47,  3.17it/s]Loading dataset:  48%|████▊     | 134/281 [00:40<01:34,  1.56it/s]Loading dataset:  49%|████▉     | 138/281 [00:40<00:44,  3.19it/s]Loading dataset:  50%|████▉     | 140/281 [00:41<00:35,  4.02it/s]Loading dataset:  51%|█████     | 142/281 [00:42<00:41,  3.31it/s]Loading dataset:  51%|█████     | 143/281 [00:42<00:38,  3.55it/s]Loading dataset:  52%|█████▏    | 145/281 [00:43<00:44,  3.08it/s]Loading dataset:  52%|█████▏    | 146/281 [00:43<00:38,  3.49it/s]Loading dataset:  52%|█████▏    | 147/281 [00:43<00:33,  4.05it/s]Loading dataset:  53%|█████▎    | 148/281 [00:43<00:28,  4.67it/s]Loading dataset:  53%|█████▎    | 149/281 [00:44<00:51,  2.57it/s]Loading dataset:  54%|█████▎    | 151/281 [00:44<00:35,  3.67it/s]Loading dataset:  54%|█████▍    | 152/281 [00:44<00:32,  3.92it/s]Loading dataset:  54%|█████▍    | 153/281 [00:45<00:35,  3.57it/s]Loading dataset:  55%|█████▍    | 154/281 [00:45<00:53,  2.37it/s]Loading dataset:  56%|█████▌    | 157/281 [00:46<00:34,  3.61it/s]Loading dataset:  56%|█████▌    | 158/281 [00:46<00:44,  2.78it/s]Loading dataset:  57%|█████▋    | 160/281 [00:47<00:30,  3.92it/s]Loading dataset:  57%|█████▋    | 161/281 [00:48<00:53,  2.24it/s]Loading dataset:  59%|█████▊    | 165/281 [00:49<00:36,  3.17it/s]Loading dataset:  59%|█████▉    | 166/281 [00:49<00:35,  3.27it/s]Loading dataset:  60%|█████▉    | 168/281 [00:49<00:27,  4.08it/s]Loading dataset:  60%|██████    | 169/281 [00:50<00:36,  3.08it/s]Loading dataset:  60%|██████    | 170/281 [00:50<00:34,  3.18it/s]Loading dataset:  61%|██████    | 171/281 [00:50<00:31,  3.50it/s]Loading dataset:  62%|██████▏   | 173/281 [00:51<00:40,  2.69it/s]Loading dataset:  62%|██████▏   | 174/281 [00:51<00:34,  3.07it/s]Loading dataset:  63%|██████▎   | 177/281 [00:53<00:39,  2.64it/s]Loading dataset:  64%|██████▍   | 181/281 [00:54<00:31,  3.19it/s]Loading dataset:  65%|██████▍   | 182/281 [00:54<00:28,  3.50it/s]Loading dataset:  65%|██████▌   | 183/281 [00:54<00:25,  3.89it/s]Loading dataset:  66%|██████▌   | 185/281 [00:55<00:31,  3.02it/s]Loading dataset:  66%|██████▌   | 186/281 [00:55<00:32,  2.90it/s]Loading dataset:  67%|██████▋   | 189/281 [00:56<00:20,  4.48it/s]Loading dataset:  68%|██████▊   | 190/281 [00:56<00:31,  2.89it/s]Loading dataset:  69%|██████▉   | 194/281 [00:57<00:24,  3.54it/s]Loading dataset:  69%|██████▉   | 195/281 [00:57<00:22,  3.79it/s]Loading dataset:  70%|██████▉   | 196/281 [00:58<00:22,  3.74it/s]Loading dataset:  70%|███████   | 198/281 [00:58<00:22,  3.62it/s]Loading dataset:  71%|███████   | 199/281 [00:59<00:27,  3.02it/s]Loading dataset:  72%|███████▏  | 202/281 [01:00<00:22,  3.51it/s]Loading dataset:  73%|███████▎  | 204/281 [01:00<00:21,  3.65it/s]Loading dataset:  73%|███████▎  | 206/281 [01:01<00:23,  3.17it/s]Loading dataset:  74%|███████▎  | 207/281 [01:01<00:21,  3.41it/s]Loading dataset:  74%|███████▍  | 208/281 [01:01<00:18,  3.90it/s]Loading dataset:  74%|███████▍  | 209/281 [01:02<00:19,  3.70it/s]Loading dataset:  75%|███████▍  | 210/281 [01:02<00:25,  2.78it/s]Loading dataset:  75%|███████▌  | 211/281 [01:02<00:22,  3.05it/s]Loading dataset:  76%|███████▌  | 213/281 [01:03<00:18,  3.65it/s]Loading dataset:  76%|███████▌  | 214/281 [01:03<00:23,  2.86it/s]Loading dataset:  77%|███████▋  | 216/281 [01:04<00:15,  4.12it/s]Loading dataset:  77%|███████▋  | 217/281 [01:04<00:21,  3.02it/s]Loading dataset:  78%|███████▊  | 218/281 [01:05<00:22,  2.74it/s]Loading dataset:  79%|███████▊  | 221/281 [01:06<00:20,  2.99it/s]Loading dataset:  79%|███████▉  | 222/281 [01:06<00:22,  2.67it/s]Loading dataset:  80%|████████  | 225/281 [01:07<00:17,  3.16it/s]Loading dataset:  80%|████████  | 226/281 [01:07<00:16,  3.36it/s]Loading dataset:  81%|████████  | 228/281 [01:07<00:12,  4.40it/s]Loading dataset:  81%|████████▏ | 229/281 [01:08<00:19,  2.73it/s]Loading dataset:  83%|████████▎ | 233/281 [01:09<00:13,  3.43it/s]Loading dataset:  84%|████████▎ | 235/281 [01:09<00:11,  4.17it/s]Loading dataset:  84%|████████▍ | 237/281 [01:10<00:10,  4.39it/s]Loading dataset:  85%|████████▌ | 239/281 [01:10<00:11,  3.71it/s]Loading dataset:  85%|████████▌ | 240/281 [01:11<00:10,  3.88it/s]Loading dataset:  86%|████████▌ | 241/281 [01:11<00:10,  3.97it/s]Loading dataset:  86%|████████▋ | 243/281 [01:12<00:13,  2.92it/s]Loading dataset:  87%|████████▋ | 244/281 [01:12<00:11,  3.19it/s]Loading dataset:  88%|████████▊ | 246/281 [01:13<00:10,  3.48it/s]Loading dataset:  88%|████████▊ | 247/281 [01:14<00:16,  2.06it/s]Loading dataset:  89%|████████▉ | 250/281 [01:14<00:08,  3.49it/s]Loading dataset:  89%|████████▉ | 251/281 [01:18<00:30,  1.03s/it]Loading dataset:  93%|█████████▎| 261/281 [01:19<00:05,  3.38it/s]Loading dataset:  94%|█████████▍| 264/281 [01:19<00:04,  3.56it/s]Loading dataset:  95%|█████████▍| 266/281 [01:20<00:04,  3.23it/s]Loading dataset:  95%|█████████▌| 268/281 [01:21<00:04,  2.98it/s]Loading dataset:  96%|█████████▌| 269/281 [01:22<00:04,  2.56it/s]Loading dataset:  96%|█████████▋| 271/281 [01:30<00:14,  1.47s/it]Loading dataset: 100%|██████████| 281/281 [01:30<00:00,  3.09it/s]
+Loaders created. Trying to fetch one batch...
+8
+[tensor([[[[0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          ...,
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.]],
+
+         [[0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          ...,
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.]],
+
+         [[0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          ...,
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.]],
+
+         ...,
+
+         [[0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          ...,
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.]],
+
+         [[0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          ...,
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.]],
+
+         [[0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          ...,
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.],
+          [0., 0., 0.,  ..., 0., 0., 0.]]]]), tensor([[[[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         ...,
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]]]], dtype=torch.uint8), tensor([[[[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         ...,
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]],
+
+         [[0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          ...,
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0],
+          [0, 0, 0,  ..., 0, 0, 0]]]], dtype=torch.uint8), tensor([54]), tensor([33]), tensor([61]), ('pancreas_001',), ('SourceB',)]
+Got first batch!
+Epoch 01 | train=0.0040 | val=0.0048 | lr=1.00e-04
+Epoch 02 | train=0.0019 | val=0.0027 | lr=5.00e-05
+Epoch 03 | train=0.0013 | val=0.0011 | lr=5.00e-05
+Epoch 04 | train=0.0012 | val=0.0010 | lr=2.50e-05
+Epoch 05 | train=0.0011 | val=0.0010 | lr=2.50e-05
+Epoch 06 | train=0.0011 | val=0.0009 | lr=1.25e-05
+Epoch 07 | train=0.0010 | val=0.0009 | lr=1.25e-05
+Epoch 08 | train=0.0010 | val=0.0009 | lr=6.25e-06
+Epoch 09 | train=0.0010 | val=0.0009 | lr=6.25e-06
+Epoch 10 | train=0.0010 | val=0.0009 | lr=3.13e-06
+Epoch 11 | train=0.0010 | val=0.0009 | lr=3.13e-06
+Epoch 12 | train=0.0010 | val=0.0008 | lr=1.56e-06
+Epoch 13 | train=0.0009 | val=0.0008 | lr=1.56e-06
+Epoch 14 | train=0.0010 | val=0.0008 | lr=7.81e-07
+Epoch 15 | train=0.0009 | val=0.0008 | lr=7.81e-07
+Epoch 16 | train=0.0009 | val=0.0008 | lr=3.91e-07
+Epoch 17 | train=0.0009 | val=0.0008 | lr=3.91e-07
+Epoch 18 | train=0.0009 | val=0.0008 | lr=1.95e-07
+Epoch 19 | train=0.0010 | val=0.0008 | lr=1.95e-07
+Epoch 20 | train=0.0009 | val=0.0008 | lr=9.77e-08
+Epoch 21 | train=0.0009 | val=0.0008 | lr=9.77e-08
+Epoch 22 | train=0.0010 | val=0.0008 | lr=4.88e-08
+Epoch 23 | train=0.0014 | val=0.0008 | lr=4.88e-08
+Epoch 24 | train=0.0010 | val=0.0008 | lr=2.44e-08
+Epoch 25 | train=0.0010 | val=0.0008 | lr=2.44e-08
+Epoch 26 | train=0.0009 | val=0.0008 | lr=1.22e-08
+Epoch 27 | train=0.0010 | val=0.0008 | lr=1.22e-08
+Epoch 28 | train=0.0009 | val=0.0008 | lr=6.10e-09
+Epoch 29 | train=0.0011 | val=0.0008 | lr=6.10e-09
+Epoch 30 | train=0.0010 | val=0.0008 | lr=3.05e-09
+Epoch 31 | train=0.0009 | val=0.0008 | lr=3.05e-09
+Epoch 32 | train=0.0009 | val=0.0008 | lr=1.53e-09
+Epoch 33 | train=0.0009 | val=0.0008 | lr=1.53e-09
+Epoch 34 | train=0.0009 | val=0.0008 | lr=7.63e-10
+Epoch 35 | train=0.0010 | val=0.0008 | lr=7.63e-10
+Epoch 36 | train=0.0009 | val=0.0008 | lr=3.81e-10
+Epoch 37 | train=0.0009 | val=0.0008 | lr=3.81e-10
+Epoch 38 | train=0.0010 | val=0.0008 | lr=1.91e-10
+Epoch 39 | train=0.0009 | val=0.0008 | lr=1.91e-10
+Epoch 40 | train=0.0010 | val=0.0008 | lr=9.54e-11
+Epoch 41 | train=0.0010 | val=0.0008 | lr=9.54e-11
+Epoch 42 | train=0.0013 | val=0.0008 | lr=4.77e-11
+Epoch 43 | train=0.0009 | val=0.0008 | lr=4.77e-11
+Epoch 44 | train=0.0009 | val=0.0008 | lr=2.38e-11
+Epoch 45 | train=0.0013 | val=0.0008 | lr=2.38e-11
+Epoch 46 | train=0.0010 | val=0.0008 | lr=1.19e-11
+Epoch 47 | train=0.0009 | val=0.0008 | lr=1.19e-11
+Epoch 48 | train=0.0009 | val=0.0008 | lr=5.96e-12
+Epoch 49 | train=0.0009 | val=0.0008 | lr=5.96e-12
+Epoch 50 | train=0.0009 | val=0.0008 | lr=2.98e-12
+Epoch 51 | train=0.0010 | val=0.0008 | lr=2.98e-12
+Epoch 52 | train=0.0009 | val=0.0008 | lr=1.49e-12
+Epoch 53 | train=0.0013 | val=0.0008 | lr=1.49e-12
+Epoch 54 | train=0.0009 | val=0.0008 | lr=7.45e-13
+Epoch 55 | train=0.0010 | val=0.0008 | lr=7.45e-13
+Epoch 56 | train=0.0013 | val=0.0008 | lr=3.73e-13
+Epoch 57 | train=0.0009 | val=0.0008 | lr=3.73e-13
+Epoch 58 | train=0.0009 | val=0.0008 | lr=1.86e-13
+Epoch 59 | train=0.0014 | val=0.0008 | lr=1.86e-13
+Epoch 60 | train=0.0009 | val=0.0008 | lr=9.31e-14
+Epoch 61 | train=0.0009 | val=0.0008 | lr=9.31e-14
+Epoch 62 | train=0.0009 | val=0.0008 | lr=4.66e-14
+Epoch 63 | train=0.0009 | val=0.0008 | lr=4.66e-14
+Epoch 64 | train=0.0010 | val=0.0008 | lr=2.33e-14
+Epoch 65 | train=0.0010 | val=0.0008 | lr=2.33e-14
+Epoch 66 | train=0.0010 | val=0.0008 | lr=1.16e-14
+Epoch 67 | train=0.0010 | val=0.0008 | lr=1.16e-14
+Epoch 68 | train=0.0010 | val=0.0008 | lr=5.82e-15
+Epoch 69 | train=0.0010 | val=0.0008 | lr=5.82e-15
+Epoch 70 | train=0.0009 | val=0.0008 | lr=2.91e-15
+Epoch 71 | train=0.0014 | val=0.0008 | lr=2.91e-15
+Epoch 72 | train=0.0010 | val=0.0008 | lr=1.46e-15
+Epoch 73 | train=0.0009 | val=0.0008 | lr=1.46e-15
+Epoch 74 | train=0.0009 | val=0.0008 | lr=7.28e-16
+Epoch 75 | train=0.0013 | val=0.0008 | lr=7.28e-16
+Epoch 76 | train=0.0009 | val=0.0008 | lr=3.64e-16
+Epoch 77 | train=0.0013 | val=0.0008 | lr=3.64e-16
+Epoch 78 | train=0.0014 | val=0.0008 | lr=1.82e-16
+Epoch 79 | train=0.0009 | val=0.0008 | lr=1.82e-16
+Epoch 80 | train=0.0010 | val=0.0008 | lr=9.09e-17
+Epoch 81 | train=0.0009 | val=0.0008 | lr=9.09e-17
+Epoch 82 | train=0.0010 | val=0.0008 | lr=4.55e-17
+Epoch 83 | train=0.0010 | val=0.0008 | lr=4.55e-17
+Epoch 84 | train=0.0010 | val=0.0008 | lr=2.27e-17
+Epoch 85 | train=0.0009 | val=0.0008 | lr=2.27e-17
+Epoch 86 | train=0.0009 | val=0.0008 | lr=1.14e-17
+Epoch 87 | train=0.0009 | val=0.0008 | lr=1.14e-17
+Epoch 88 | train=0.0009 | val=0.0008 | lr=5.68e-18
+Epoch 89 | train=0.0009 | val=0.0008 | lr=5.68e-18
+Epoch 90 | train=0.0013 | val=0.0008 | lr=2.84e-18
+Epoch 91 | train=0.0010 | val=0.0008 | lr=2.84e-18
+Epoch 92 | train=0.0009 | val=0.0008 | lr=1.42e-18
+Epoch 93 | train=0.0010 | val=0.0008 | lr=1.42e-18
+Epoch 94 | train=0.0009 | val=0.0008 | lr=7.11e-19
+Epoch 95 | train=0.0013 | val=0.0008 | lr=7.11e-19
+Epoch 96 | train=0.0009 | val=0.0008 | lr=3.55e-19
+Epoch 97 | train=0.0009 | val=0.0008 | lr=3.55e-19
+Epoch 98 | train=0.0009 | val=0.0008 | lr=1.78e-19
+Epoch 99 | train=0.0009 | val=0.0008 | lr=1.78e-19
+Epoch 100 | train=0.0009 | val=0.0008 | lr=8.88e-20
+Epoch 101 | train=0.0009 | val=0.0008 | lr=8.88e-20
+Epoch 102 | train=0.0009 | val=0.0008 | lr=4.44e-20
+Epoch 103 | train=0.0009 | val=0.0008 | lr=4.44e-20
+Epoch 104 | train=0.0009 | val=0.0008 | lr=2.22e-20
+Epoch 105 | train=0.0010 | val=0.0008 | lr=2.22e-20
+Epoch 106 | train=0.0009 | val=0.0008 | lr=1.11e-20
+Epoch 107 | train=0.0010 | val=0.0008 | lr=1.11e-20
+Epoch 108 | train=0.0010 | val=0.0008 | lr=5.55e-21
+Epoch 109 | train=0.0009 | val=0.0008 | lr=5.55e-21
+Epoch 110 | train=0.0009 | val=0.0008 | lr=2.78e-21
+Epoch 111 | train=0.0018 | val=0.0008 | lr=2.78e-21
+Epoch 112 | train=0.0009 | val=0.0008 | lr=1.39e-21
+Epoch 113 | train=0.0009 | val=0.0008 | lr=1.39e-21
+Epoch 114 | train=0.0009 | val=0.0008 | lr=6.94e-22
+Epoch 115 | train=0.0009 | val=0.0008 | lr=6.94e-22
+Epoch 116 | train=0.0010 | val=0.0008 | lr=3.47e-22
+Epoch 117 | train=0.0009 | val=0.0008 | lr=3.47e-22
+Epoch 118 | train=0.0010 | val=0.0008 | lr=1.73e-22
+Epoch 119 | train=0.0010 | val=0.0008 | lr=1.73e-22
+Epoch 120 | train=0.0009 | val=0.0008 | lr=8.67e-23
+Epoch 121 | train=0.0010 | val=0.0008 | lr=8.67e-23
+Epoch 122 | train=0.0009 | val=0.0008 | lr=4.34e-23
+Epoch 123 | train=0.0010 | val=0.0008 | lr=4.34e-23
+Epoch 124 | train=0.0009 | val=0.0008 | lr=2.17e-23
+Epoch 125 | train=0.0010 | val=0.0008 | lr=2.17e-23
+Epoch 126 | train=0.0010 | val=0.0008 | lr=1.08e-23
+Epoch 127 | train=0.0010 | val=0.0008 | lr=1.08e-23
+Epoch 128 | train=0.0010 | val=0.0008 | lr=5.42e-24
+Epoch 129 | train=0.0009 | val=0.0008 | lr=5.42e-24
+Epoch 130 | train=0.0013 | val=0.0008 | lr=2.71e-24
+Epoch 131 | train=0.0013 | val=0.0008 | lr=2.71e-24
+Epoch 132 | train=0.0010 | val=0.0008 | lr=1.36e-24
+Epoch 133 | train=0.0013 | val=0.0008 | lr=1.36e-24
+Epoch 134 | train=0.0010 | val=0.0008 | lr=6.78e-25
+Epoch 135 | train=0.0009 | val=0.0008 | lr=6.78e-25
+Epoch 136 | train=0.0009 | val=0.0008 | lr=3.39e-25
+Epoch 137 | train=0.0010 | val=0.0008 | lr=3.39e-25
+Epoch 138 | train=0.0009 | val=0.0008 | lr=1.69e-25
+Epoch 139 | train=0.0009 | val=0.0008 | lr=1.69e-25
+Epoch 140 | train=0.0013 | val=0.0008 | lr=8.47e-26
+Epoch 141 | train=0.0010 | val=0.0008 | lr=8.47e-26
+Epoch 142 | train=0.0013 | val=0.0008 | lr=4.24e-26
+Epoch 143 | train=0.0010 | val=0.0008 | lr=4.24e-26
+Epoch 144 | train=0.0015 | val=0.0008 | lr=2.12e-26
+Epoch 145 | train=0.0009 | val=0.0008 | lr=2.12e-26
+Epoch 146 | train=0.0009 | val=0.0008 | lr=1.06e-26
+Epoch 147 | train=0.0009 | val=0.0008 | lr=1.06e-26
+Epoch 148 | train=0.0013 | val=0.0008 | lr=5.29e-27
+Epoch 149 | train=0.0010 | val=0.0008 | lr=5.29e-27
+Epoch 150 | train=0.0010 | val=0.0008 | lr=2.65e-27
+Done. Best val: 0.0008
+Saved best: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/pancreas/Trial_B_Final_Increased_Epoch/best_model.pth
+Saved current: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/pancreas/Trial_B_Final_Increased_Epoch/current_model.pth
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : Pancreas_Trial_Setting_B_Final_Increased_Epoch
+COMET INFO:     url                   : https://www.comet.com/rakibulhaq56/sli2vol/e448bede1fca4199b1f0cda093ee861b
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     train_loss [150] : (0.0008616784277061621, 0.004026217618957162)
+COMET INFO:     val_loss [150]   : (0.0008312435820698738, 0.004799405345693231)
+COMET INFO:   Others:
+COMET INFO:     Name : Pancreas_Trial_Setting_B_Final_Increased_Epoch
+COMET INFO:   Uploads:
+COMET INFO:     conda-environment-definition : 1
+COMET INFO:     conda-info                   : 1
+COMET INFO:     conda-specification          : 1
+COMET INFO:     environment details          : 1
+COMET INFO:     filename                     : 1
+COMET INFO:     git metadata                 : 1
+COMET INFO:     git-patch (uncompressed)     : 1 (15.41 KB)
+COMET INFO:     installed packages           : 1
+COMET INFO:     os packages                  : 1
+COMET INFO:     source_code                  : 2 (15.88 KB)
+COMET INFO: 
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Please wait for metadata to finish uploading (timeout is 3600 seconds)
+COMET INFO: Uploading 2 metrics, params and output messages

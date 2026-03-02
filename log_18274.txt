@@ -1,0 +1,1 @@
+[2026-01-17T19:55:05.613] error: *** JOB 18274 ON spartacus-12 CANCELLED AT 2026-01-17T19:55:05 DUE to SIGNAL Terminated ***

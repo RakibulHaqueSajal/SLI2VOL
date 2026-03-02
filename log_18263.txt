@@ -1,0 +1,102 @@
+[collect|SourceA] total=80 labeled=80 unlabeled=0
+[collect|SourceB] total=281 labeled=281 unlabeled=0
+[split|SourceA] total=80 train=72 test=8
+[split|SourceB] total=281 train=253 test=28
+[Setting A] train_pool=325 (labeled_train=325 + unlabeled=0)
+[Setting A] test_pool=36 (labeled_test only)
+[train/val] train=292 val=33
+Loading dataset:   0%|          | 0/292 [00:00<?, ?it/s]Loading dataset:   0%|          | 1/292 [00:01<06:46,  1.40s/it]Loading dataset:   2%|▏         | 5/292 [00:02<01:39,  2.90it/s]Loading dataset:   2%|▏         | 7/292 [00:02<01:11,  3.97it/s]Loading dataset:   3%|▎         | 8/292 [00:03<02:18,  2.05it/s]Loading dataset:   3%|▎         | 10/292 [00:04<01:49,  2.57it/s]Loading dataset:   5%|▍         | 14/292 [00:05<01:31,  3.03it/s]Loading dataset:   6%|▌         | 18/292 [00:05<00:57,  4.77it/s]Loading dataset:   7%|▋         | 19/292 [00:05<01:05,  4.14it/s]Loading dataset:   7%|▋         | 20/292 [00:06<01:17,  3.52it/s]Loading dataset:   8%|▊         | 23/292 [00:06<00:58,  4.57it/s]Loading dataset:   8%|▊         | 24/292 [00:06<00:55,  4.85it/s]Loading dataset:   9%|▊         | 25/292 [00:07<00:56,  4.76it/s]Loading dataset:   9%|▉         | 26/292 [00:07<01:30,  2.94it/s]Loading dataset:  10%|▉         | 28/292 [00:08<01:14,  3.54it/s]Loading dataset:  11%|█         | 31/292 [00:08<01:09,  3.76it/s]Loading dataset:  12%|█▏        | 34/292 [00:09<01:10,  3.68it/s]Loading dataset:  13%|█▎        | 37/292 [00:10<00:51,  4.96it/s]Loading dataset:  13%|█▎        | 38/292 [00:10<01:03,  3.98it/s]Loading dataset:  14%|█▎        | 40/292 [00:11<01:16,  3.28it/s]Loading dataset:  14%|█▍        | 42/292 [00:11<01:01,  4.08it/s]Loading dataset:  15%|█▌        | 44/292 [00:11<00:47,  5.24it/s]Loading dataset:  15%|█▌        | 45/292 [00:12<00:59,  4.14it/s]Loading dataset:  16%|█▌        | 46/292 [00:12<00:56,  4.38it/s]Loading dataset:  16%|█▋        | 48/292 [00:12<00:43,  5.60it/s]Loading dataset:  17%|█▋        | 49/292 [00:13<01:07,  3.60it/s]Loading dataset:  17%|█▋        | 50/292 [00:13<00:59,  4.06it/s]Loading dataset:  18%|█▊        | 52/292 [00:13<00:40,  5.87it/s]Loading dataset:  18%|█▊        | 53/292 [00:14<01:44,  2.29it/s]Loading dataset:  19%|█▉        | 56/292 [00:15<01:17,  3.05it/s]Loading dataset:  20%|█▉        | 58/292 [00:15<00:58,  3.99it/s]Loading dataset:  21%|██        | 60/292 [00:16<01:25,  2.71it/s]Loading dataset:  22%|██▏       | 64/292 [00:17<01:01,  3.74it/s]Loading dataset:  22%|██▏       | 65/292 [00:23<04:18,  1.14s/it]Loading dataset:  29%|██▉       | 85/292 [00:24<00:49,  4.20it/s]Loading dataset:  30%|██▉       | 87/292 [00:25<00:52,  3.93it/s]Loading dataset:  30%|███       | 89/292 [00:25<00:56,  3.60it/s]Loading dataset:  31%|███       | 91/292 [00:26<00:54,  3.68it/s]Loading dataset:  32%|███▏      | 93/292 [00:26<00:46,  4.27it/s]Loading dataset:  33%|███▎      | 95/292 [00:29<01:29,  2.20it/s]Loading dataset:  34%|███▍      | 99/292 [00:31<01:29,  2.16it/s]Loading dataset:  37%|███▋      | 109/292 [00:32<00:53,  3.45it/s]Loading dataset:  38%|███▊      | 111/292 [00:32<00:46,  3.88it/s]Loading dataset:  39%|███▉      | 114/292 [00:33<00:44,  3.96it/s]Loading dataset:  40%|███▉      | 116/292 [00:34<00:51,  3.44it/s]Loading dataset:  41%|████      | 119/292 [00:34<00:44,  3.86it/s]Loading dataset:  42%|████▏     | 122/292 [00:35<00:34,  4.91it/s]Loading dataset:  42%|████▏     | 124/292 [00:36<00:46,  3.59it/s]Loading dataset:  43%|████▎     | 127/292 [00:36<00:42,  3.89it/s]Loading dataset:  44%|████▍     | 128/292 [00:37<00:43,  3.76it/s]Loading dataset:  45%|████▍     | 131/292 [00:37<00:34,  4.68it/s]Loading dataset:  45%|████▌     | 132/292 [00:37<00:32,  4.97it/s]Loading dataset:  46%|████▌     | 134/292 [00:38<00:34,  4.57it/s]Loading dataset:  47%|████▋     | 136/292 [00:39<00:52,  2.96it/s]Loading dataset:  48%|████▊     | 140/292 [00:40<00:50,  2.99it/s]Loading dataset:  49%|████▉     | 144/292 [00:41<00:41,  3.56it/s]Loading dataset:  50%|████▉     | 145/292 [00:41<00:41,  3.53it/s]Loading dataset:  51%|█████     | 148/292 [00:42<00:36,  3.90it/s]Loading dataset:  52%|█████▏    | 151/292 [00:42<00:26,  5.39it/s]Loading dataset:  52%|█████▏    | 153/292 [00:43<00:31,  4.37it/s]Loading dataset:  53%|█████▎    | 155/292 [00:43<00:26,  5.23it/s]Loading dataset:  53%|█████▎    | 156/292 [00:44<00:34,  3.89it/s]Loading dataset:  54%|█████▍    | 157/292 [00:44<00:34,  3.90it/s]Loading dataset:  54%|█████▍    | 158/292 [00:44<00:39,  3.39it/s]Loading dataset:  55%|█████▍    | 160/292 [00:44<00:27,  4.87it/s]Loading dataset:  55%|█████▌    | 161/292 [00:45<00:46,  2.84it/s]Loading dataset:  56%|█████▌    | 163/292 [00:45<00:31,  4.09it/s]Loading dataset:  57%|█████▋    | 165/292 [00:46<00:24,  5.25it/s]Loading dataset:  57%|█████▋    | 166/292 [00:46<00:25,  4.93it/s]Loading dataset:  57%|█████▋    | 167/292 [00:46<00:29,  4.20it/s]Loading dataset:  58%|█████▊    | 169/292 [00:47<00:23,  5.28it/s]Loading dataset:  58%|█████▊    | 170/292 [00:47<00:25,  4.71it/s]Loading dataset:  59%|█████▊    | 171/292 [00:48<00:50,  2.40it/s]Loading dataset:  60%|█████▉    | 175/292 [00:48<00:23,  5.05it/s]Loading dataset:  61%|██████    | 177/292 [00:49<00:31,  3.68it/s]Loading dataset:  61%|██████    | 178/292 [00:49<00:34,  3.30it/s]Loading dataset:  62%|██████▏   | 181/292 [00:50<00:24,  4.55it/s]Loading dataset:  62%|██████▏   | 182/292 [00:50<00:30,  3.55it/s]Loading dataset:  63%|██████▎   | 183/292 [00:51<00:32,  3.31it/s]Loading dataset:  63%|██████▎   | 185/292 [00:51<00:31,  3.43it/s]Loading dataset:  64%|██████▎   | 186/292 [00:52<00:34,  3.07it/s]Loading dataset:  65%|██████▍   | 189/292 [00:52<00:26,  3.95it/s]Loading dataset:  65%|██████▌   | 190/292 [00:52<00:23,  4.38it/s]Loading dataset:  65%|██████▌   | 191/292 [00:52<00:21,  4.79it/s]Loading dataset:  66%|██████▌   | 192/292 [00:53<00:38,  2.59it/s]Loading dataset:  66%|██████▋   | 194/292 [00:54<00:31,  3.15it/s]Loading dataset:  67%|██████▋   | 196/292 [00:54<00:27,  3.46it/s]Loading dataset:  67%|██████▋   | 197/292 [00:55<00:32,  2.90it/s]Loading dataset:  69%|██████▉   | 201/292 [00:55<00:20,  4.45it/s]Loading dataset:  69%|██████▉   | 202/292 [00:56<00:22,  3.91it/s]Loading dataset:  70%|██████▉   | 203/292 [00:56<00:21,  4.22it/s]Loading dataset:  70%|██████▉   | 204/292 [00:57<00:35,  2.45it/s]Loading dataset:  71%|███████   | 208/292 [00:57<00:17,  4.68it/s]Loading dataset:  72%|███████▏  | 209/292 [00:59<00:32,  2.54it/s]Loading dataset:  73%|███████▎  | 213/292 [00:59<00:18,  4.36it/s]Loading dataset:  74%|███████▎  | 215/292 [00:59<00:15,  5.01it/s]Loading dataset:  74%|███████▍  | 216/292 [01:01<00:33,  2.24it/s]Loading dataset:  75%|███████▍  | 218/292 [01:01<00:24,  3.07it/s]Loading dataset:  75%|███████▌  | 220/292 [01:01<00:19,  3.67it/s]Loading dataset:  76%|███████▌  | 222/292 [01:02<00:17,  3.97it/s]Loading dataset:  77%|███████▋  | 225/292 [01:02<00:14,  4.74it/s]Loading dataset:  77%|███████▋  | 226/292 [01:03<00:22,  2.92it/s]Loading dataset:  79%|███████▉  | 232/292 [01:04<00:11,  5.10it/s]Loading dataset:  80%|███████▉  | 233/292 [01:04<00:11,  5.34it/s]Loading dataset:  80%|████████  | 234/292 [01:05<00:17,  3.36it/s]Loading dataset:  82%|████████▏ | 238/292 [01:05<00:10,  5.17it/s]Loading dataset:  82%|████████▏ | 239/292 [01:07<00:22,  2.31it/s]Loading dataset:  84%|████████▎ | 244/292 [01:08<00:16,  2.93it/s]Loading dataset:  85%|████████▍ | 248/292 [01:08<00:10,  4.20it/s]Loading dataset:  85%|████████▌ | 249/292 [01:09<00:11,  3.72it/s]Loading dataset:  86%|████████▌ | 250/292 [01:09<00:12,  3.24it/s]Loading dataset:  87%|████████▋ | 253/292 [01:10<00:08,  4.49it/s]Loading dataset:  87%|████████▋ | 255/292 [01:10<00:06,  5.37it/s]Loading dataset:  88%|████████▊ | 257/292 [01:10<00:07,  4.86it/s]Loading dataset:  88%|████████▊ | 258/292 [01:11<00:07,  4.27it/s]Loading dataset:  89%|████████▊ | 259/292 [01:11<00:08,  3.98it/s]Loading dataset:  89%|████████▉ | 261/292 [01:12<00:10,  2.86it/s]Loading dataset:  91%|█████████ | 265/292 [01:12<00:05,  5.06it/s]Loading dataset:  91%|█████████▏| 267/292 [01:13<00:05,  4.39it/s]Loading dataset:  92%|█████████▏| 268/292 [01:13<00:05,  4.80it/s]Loading dataset:  92%|█████████▏| 270/292 [01:13<00:03,  5.69it/s]Loading dataset:  93%|█████████▎| 271/292 [01:14<00:05,  3.98it/s]Loading dataset:  93%|█████████▎| 273/292 [01:14<00:04,  4.69it/s]Loading dataset:  94%|█████████▍| 274/292 [01:15<00:06,  2.86it/s]Loading dataset:  94%|█████████▍| 275/292 [01:15<00:06,  2.81it/s]Loading dataset:  95%|█████████▌| 278/292 [01:15<00:02,  4.94it/s]Loading dataset:  96%|█████████▌| 280/292 [01:17<00:04,  2.91it/s]Loading dataset:  97%|█████████▋| 282/292 [01:17<00:02,  3.96it/s]Loading dataset:  97%|█████████▋| 284/292 [01:17<00:02,  3.68it/s]Loading dataset:  98%|█████████▊| 286/292 [01:19<00:02,  2.41it/s]Loading dataset: 100%|█████████▉| 291/292 [01:19<00:00,  4.49it/s]Loading dataset: 100%|██████████| 292/292 [01:19<00:00,  3.65it/s]
+Loading dataset:   0%|          | 0/33 [00:00<?, ?it/s]Loading dataset:   3%|▎         | 1/33 [00:02<01:07,  2.10s/it]Loading dataset:   9%|▉         | 3/33 [00:02<00:19,  1.54it/s]Loading dataset:  21%|██        | 7/33 [00:03<00:12,  2.07it/s]Loading dataset:  33%|███▎      | 11/33 [00:04<00:07,  2.85it/s]Loading dataset:  42%|████▏     | 14/33 [00:04<00:04,  4.12it/s]Loading dataset:  52%|█████▏    | 17/33 [00:05<00:03,  4.01it/s]Loading dataset:  58%|█████▊    | 19/33 [00:05<00:02,  4.92it/s]Loading dataset:  64%|██████▎   | 21/33 [00:06<00:03,  3.51it/s]Loading dataset:  73%|███████▎  | 24/33 [00:07<00:01,  4.58it/s]Loading dataset:  76%|███████▌  | 25/33 [00:08<00:02,  3.20it/s]Loading dataset:  88%|████████▊ | 29/33 [00:08<00:00,  4.69it/s]Loading dataset:  91%|█████████ | 30/33 [00:09<00:01,  2.86it/s]Loading dataset: 100%|██████████| 33/33 [00:09<00:00,  3.40it/s]
+Loading dataset:   0%|          | 0/36 [00:00<?, ?it/s]Loading dataset:   3%|▎         | 1/36 [00:01<00:43,  1.24s/it]Loading dataset:   6%|▌         | 2/36 [00:01<00:20,  1.65it/s]Loading dataset:   8%|▊         | 3/36 [00:02<00:34,  1.03s/it]Loading dataset:  14%|█▍        | 5/36 [00:04<00:24,  1.28it/s]Loading dataset:  28%|██▊       | 10/36 [00:04<00:07,  3.63it/s]Loading dataset:  33%|███▎      | 12/36 [00:05<00:07,  3.27it/s]Loading dataset:  39%|███▉      | 14/36 [00:06<00:10,  2.17it/s]Loading dataset:  53%|█████▎    | 19/36 [00:07<00:05,  2.94it/s]Loading dataset:  58%|█████▊    | 21/36 [00:08<00:04,  3.08it/s]Loading dataset:  69%|██████▉   | 25/36 [00:10<00:04,  2.64it/s]Loading dataset:  89%|████████▉ | 32/36 [00:10<00:00,  4.85it/s]Loading dataset:  94%|█████████▍| 34/36 [00:11<00:00,  3.43it/s]Loading dataset: 100%|██████████| 36/36 [00:12<00:00,  3.56it/s]Loading dataset: 100%|██████████| 36/36 [00:12<00:00,  2.92it/s]
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: sklearn, torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/93bd78c930dc405d85a4b2b24b2b05cf
+
+Epoch 001 | train=0.004655 | val=0.005164 | lr=1.00e-04
+Epoch 002 | train=0.002624 | val=0.002969 | lr=5.00e-05
+Epoch 003 | train=0.001887 | val=0.002014 | lr=5.00e-05
+Epoch 004 | train=0.001788 | val=0.001904 | lr=2.50e-05
+Epoch 005 | train=0.001538 | val=0.001688 | lr=2.50e-05
+Epoch 006 | train=0.001586 | val=0.001571 | lr=1.25e-05
+Epoch 007 | train=0.001538 | val=0.001508 | lr=1.25e-05
+Epoch 008 | train=0.001498 | val=0.001508 | lr=6.25e-06
+Epoch 009 | train=0.001448 | val=0.001455 | lr=6.25e-06
+Epoch 010 | train=0.001476 | val=0.001444 | lr=3.13e-06
+Epoch 011 | train=0.001387 | val=0.001426 | lr=3.13e-06
+Epoch 012 | train=0.001435 | val=0.001409 | lr=1.56e-06
+Epoch 013 | train=0.001387 | val=0.001405 | lr=1.56e-06
+Epoch 014 | train=0.001358 | val=0.001404 | lr=7.81e-07
+Epoch 015 | train=0.001509 | val=0.001403 | lr=7.81e-07
+Epoch 016 | train=0.001392 | val=0.001396 | lr=3.91e-07
+Epoch 017 | train=0.001526 | val=0.001398 | lr=3.91e-07
+Epoch 018 | train=0.001394 | val=0.001401 | lr=1.95e-07
+Epoch 019 | train=0.001400 | val=0.001392 | lr=1.95e-07
+Epoch 020 | train=0.001438 | val=0.001391 | lr=9.77e-08
+Epoch 021 | train=0.001378 | val=0.001389 | lr=9.77e-08
+Epoch 022 | train=0.001401 | val=0.001396 | lr=4.88e-08
+Epoch 023 | train=0.001427 | val=0.001399 | lr=4.88e-08
+Epoch 024 | train=0.001424 | val=0.001390 | lr=2.44e-08
+Epoch 025 | train=0.001413 | val=0.001393 | lr=2.44e-08
+Epoch 026 | train=0.001331 | val=0.001391 | lr=1.22e-08
+Epoch 027 | train=0.001352 | val=0.001392 | lr=1.22e-08
+Epoch 028 | train=0.001484 | val=0.001387 | lr=6.10e-09
+Epoch 029 | train=0.001478 | val=0.001395 | lr=6.10e-09
+Epoch 030 | train=0.001338 | val=0.001397 | lr=3.05e-09
+Epoch 031 | train=0.001344 | val=0.001390 | lr=3.05e-09
+Epoch 032 | train=0.001264 | val=0.001410 | lr=1.53e-09
+Epoch 033 | train=0.001404 | val=0.001391 | lr=1.53e-09
+Epoch 034 | train=0.001375 | val=0.001392 | lr=7.63e-10
+Epoch 035 | train=0.001374 | val=0.001395 | lr=7.63e-10
+Epoch 036 | train=0.001518 | val=0.001388 | lr=3.81e-10
+Epoch 037 | train=0.001352 | val=0.001402 | lr=3.81e-10
+Epoch 038 | train=0.001414 | val=0.001388 | lr=1.91e-10
+Epoch 039 | train=0.001295 | val=0.001397 | lr=1.91e-10
+Epoch 040 | train=0.001388 | val=0.001391 | lr=9.54e-11
+Epoch 041 | train=0.001363 | val=0.001393 | lr=9.54e-11
+Epoch 042 | train=0.001441 | val=0.001391 | lr=4.77e-11
+Epoch 043 | train=0.001484 | val=0.001406 | lr=4.77e-11
+Epoch 044 | train=0.001292 | val=0.001397 | lr=2.38e-11
+Epoch 045 | train=0.001476 | val=0.001396 | lr=2.38e-11
+Epoch 046 | train=0.001344 | val=0.001394 | lr=1.19e-11
+Epoch 047 | train=0.001487 | val=0.001391 | lr=1.19e-11
+Epoch 048 | train=0.001494 | val=0.001393 | lr=5.96e-12
+Epoch 049 | train=0.001485 | val=0.001385 | lr=5.96e-12
+Epoch 050 | train=0.001469 | val=0.001392 | lr=2.98e-12
+Epoch 051 | train=0.001462 | val=0.001386 | lr=2.98e-12
+Epoch 052 | train=0.001271 | val=0.001395 | lr=1.49e-12
+Epoch 053 | train=0.001463 | val=0.001389 | lr=1.49e-12
+Epoch 054 | train=0.001395 | val=0.001392 | lr=7.45e-13
+Epoch 055 | train=0.001408 | val=0.001394 | lr=7.45e-13
+Epoch 056 | train=0.001316 | val=0.001394 | lr=3.73e-13
+Epoch 057 | train=0.001375 | val=0.001395 | lr=3.73e-13
+Epoch 058 | train=0.001362 | val=0.001399 | lr=1.86e-13
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : Pancreas_Only_A_Run_Final
+COMET INFO:     url                   : https://www.comet.com/rakibulhaq56/sli2vol/93bd78c930dc405d85a4b2b24b2b05cf
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr [59]         : (1.862645149230957e-13, 0.0001)
+COMET INFO:     train_loss [59] : (0.001264058938862658, 0.004654893639350408)
+COMET INFO:     val_loss [59]   : (0.0013846839622904856, 0.0051638974497715635)
+COMET INFO:   Others:
+COMET INFO:     Name : Pancreas_Only_A_Run_Final
+COMET INFO:   Uploads:
+COMET INFO:     conda-environment-definition : 1
+COMET INFO:     conda-info                   : 1
+COMET INFO:     conda-specification          : 1
+COMET INFO:     environment details          : 1
+COMET INFO:     filename                     : 1
+COMET INFO:     git metadata                 : 1
+COMET INFO:     git-patch (uncompressed)     : 1 (34.68 KB)
+COMET INFO:     installed packages           : 1
+COMET INFO:     os packages                  : 1
+COMET INFO:     source_code                  : 1 (10.47 KB)
+COMET INFO: 
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: sklearn, torch.
+Epoch 059 | train=0.001312 | val=0.001397 | lr=1.86e-13
+[EARLY STOP] epoch=59 best_val=0.001455 patience=50
+Done. Best val: 0.001385
+Saved best:    /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/pancreas/Pancrease_A_RUN_Final/best_model.pth
+Saved current: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/pancreas/Pancrease_A_RUN_Final/current_model.pth

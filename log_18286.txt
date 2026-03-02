@@ -1,0 +1,13 @@
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[Setting B] train_sources=['SourceA', 'SourceD'] train_pool=110
+[Setting B] test_sources=['SourceB', 'SourceC'] test_pool=151
+[train/val] train=99 val=11
+Loading dataset:   0%|          | 0/9 [00:00<?, ?it/s]Loading dataset:  11%|█         | 1/9 [00:01<00:12,  1.52s/it]Loading dataset:  22%|██▏       | 2/9 [00:09<00:37,  5.43s/it]Loading dataset:  78%|███████▊  | 7/9 [00:12<00:02,  1.46s/it]Loading dataset: 100%|██████████| 9/9 [00:12<00:00,  1.36s/it]
+Loading dataset:   0%|          | 0/1 [00:00<?, ?it/s]Loading dataset: 100%|██████████| 1/1 [00:02<00:00,  2.14s/it]Loading dataset: 100%|██████████| 1/1 [00:02<00:00,  2.14s/it]
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: sklearn, torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/07043b681af645c288e6bdcbdd69df6c
+
+[2026-01-17T20:28:50.749] error: *** JOB 18286 ON spartacus-12 CANCELLED AT 2026-01-17T20:28:50 DUE to SIGNAL Terminated ***

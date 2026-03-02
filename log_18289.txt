@@ -1,0 +1,109 @@
+[collect|SourceA] total=40 labeled=0 unlabeled=40
+[collect|SourceB] total=20 labeled=20 unlabeled=0
+[collect|SourceC] total=131 labeled=131 unlabeled=0
+[collect|SourceD] total=70 labeled=0 unlabeled=70
+[collect|SourceE] total=80 labeled=80 unlabeled=0
+[collect|SourceF] total=281 labeled=281 unlabeled=0
+[split|SourceB] total=20 train=18 test=2
+[split|SourceC] total=131 train=118 test=13
+[split|SourceE] total=80 train=72 test=8
+[split|SourceF] total=281 train=253 test=28
+[Setting A] train_pool=571 (labeled_train=461 + unlabeled=110)
+[Setting A] test_pool=51 (labeled_test only)
+[train/val] train=514 val=57
+Loading dataset:   0%|          | 0/51 [00:00<?, ?it/s]Loading dataset:   2%|▏         | 1/51 [00:06<05:19,  6.40s/it]Loading dataset:  10%|▉         | 5/51 [00:10<01:23,  1.81s/it]Loading dataset:  25%|██▌       | 13/51 [00:14<00:33,  1.15it/s]Loading dataset:  47%|████▋     | 24/51 [00:17<00:13,  1.96it/s]Loading dataset:  55%|█████▍    | 28/51 [00:18<00:11,  2.01it/s]Loading dataset:  57%|█████▋    | 29/51 [00:20<00:12,  1.78it/s]Loading dataset:  63%|██████▎   | 32/51 [00:25<00:16,  1.13it/s]Loading dataset:  73%|███████▎  | 37/51 [00:27<00:09,  1.42it/s]Loading dataset:  88%|████████▊ | 45/51 [00:29<00:02,  2.10it/s]Loading dataset:  98%|█████████▊| 50/51 [00:30<00:00,  2.63it/s]Loading dataset: 100%|██████████| 51/51 [00:30<00:00,  1.69it/s]
+Loading dataset:   0%|          | 0/5 [00:00<?, ?it/s]Loading dataset:  20%|██        | 1/5 [00:01<00:07,  1.91s/it]Loading dataset:  40%|████      | 2/5 [00:07<00:12,  4.26s/it]Loading dataset: 100%|██████████| 5/5 [00:07<00:00,  1.56s/it]
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: sklearn, torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/0a671db6d75d4534ad226fc1c0a89011
+
+Epoch 001 | train=0.003659 | val=0.002720 | lr=1.00e-04
+Epoch 002 | train=0.001746 | val=0.001401 | lr=5.00e-05
+Epoch 003 | train=0.001398 | val=0.001256 | lr=5.00e-05
+Epoch 004 | train=0.001258 | val=0.001183 | lr=2.50e-05
+Epoch 005 | train=0.001270 | val=0.001076 | lr=2.50e-05
+Epoch 006 | train=0.001115 | val=0.001085 | lr=1.25e-05
+Epoch 007 | train=0.001243 | val=0.001018 | lr=1.25e-05
+Epoch 008 | train=0.001211 | val=0.000997 | lr=6.25e-06
+Epoch 009 | train=0.001048 | val=0.000990 | lr=6.25e-06
+Epoch 010 | train=0.001141 | val=0.000977 | lr=3.13e-06
+Epoch 011 | train=0.001172 | val=0.000972 | lr=3.13e-06
+Epoch 012 | train=0.001051 | val=0.000968 | lr=1.56e-06
+Epoch 013 | train=0.001059 | val=0.000965 | lr=1.56e-06
+Epoch 014 | train=0.001183 | val=0.000963 | lr=7.81e-07
+Epoch 015 | train=0.001165 | val=0.000961 | lr=7.81e-07
+Epoch 016 | train=0.001102 | val=0.000960 | lr=3.91e-07
+Epoch 017 | train=0.001071 | val=0.000957 | lr=3.91e-07
+Epoch 018 | train=0.001060 | val=0.000956 | lr=1.95e-07
+Epoch 019 | train=0.001047 | val=0.000958 | lr=1.95e-07
+Epoch 020 | train=0.001036 | val=0.000958 | lr=9.77e-08
+Epoch 021 | train=0.001171 | val=0.000958 | lr=9.77e-08
+Epoch 022 | train=0.001199 | val=0.000956 | lr=4.88e-08
+Epoch 023 | train=0.001051 | val=0.000957 | lr=4.88e-08
+Epoch 024 | train=0.001047 | val=0.000959 | lr=2.44e-08
+Epoch 025 | train=0.001085 | val=0.000955 | lr=2.44e-08
+Epoch 026 | train=0.001032 | val=0.000955 | lr=1.22e-08
+Epoch 027 | train=0.001017 | val=0.000957 | lr=1.22e-08
+Epoch 028 | train=0.001095 | val=0.000955 | lr=6.10e-09
+Epoch 029 | train=0.001184 | val=0.000957 | lr=6.10e-09
+Epoch 030 | train=0.001120 | val=0.000955 | lr=3.05e-09
+Epoch 031 | train=0.001062 | val=0.000957 | lr=3.05e-09
+Epoch 032 | train=0.001059 | val=0.000957 | lr=1.53e-09
+Epoch 033 | train=0.001092 | val=0.000956 | lr=1.53e-09
+Epoch 034 | train=0.001206 | val=0.000956 | lr=7.63e-10
+Epoch 035 | train=0.001221 | val=0.000956 | lr=7.63e-10
+Epoch 036 | train=0.001044 | val=0.000955 | lr=3.81e-10
+Epoch 037 | train=0.001113 | val=0.000956 | lr=3.81e-10
+Epoch 038 | train=0.001104 | val=0.000955 | lr=1.91e-10
+Epoch 039 | train=0.001044 | val=0.000957 | lr=1.91e-10
+Epoch 040 | train=0.001039 | val=0.000955 | lr=9.54e-11
+Epoch 041 | train=0.001171 | val=0.000956 | lr=9.54e-11
+Epoch 042 | train=0.001108 | val=0.000957 | lr=4.77e-11
+Epoch 043 | train=0.001058 | val=0.000955 | lr=4.77e-11
+Epoch 044 | train=0.001147 | val=0.000957 | lr=2.38e-11
+Epoch 045 | train=0.000986 | val=0.000956 | lr=2.38e-11
+Epoch 046 | train=0.001099 | val=0.000955 | lr=1.19e-11
+Epoch 047 | train=0.001138 | val=0.000955 | lr=1.19e-11
+Epoch 048 | train=0.001093 | val=0.000956 | lr=5.96e-12
+Epoch 049 | train=0.001182 | val=0.000955 | lr=5.96e-12
+Epoch 050 | train=0.001097 | val=0.000956 | lr=2.98e-12
+Epoch 051 | train=0.001075 | val=0.000955 | lr=2.98e-12
+Epoch 052 | train=0.001063 | val=0.000955 | lr=1.49e-12
+Epoch 053 | train=0.001180 | val=0.000956 | lr=1.49e-12
+Epoch 054 | train=0.001113 | val=0.000955 | lr=7.45e-13
+Epoch 055 | train=0.001184 | val=0.000956 | lr=7.45e-13
+Epoch 056 | train=0.001045 | val=0.000956 | lr=3.73e-13
+Epoch 057 | train=0.001190 | val=0.000955 | lr=3.73e-13
+Epoch 058 | train=0.001091 | val=0.000955 | lr=1.86e-13
+Epoch 059 | train=0.001168 | val=0.000956 | lr=1.86e-13
+Epoch 060 | train=0.001038 | val=0.000955 | lr=9.31e-14
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : Liver_Pancreas_A_Run_Final
+COMET INFO:     url                   : https://www.comet.com/rakibulhaq56/sli2vol/0a671db6d75d4534ad226fc1c0a89011
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr [61]         : (9.313225746154786e-14, 0.0001)
+COMET INFO:     train_loss [61] : (0.000985835144423287, 0.003658557924526659)
+COMET INFO:     val_loss [61]   : (0.0009546331421006471, 0.0027200194890610874)
+COMET INFO:   Others:
+COMET INFO:     Name : Liver_Pancreas_A_Run_Final
+COMET INFO:   Uploads:
+COMET INFO:     conda-environment-definition : 1
+COMET INFO:     conda-info                   : 1
+COMET INFO:     conda-specification          : 1
+COMET INFO:     environment details          : 1
+COMET INFO:     filename                     : 1
+COMET INFO:     git metadata                 : 1
+COMET INFO:     git-patch (uncompressed)     : 1 (35.92 KB)
+COMET INFO:     installed packages           : 1
+COMET INFO:     os packages                  : 1
+COMET INFO:     source_code                  : 1 (11.70 KB)
+COMET INFO: 
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: sklearn, torch.
+Epoch 061 | train=0.001125 | val=0.000955 | lr=9.31e-14
+[EARLY STOP] epoch=61 best_val=0.000972 patience=50
+Done. Best val: 0.000955
+Saved best:    /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/Liver_Pancreas/Liver_Pancreas_A_Run_Final/best_model.pth
+Saved current: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/checkpoint/Liver_Pancreas/Liver_Pancreas_A_Run_Final/current_model.pth

@@ -1,0 +1,4 @@
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/1a3ab71f03fb4c68b08d75dfce58505e
+
+[2026-01-14T23:40:35.119] error: *** JOB 17162 ON spartacus-11 CANCELLED AT 2026-01-14T23:40:35 DUE to SIGNAL Terminated ***

@@ -15,7 +15,7 @@ import glob
 import itertools
 import random
 from random import uniform
-from imgaug import augmenters as iaa
+#from imgaug import augmenters as iaa
 from skimage.transform import radon, resize
 import cv2
 from skimage.morphology import convex_hull_image
@@ -432,3 +432,292 @@ class Dataset_test_decathon_liver(data.Dataset):
     def shuffle_list(self):
         random.shuffle(self.list_IDs)
 #        random.shuffle(self.sampling_params)
+
+# class Dataset_numpy_3d(data.Dataset):
+#     'Characterizes a dataset for PyTorch loading 3D numpy volumes'
+#     def __init__(self, folders_list, batch_size, set_size, mode='training'):
+#         'Initialization'
+#         self.mode = mode
+#         self.batch_size = batch_size
+#         self.set_size = set_size
+#         self.create_list_and_ID(folders_list)
+
+#     def __len__(self):
+#         'Denotes the total number of samples'
+#         return len(self.list_IDs)
+
+#     def __getitem__(self, index):
+#         try:
+#             'Generates one sample of data'
+#             # Select sample
+#             ID = self.list_IDs[index]
+#             f1_idx = self.info[ID]['f1']
+#             f2_idx = self.info[ID]['f2']
+#             vol_key = self.info[ID]['vol']
+            
+#             # Load volume dictionary and extract image
+#             vol_dict = np.load(vol_key, allow_pickle=True).item()
+#             vol = vol_dict['image'].astype(float)
+            
+#             # Extract slices
+#             frame1 = vol[:, :, f1_idx]
+#             frame2 = vol[:, :, f2_idx]
+            
+#             # Rotate
+#             angle = random.randint(0, 359)
+#             frame1 = rotate(frame1, angle, reshape=False, mode='nearest')
+#             frame2 = rotate(frame2, angle, reshape=False, mode='nearest')
+            
+#             # Resize
+#             resize_size = random.randint(256, 300)
+#             frame1 = resize(frame1, (resize_size, resize_size), anti_aliasing=True)
+#             frame2 = resize(frame2, (resize_size, resize_size), anti_aliasing=True)
+#             [frame1, frame2] = get_random_crop([frame1, frame2], 256, 256)
+            
+#             # Augmentation for information bottleneck
+#             frame1_input = frame1.copy()
+#             frame2_input = frame2.copy()
+            
+#             frame1_input = cap_image(frame1_input, random.randint(-400, -200), random.randint(300, 500))
+#             frame2_input = cap_image(frame2_input, random.randint(-400, -200), random.randint(300, 500))
+            
+#             if np.std(frame1_input) < 10 or np.std(frame2_input) < 10:
+#                 frame1_input += (np.random.normal(loc=1, scale=uniform(0, 0.4), size=frame1_input.shape)) ** 2
+#                 frame2_input += (np.random.normal(loc=1, scale=uniform(0, 0.4), size=frame2_input.shape)) ** 2
+#                 frame1 += (np.random.normal(loc=1, scale=uniform(0, 0.4), size=frame1_input.shape)) ** 2
+#                 frame2 += (np.random.normal(loc=1, scale=uniform(0, 0.4), size=frame2_input.shape)) ** 2
+            
+#             frame1_input = gamma_contrast(frame1_input)
+#             frame2_input = gamma_contrast(frame2_input)
+            
+#             # Make dimension right
+#             if len(frame1_input.shape) == 2:
+#                 frame1_input = frame1_input[np.newaxis, ...]
+#                 frame2_input = frame2_input[np.newaxis, ...]
+#             if len(frame1.shape) == 2:
+#                 frame1 = frame1[np.newaxis, ...]
+#                 frame2 = frame2[np.newaxis, ...]
+            
+#             return frame1_input, frame2_input, frame1, frame2
+        
+#         except Exception as e:
+#             print(f"Error in Dataset_numpy_3d.__getitem__: {e}")
+#             return None
+        
+#     def create_list_and_ID(self, folders_list):
+#         self.list_IDs = []
+#         self.info = {}
+        
+#         count = 0
+#         for n, folder in enumerate(folders_list):
+#             print(f"Processing folder {n}: {folder}")
+            
+#             # Find all .npy files in folder
+#             npy_files = sorted(glob.glob(os.path.join(folder, '*.npy')))
+            
+#             for npy_file in npy_files:
+#                 try:
+#                     # Load the 3D volume dictionary
+#                     vol_dict = np.load(npy_file, allow_pickle=True).item()
+#                     vol = vol_dict['image'].astype(float)
+                    
+#                     # Get number of slices in z dimension (last dimension)
+#                     num_slices = vol.shape[-1]
+                    
+#                     if num_slices < 4:
+#                         continue
+                    
+#                     # Create pairs of slices
+#                     interval = np.random.choice([2, 3, 4], p=([1/3] * 3))
+                    
+#                     for f in range(0, num_slices, interval + 1):
+#                         if f + interval < num_slices:
+#                             temp = {}
+#                             if np.random.choice([1, 2], p=[0.5, 0.5]) == 1:
+#                                 temp.update({'vol': npy_file, 'f1': f, 'f2': f + interval})
+#                             else:
+#                                 temp.update({'vol': npy_file, 'f2': f, 'f1': f + interval})
+#                             self.info.update({count: temp})
+#                             self.list_IDs.append(count)
+#                             count += 1
+                
+#                 except Exception as e:
+#                     print(f"Error loading {npy_file}: {e}")
+#                     continue
+        
+#         print(f"Total samples created: {len(self.list_IDs)}")
+#         self.shuffle_list()
+        
+#     def shuffle_list(self):
+#         random.shuffle(self.list_IDs)
+
+
+class Dataset_numpy_3d(data.Dataset):
+    """
+    PyTorch dataset for 3D numpy volume dictionaries saved as .npy.
+
+    Each .npy file is expected to be a dict with key 'image' -> 3D array [H, W, Z].
+    The dataset builds a list of slice-pairs (f1, f2) from each volume.
+
+    Input `sources` can be:
+      - list of folders containing .npy files
+      - list of .npy file paths
+      - a mix of both
+    """
+    def __init__(self, sources, batch_size, set_size, mode='training',
+                 slice_interval_choices=(2, 3, 4), seed=10):
+        self.mode = mode
+        self.batch_size = batch_size
+        self.set_size = set_size
+        self.slice_interval_choices = slice_interval_choices
+        self.seed = seed
+
+        self.list_IDs = []
+        self.info = {}
+        self._build_index(sources)
+
+    def __len__(self):
+        return len(self.list_IDs)
+
+    def __getitem__(self, index):
+        try:
+            ID = self.list_IDs[index]
+            f1_idx = self.info[ID]['f1']
+            f2_idx = self.info[ID]['f2']
+            vol_path = self.info[ID]['vol']
+
+            vol_dict = np.load(vol_path, allow_pickle=True).item()
+            vol = vol_dict['image'].astype(np.float32)  # [H,W,Z]
+
+            # basic sanity
+            if vol.ndim != 3 or vol.shape[-1] <= max(f1_idx, f2_idx):
+                return None
+
+            frame1 = vol[:, :, f1_idx]
+            frame2 = vol[:, :, f2_idx]
+
+            # augmentations (same style as your other datasets)
+            angle = random.randint(0, 359)
+            frame1 = rotate(frame1, angle, reshape=False, mode='nearest')
+            frame2 = rotate(frame2, angle, reshape=False, mode='nearest')
+
+            resize_size = random.randint(256, 300)
+            frame1 = resize(frame1, (resize_size, resize_size), anti_aliasing=True).astype(np.float32)
+            frame2 = resize(frame2, (resize_size, resize_size), anti_aliasing=True).astype(np.float32)
+            frame1, frame2 = get_random_crop([frame1, frame2], 256, 256)
+
+            frame1_input = cap_image(frame1.copy(), random.randint(-400, -200), random.randint(300, 500))
+            frame2_input = cap_image(frame2.copy(), random.randint(-400, -200), random.randint(300, 500))
+
+            if np.std(frame1_input) < 10 or np.std(frame2_input) < 10:
+                noise = (np.random.normal(loc=1, scale=uniform(0, 0.4), size=frame1_input.shape)) ** 2
+                frame1_input += noise
+                frame2_input += noise
+                frame1 += noise
+                frame2 += noise
+
+            frame1_input = gamma_contrast(frame1_input)
+            frame2_input = gamma_contrast(frame2_input)
+
+            # [1,H,W]
+            frame1_input = frame1_input[np.newaxis, ...]
+            frame2_input = frame2_input[np.newaxis, ...]
+            frame1 = frame1[np.newaxis, ...]
+            frame2 = frame2[np.newaxis, ...]
+
+            return frame1_input, frame2_input, frame1, frame2
+
+        except Exception as e:
+            print(f"Error in Dataset_numpy_3d.__getitem__: {e}")
+            return None
+
+    def _expand_sources_to_files(self, sources):
+        """Turn mixed list of folders/files into a flat list of .npy files."""
+        files = []
+        for s in sources:
+            if os.path.isdir(s):
+                fs = sorted(glob.glob(os.path.join(s, "*.npy")))
+                files.extend(fs)
+            elif os.path.isfile(s) and s.endswith(".npy"):
+                files.append(s)
+            else:
+                # ignore unknown entries but print once for debugging
+                print(f"[Dataset_numpy_3d] skipping unknown source: {s}")
+        return files
+
+    def _build_index(self, sources):
+        rng = np.random.RandomState(self.seed)
+
+        npy_files = self._expand_sources_to_files(sources)
+        if len(npy_files) == 0:
+            print("[Dataset_numpy_3d] No .npy files found. Index is empty.")
+            return
+
+        count = 0
+        for n, npy_file in enumerate(npy_files):
+            if n % 50 == 0:
+                print(f"Indexing {n}/{len(npy_files)}: {npy_file}")
+
+            try:
+                vol_dict = np.load(npy_file, allow_pickle=True).item()
+                vol = vol_dict.get('image', None)
+                if vol is None or not hasattr(vol, "shape"):
+                    continue
+                vol = vol.astype(np.float32)
+
+                if vol.ndim != 3:
+                    continue
+
+                num_slices = vol.shape[-1]
+                if num_slices < 4:
+                    continue
+
+                interval = int(rng.choice(self.slice_interval_choices))
+
+                # build slice pairs
+                for f in range(0, num_slices, interval + 1):
+                    if f + interval < num_slices:
+                        if rng.rand() < 0.5:
+                            temp = {'vol': npy_file, 'f1': f, 'f2': f + interval}
+                        else:
+                            temp = {'vol': npy_file, 'f1': f + interval, 'f2': f}
+
+                        self.info[count] = temp
+                        self.list_IDs.append(count)
+                        count += 1
+
+            except Exception as e:
+                print(f"[Dataset_numpy_3d] Error loading {npy_file}: {e}")
+                continue
+
+        print(f"[Dataset_numpy_3d] Total samples created: {len(self.list_IDs)}")
+        self.shuffle_list()
+
+    def shuffle_list(self):
+        random.shuffle(self.list_IDs)
+    
+
+
+def split_90_10_per_folder(folders, seed=10):
+    rng = np.random.RandomState(seed)
+    train_files, val_files = [], []
+
+    for folder in folders:
+        files = sorted(glob.glob(os.path.join(folder, "*.npy")))
+        idx = np.arange(len(files))
+        rng.shuffle(idx)
+
+        n_train = int(0.9 * len(files))
+        n_train = max(1, n_train)
+        if len(files) - n_train == 0 and len(files) > 1:
+            n_train = len(files) - 1
+
+        train_files.extend([files[i] for i in idx[:n_train]])
+        val_files.extend([files[i] for i in idx[n_train:]])
+
+        print(f"[{os.path.basename(folder)}] total={len(files)} train={n_train} val={len(files)-n_train}")
+
+    random.shuffle(train_files)
+    random.shuffle(val_files)
+    print(f"[TOTAL] train={len(train_files)} val={len(val_files)}")
+    return train_files, val_files

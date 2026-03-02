@@ -1,0 +1,56 @@
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/rakibulhaq56/sli2vol/36e7ab4f17a9400b9d20d557a1c3d7b5
+
+[numpy_dic_vols] total=80 train=72 val=8
+[numpy_dic_vols] total=300 train=270 val=30
+[numpy_dic_vols] total=86 train=77 val=9
+[TOTAL] train=419 val=47
+Indexing 0/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0136.npy
+Indexing 50/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0071.npy
+Indexing 100/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0263.npy
+Indexing 150/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0229.npy
+Indexing 200/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-Pancreas/numpy_dic_vols/pancreas_0031.npy
+Indexing 250/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0250.npy
+Indexing 300/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/KiTS/numpy_dic_vols/kits_0104.npy
+Indexing 350/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-LN/numpy_dic_vols/lymphnodes_0072.npy
+Indexing 400/419: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-LN/numpy_dic_vols/lymphnodes_0062.npy
+[Dataset_numpy_3d] Total samples created: 53386
+Indexing 0/47: /uufs/sci.utah.edu/scratch/rachaell/raw_datasets/CT-Pancreas/numpy_dic_vols/pancreas_0009.npy
+[Dataset_numpy_3d] Total samples created: 5678
+53386
+creating loaders
+Loaders created. Trying to fetch one batch...
+4
+Got first batch!
+Epoch 01 | train=0.0106 | val=SKIP | lr=1.00e-04
+Epoch 02 | train=0.0003 | val=SKIP | lr=5.00e-05
+Epoch 03 | train=0.0003 | val=SKIP | lr=5.00e-05
+Epoch 04 | train=0.0003 | val=0.0004 | lr=2.50e-05
+Done. Best val: 0.0004
+Saved best: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/numpy3d_per_folder_split/best_model.pth
+Saved current: /uufs/sci.utah.edu/projects/medvic-lab/Rakib/Sli2Vol/numpy3d_per_folder_split/current_model.pth
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : Trial_remote
+COMET INFO:     url                   : https://www.comet.com/rakibulhaq56/sli2vol/36e7ab4f17a9400b9d20d557a1c3d7b5
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     train_loss [4] : (0.0002829866861917517, 0.01058999774950092)
+COMET INFO:     val_loss       : 0.0003565974886698032
+COMET INFO:   Others:
+COMET INFO:     Name : Trial_remote
+COMET INFO:   Uploads:
+COMET INFO:     conda-environment-definition : 1
+COMET INFO:     conda-info                   : 1
+COMET INFO:     conda-specification          : 1
+COMET INFO:     environment details          : 1
+COMET INFO:     filename                     : 1
+COMET INFO:     git metadata                 : 1
+COMET INFO:     git-patch (uncompressed)     : 1 (15.41 KB)
+COMET INFO:     installed packages           : 1
+COMET INFO:     os packages                  : 1
+COMET INFO:     source_code                  : 2 (15.77 KB)
+COMET INFO: 
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
