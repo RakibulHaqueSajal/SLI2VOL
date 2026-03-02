@@ -132,3 +132,5 @@ Use the saved checkpoint for testing.
 Do not modify hyperparameters or train/test source configuration.
 
 Any deviation from these parameters will produce non-comparable results.
+
+The conda environment is also provided here
